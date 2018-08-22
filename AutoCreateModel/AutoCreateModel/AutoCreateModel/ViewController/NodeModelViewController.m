@@ -77,19 +77,8 @@ typedef enum : NSUInteger {
     self.title = self.nodeModel.modelName;
     
     if (self.nodeModel.level == 0) {
-        
-        UIButton *backButton       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 20)];
-        backButton.tag             = kBackButton;
-        backButton.titleLabel.font = [UIFont fontWithName:@"AppleSDGothicNeo-UltraLight" size:14.f];
-        [backButton setTitle:@"Back" forState:UIControlStateNormal];
-        [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [backButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-        [backButton addTarget:self action:@selector(buttonsEvent:) forControlEvents:UIControlEventTouchUpInside];
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
-        
         UIButton *createButton       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 20)];
         createButton.tag             = kCreateButton;
-        createButton.titleLabel.font = [UIFont fontWithName:@"AppleSDGothicNeo-UltraLight" size:14.f];
         [createButton setTitle:@"Create" forState:UIControlStateNormal];
         [createButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [createButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
@@ -225,10 +214,6 @@ typedef enum : NSUInteger {
     } else if (button.tag == kBlackView) {
         
         [self changeToState:kHideState];
-        
-    } else if (button.tag == kBackButton) {
-        
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         
     } else if (button.tag == kCreateButton) {
         

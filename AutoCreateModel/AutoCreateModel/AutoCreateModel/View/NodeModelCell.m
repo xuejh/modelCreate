@@ -82,20 +82,17 @@
     [self addSubview:lineView];
     
     // 属性label
-    self.propertyTypeLabel       = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 200, 12.f)];
-    self.propertyTypeLabel.font  = [UIFont fontWithName:@"AppleSDGothicNeo-UltraLight" size:10.f];
+    self.propertyTypeLabel       = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 220, 20.f)];
+    self.propertyTypeLabel.adjustsFontSizeToFitWidth = YES;
     [self addSubview:self.propertyTypeLabel];
     
     // 属性名字label
     self.propertyNameLabel       = [[UILabel alloc] initWithFrame:CGRectMake(10, 14, 200, 30)];
-    self.propertyNameLabel.font  = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:20.f];
-    self.propertyNameLabel.alpha = 0.75f;
     [self addSubview:self.propertyNameLabel];
     
     // 编辑按钮
-    self.pressButton = [[NodePressAnimationView alloc] initWithFrame:CGRectMake(Width - 85 - 40, 25, 85, 16)];
+    self.pressButton = [[NodePressAnimationView alloc] initWithFrame:CGRectMake(Width - 150 - 40, 25, 150, 16)];
     self.pressButton.backgroundColor    = [UIColor blackColor];
-    self.pressButton.font               = [UIFont fontWithName:@"AppleSDGothicNeo-Light" size:10.f];
     self.pressButton.layer.borderColor  = [UIColor whiteColor].CGColor;
     self.pressButton.normalTextColor    = [UIColor whiteColor];
     self.pressButton.highlightTextColor = [UIColor blackColor];
@@ -110,8 +107,7 @@
     
     // Model的名字(可以编辑)
     self.modelNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(Width - 190, 5, 150, 20)];
-    self.modelNameLabel.font          = [UIFont fontWithName:@"AppleSDGothicNeo-UltraLight" size:10.f];
-    self.modelNameLabel.text          = @"countryModel";
+    self.modelNameLabel.adjustsFontSizeToFitWidth = YES;
     self.modelNameLabel.textAlignment = NSTextAlignmentRight;
     [self addSubview:self.modelNameLabel];
     
@@ -163,7 +159,6 @@
     if (type == kNSString || type == kNSNumber) {
         
         self.propertyTypeLabel.textColor      = [UIColor grayColor];
-        self.propertyTypeLabel.font           = [UIFont fontWithName:@"AppleSDGothicNeo-UltraLight" size:10.f];
         self.modelNameLabel.hidden            = YES;
         self.indicatorView.hidden             = YES;
         self.pressButton.hidden               = YES;
@@ -171,7 +166,6 @@
     } else if (type == kNull) {
         
         self.propertyTypeLabel.textColor      = [UIColor blueColor];
-        self.propertyTypeLabel.font           = [UIFont fontWithName:@"AppleSDGothicNeo-UltraLight" size:10.f];
         self.modelNameLabel.hidden            = YES;
         self.indicatorView.hidden             = YES;
         self.pressButton.hidden               = YES;
@@ -179,7 +173,6 @@
     } else if (type == kNSArray) {
         
         self.propertyTypeLabel.textColor      = [UIColor redColor];
-        self.propertyTypeLabel.font           = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:10.f];
         self.modelNameLabel.hidden            = NO;
         self.indicatorView.hidden             = NO;
         self.pressButton.hidden               = NO;
@@ -187,7 +180,6 @@
     } else if (type == kNSDictionary) {
         
         self.propertyTypeLabel.textColor      = [UIColor redColor];
-        self.propertyTypeLabel.font           = [UIFont fontWithName:@"AppleSDGothicNeo-Regular" size:10.f];
         self.modelNameLabel.hidden            = NO;
         self.indicatorView.hidden             = NO;
         self.pressButton.hidden               = NO;

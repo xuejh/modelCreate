@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "NodeModel.h"
-
-@interface NodeModelViewController : UIViewController
+#import "BaseViewController.h"
+@interface NodeModelViewController : BaseViewController
 
 @property (nonatomic, strong) NodeModel *nodeModel;
 
