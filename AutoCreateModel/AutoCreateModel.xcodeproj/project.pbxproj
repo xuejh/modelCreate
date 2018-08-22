@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356088EE7F1D4104E7AAA8D8 /* libPods-AutoCreateModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */; };
 		F272943C212D2F0A008B38E5 /* NodeModelStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F272943B212D2F09008B38E5 /* NodeModelStrings.plist */; };
+		F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = F272943F212D34E4008B38E5 /* UIResponder+Router.m */; };
+		F2729443212D3567008B38E5 /* UIView+Context.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729442212D3567008B38E5 /* UIView+Context.m */; };
+		F2729449212D3657008B38E5 /* NodeModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729447212D3657008B38E5 /* NodeModelViewController.m */; };
+		F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F272944A212D3675008B38E5 /* NodePressAnimationView.m */; };
+		F272944F212D3675008B38E5 /* NodeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F272944B212D3675008B38E5 /* NodeModelCell.m */; };
 		F2749C96212BE30D00FB20BF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749C95212BE30D00FB20BF /* BaseViewController.m */; };
 		F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749C9A212BF89900FB20BF /* JsonManage.m */; };
 		F2749CA1212C121100FB20BF /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA0212C121100FB20BF /* NodeModel.m */; };
 		F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */; };
-		F2749CA7212C3A1000FB20BF /* NodeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA6212C3A1000FB20BF /* NodeModelCell.m */; };
-		F2749CAA212C3A8D00FB20BF /* NodePressAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA9212C3A8D00FB20BF /* NodePressAnimationView.m */; };
-		F2749CAD212C3AF800FB20BF /* NodeModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CAC212C3AF800FB20BF /* NodeModelViewController.m */; };
 		F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */; };
 		F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5A8212ACFD600DC5891 /* AppDelegate.m */; };
 		F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5AB212ACFD600DC5891 /* ViewController.m */; };
@@ -25,7 +28,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoCreateModel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B668B53C49D0476CB1309A3F /* Pods-AutoCreateModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.debug.xcconfig"; sourceTree = "<group>"; };
+		D552446CAA2DD869BB5F0E73 /* Pods-AutoCreateModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.release.xcconfig"; sourceTree = "<group>"; };
 		F272943B212D2F09008B38E5 /* NodeModelStrings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NodeModelStrings.plist; sourceTree = "<group>"; };
+		F272943E212D34E4008B38E5 /* UIResponder+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
+		F272943F212D34E4008B38E5 /* UIResponder+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
+		F2729441212D3567008B38E5 /* UIView+Context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Context.h"; sourceTree = "<group>"; };
+		F2729442212D3567008B38E5 /* UIView+Context.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Context.m"; sourceTree = "<group>"; };
+		F2729447212D3657008B38E5 /* NodeModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelViewController.m; sourceTree = "<group>"; };
+		F2729448212D3657008B38E5 /* NodeModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelViewController.h; sourceTree = "<group>"; };
+		F272944A212D3675008B38E5 /* NodePressAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodePressAnimationView.m; sourceTree = "<group>"; };
+		F272944B212D3675008B38E5 /* NodeModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelCell.m; sourceTree = "<group>"; };
+		F272944C212D3675008B38E5 /* NodePressAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodePressAnimationView.h; sourceTree = "<group>"; };
+		F272944D212D3675008B38E5 /* NodeModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelCell.h; sourceTree = "<group>"; };
 		F2749C94212BE30D00FB20BF /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		F2749C95212BE30D00FB20BF /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		F2749C99212BF89900FB20BF /* JsonManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonManage.h; sourceTree = "<group>"; };
@@ -35,12 +51,6 @@
 		F2749CA0212C121100FB20BF /* NodeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
 		F2749CA2212C37FC00FB20BF /* PropertyInfomation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyInfomation.h; sourceTree = "<group>"; };
 		F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyInfomation.m; sourceTree = "<group>"; };
-		F2749CA5212C3A1000FB20BF /* NodeModelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelCell.h; sourceTree = "<group>"; };
-		F2749CA6212C3A1000FB20BF /* NodeModelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelCell.m; sourceTree = "<group>"; };
-		F2749CA8212C3A8D00FB20BF /* NodePressAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodePressAnimationView.h; sourceTree = "<group>"; };
-		F2749CA9212C3A8D00FB20BF /* NodePressAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodePressAnimationView.m; sourceTree = "<group>"; };
-		F2749CAB212C3AF800FB20BF /* NodeModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelViewController.h; sourceTree = "<group>"; };
-		F2749CAC212C3AF800FB20BF /* NodeModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelViewController.m; sourceTree = "<group>"; };
 		F2749CAE212C3B5C00FB20BF /* NodeModelStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelStrings.h; sourceTree = "<group>"; };
 		F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelStrings.m; sourceTree = "<group>"; };
 		F290A5A4212ACFD600DC5891 /* AutoCreateModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCreateModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,15 +70,74 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356088EE7F1D4104E7AAA8D8 /* libPods-AutoCreateModel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98A48E3C0B03E562D1DD3DC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B668B53C49D0476CB1309A3F /* Pods-AutoCreateModel.debug.xcconfig */,
+				D552446CAA2DD869BB5F0E73 /* Pods-AutoCreateModel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF0B0C259986E8F80E831ED5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F272943D212D34BA008B38E5 /* MUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F272943E212D34E4008B38E5 /* UIResponder+Router.h */,
+				F272943F212D34E4008B38E5 /* UIResponder+Router.m */,
+				F2729441212D3567008B38E5 /* UIView+Context.h */,
+				F2729442212D3567008B38E5 /* UIView+Context.m */,
+			);
+			path = MUIKit;
+			sourceTree = "<group>";
+		};
+		F2729444212D3631008B38E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F272944D212D3675008B38E5 /* NodeModelCell.h */,
+				F272944B212D3675008B38E5 /* NodeModelCell.m */,
+				F272944C212D3675008B38E5 /* NodePressAnimationView.h */,
+				F272944A212D3675008B38E5 /* NodePressAnimationView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2729445212D3631008B38E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F2729448212D3657008B38E5 /* NodeModelViewController.h */,
+				F2729447212D3657008B38E5 /* NodeModelViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F2729446212D3631008B38E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F2749C97212BF86F00FB20BF /* AutoCreateModel */ = {
 			isa = PBXGroup;
 			children = (
+				F2729446212D3631008B38E5 /* Model */,
+				F2729444212D3631008B38E5 /* View */,
+				F2729445212D3631008B38E5 /* ViewController */,
 				F2749C98212BF88500FB20BF /* Common */,
 			);
 			path = AutoCreateModel;
@@ -85,12 +154,6 @@
 				F2749CA0212C121100FB20BF /* NodeModel.m */,
 				F2749CA2212C37FC00FB20BF /* PropertyInfomation.h */,
 				F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */,
-				F2749CA5212C3A1000FB20BF /* NodeModelCell.h */,
-				F2749CA6212C3A1000FB20BF /* NodeModelCell.m */,
-				F2749CA8212C3A8D00FB20BF /* NodePressAnimationView.h */,
-				F2749CA9212C3A8D00FB20BF /* NodePressAnimationView.m */,
-				F2749CAB212C3AF800FB20BF /* NodeModelViewController.h */,
-				F2749CAC212C3AF800FB20BF /* NodeModelViewController.m */,
 				F2749CAE212C3B5C00FB20BF /* NodeModelStrings.h */,
 				F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */,
 			);
@@ -102,6 +165,8 @@
 			children = (
 				F290A5A6212ACFD600DC5891 /* AutoCreateModel */,
 				F290A5A5212ACFD600DC5891 /* Products */,
+				98A48E3C0B03E562D1DD3DC2 /* Pods */,
+				AF0B0C259986E8F80E831ED5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +181,7 @@
 		F290A5A6212ACFD600DC5891 /* AutoCreateModel */ = {
 			isa = PBXGroup;
 			children = (
+				F272943D212D34BA008B38E5 /* MUIKit */,
 				F2749C97212BF86F00FB20BF /* AutoCreateModel */,
 				F290A5A7212ACFD600DC5891 /* AppDelegate.h */,
 				F290A5A8212ACFD600DC5891 /* AppDelegate.m */,
@@ -139,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F290A5BA212ACFD600DC5891 /* Build configuration list for PBXNativeTarget "AutoCreateModel" */;
 			buildPhases = (
+				78EF29C5945D6E22CE181DD8 /* [CP] Check Pods Manifest.lock */,
 				F290A5A0212ACFD600DC5891 /* Sources */,
 				F290A5A1212ACFD600DC5891 /* Frameworks */,
 				F290A5A2212ACFD600DC5891 /* Resources */,
+				5B13906791A6BB508339E19C /* [CP] Embed Pods Frameworks */,
+				A7A2CF4C9D48D7B3B374C870 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,22 +268,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B13906791A6BB508339E19C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78EF29C5945D6E22CE181DD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoCreateModel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7A2CF4C9D48D7B3B374C870 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F290A5A0212ACFD600DC5891 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */,
-				F2749CAA212C3A8D00FB20BF /* NodePressAnimationView.m in Sources */,
-				F2749CA7212C3A1000FB20BF /* NodeModelCell.m in Sources */,
+				F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
 				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
 				F2749C96212BE30D00FB20BF /* BaseViewController.m in Sources */,
-				F2749CAD212C3AF800FB20BF /* NodeModelViewController.m in Sources */,
+				F2729449212D3657008B38E5 /* NodeModelViewController.m in Sources */,
 				F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */,
 				F2749CA1212C121100FB20BF /* NodeModel.m in Sources */,
 				F290A5B7212ACFD600DC5891 /* main.m in Sources */,
+				F2729443212D3567008B38E5 /* UIView+Context.m in Sources */,
 				F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */,
+				F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */,
+				F272944F212D3675008B38E5 /* NodeModelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +468,7 @@
 		};
 		F290A5BB212ACFD600DC5891 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B668B53C49D0476CB1309A3F /* Pods-AutoCreateModel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -359,6 +482,7 @@
 		};
 		F290A5BC212ACFD600DC5891 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D552446CAA2DD869BB5F0E73 /* Pods-AutoCreateModel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

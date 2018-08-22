@@ -1,0 +1,1 @@
+{"items":[{"type":"train","rank_url":"react://com.nd.sdp.component.ele-rank/train?id={class_id}","url_type":1,"status":1},{"type":"exam","rank_url":"react://com.nd.sdp.component.ele-rank/exam?id={exam_id}","url_type":1,"status":1},{"type":"person","rank_url":"react://com.nd.sdp.component.ele-rank/index","url_type":1,"status":1}]}
