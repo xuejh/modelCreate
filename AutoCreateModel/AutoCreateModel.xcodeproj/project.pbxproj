@@ -14,10 +14,11 @@
 		F2729449212D3657008B38E5 /* NodeModelViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729447212D3657008B38E5 /* NodeModelViewController1.m */; };
 		F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F272944A212D3675008B38E5 /* NodePressAnimationView.m */; };
 		F272944F212D3675008B38E5 /* NodeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F272944B212D3675008B38E5 /* NodeModelCell.m */; };
-		F2729452212D3910008B38E5 /* NodeCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729451212D3910008B38E5 /* NodeCellView.m */; };
 		F2729455212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2729454212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png */; };
 		F2729458212D5DDA008B38E5 /* NodeModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729457212D5DDA008B38E5 /* NodeModelViewController.m */; };
 		F272945B212D63DB008B38E5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F272945A212D63DA008B38E5 /* BaseViewController.m */; };
+		F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */; };
+		F2729461212D8AEC008B38E5 /* NodeBaseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729460212D8AEC008B38E5 /* NodeBaseCellView.m */; };
 		F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749C9A212BF89900FB20BF /* JsonManage.m */; };
 		F2749CA1212C121100FB20BF /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA0212C121100FB20BF /* NodeModel.m */; };
 		F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */; };
@@ -45,13 +46,15 @@
 		F272944B212D3675008B38E5 /* NodeModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelCell.m; sourceTree = "<group>"; };
 		F272944C212D3675008B38E5 /* NodePressAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodePressAnimationView.h; sourceTree = "<group>"; };
 		F272944D212D3675008B38E5 /* NodeModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelCell.h; sourceTree = "<group>"; };
-		F2729450212D3910008B38E5 /* NodeCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCellView.h; sourceTree = "<group>"; };
-		F2729451212D3910008B38E5 /* NodeCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeCellView.m; sourceTree = "<group>"; };
 		F2729454212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NodeModelViewControllerBack_next@3x.png"; sourceTree = "<group>"; };
 		F2729456212D5DDA008B38E5 /* NodeModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelViewController.h; sourceTree = "<group>"; };
 		F2729457212D5DDA008B38E5 /* NodeModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelViewController.m; sourceTree = "<group>"; };
 		F2729459212D63DA008B38E5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		F272945A212D63DA008B38E5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		F272945C212D83FE008B38E5 /* UIColor+ColorChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorChange.h"; sourceTree = "<group>"; };
+		F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorChange.m"; sourceTree = "<group>"; };
+		F272945F212D8AEC008B38E5 /* NodeBaseCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBaseCellView.h; sourceTree = "<group>"; };
+		F2729460212D8AEC008B38E5 /* NodeBaseCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseCellView.m; sourceTree = "<group>"; };
 		F2749C99212BF89900FB20BF /* JsonManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonManage.h; sourceTree = "<group>"; };
 		F2749C9A212BF89900FB20BF /* JsonManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsonManage.m; sourceTree = "<group>"; };
 		F2749C9C212C03B800FB20BF /* AutoModelPCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoModelPCH.h; sourceTree = "<group>"; };
@@ -120,8 +123,8 @@
 				F272944B212D3675008B38E5 /* NodeModelCell.m */,
 				F272944C212D3675008B38E5 /* NodePressAnimationView.h */,
 				F272944A212D3675008B38E5 /* NodePressAnimationView.m */,
-				F2729450212D3910008B38E5 /* NodeCellView.h */,
-				F2729451212D3910008B38E5 /* NodeCellView.m */,
+				F272945F212D8AEC008B38E5 /* NodeBaseCellView.h */,
+				F2729460212D8AEC008B38E5 /* NodeBaseCellView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +182,8 @@
 				F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */,
 				F2749CAE212C3B5C00FB20BF /* NodeModelStrings.h */,
 				F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */,
+				F272945C212D83FE008B38E5 /* UIColor+ColorChange.h */,
+				F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -346,19 +351,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2729452212D3910008B38E5 /* NodeCellView.m in Sources */,
 				F272945B212D63DB008B38E5 /* BaseViewController.m in Sources */,
 				F2729458212D5DDA008B38E5 /* NodeModelViewController.m in Sources */,
 				F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */,
 				F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
 				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
+				F2729461212D8AEC008B38E5 /* NodeBaseCellView.m in Sources */,
 				F2729449212D3657008B38E5 /* NodeModelViewController1.m in Sources */,
 				F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */,
 				F2749CA1212C121100FB20BF /* NodeModel.m in Sources */,
 				F290A5B7212ACFD600DC5891 /* main.m in Sources */,
 				F2729443212D3567008B38E5 /* UIView+Context.m in Sources */,
 				F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */,
+				F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */,
 				F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */,
 				F272944F212D3675008B38E5 /* NodeModelCell.m in Sources */,
 			);

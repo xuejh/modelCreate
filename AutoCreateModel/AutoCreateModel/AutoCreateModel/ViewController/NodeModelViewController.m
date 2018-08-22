@@ -8,6 +8,7 @@
 
 #import "NodeModelViewController.h"
 #import <KVOController/FBKVOController.h>
+#import "AutoModelPCH.h"
 
 @interface NodeModelViewController ()<UITableViewDelegate,
 UITableViewDataSource>
@@ -37,8 +38,8 @@ UITableViewDataSource>
     if (self.nodeModel.level == 0) {
         UIButton *createButton       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
         [createButton setTitle:@"生成Model" forState:UIControlStateNormal];
-        [createButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [createButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+        [createButton setTitleColor:COLOR_3 forState:UIControlStateNormal];
+        [createButton setTitleColor:COLOR_6 forState:UIControlStateHighlighted];
         [createButton addTarget:self action:@selector(createModelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:createButton];
     }

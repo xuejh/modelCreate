@@ -11,3 +11,7 @@
 #import "NodeModel.h"
 #import "NodeModelViewController1.h"
 #import "NodeModelViewController.h"
+#import "UIColor+ColorChange.h"
+
+#define COLOR_3  [UIColor colorWithHexString:@"0x0090ff"]
+#define COLOR_6  [UIColor colorWithHexString:@"0xff6e00"]
