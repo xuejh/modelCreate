@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1578" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--测试页面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSW-94-nJl">
-                                <rect key="frame" x="267" y="466" width="81" height="30"/>
+                                <rect key="frame" x="28" y="525" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="创建Model"/>
                                 <connections>
@@ -55,11 +55,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmt-os-n3c">
+                                <rect key="frame" x="228" y="469" width="97" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="创建Model"/>
+                                <connections>
+                                    <action selector="modelBtnTouchup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ff2-Su-1qh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2fa-Yw-JRT"/>
+                    <navigationItem key="navigationItem" title="测试页面" id="2fa-Yw-JRT"/>
                     <connections>
                         <outlet property="textField" destination="kMa-YB-jrM" id="WRg-SL-r1e"/>
                         <outlet property="textView" destination="6ee-Mj-LO6" id="uqN-7U-FDW"/>

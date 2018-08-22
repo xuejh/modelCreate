@@ -9,4 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "JsonManage.h"
 #import "NodeModel.h"
+#import "NodeModelViewController1.h"
 #import "NodeModelViewController.h"

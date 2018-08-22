@@ -11,12 +11,13 @@
 		F272943C212D2F0A008B38E5 /* NodeModelStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F272943B212D2F09008B38E5 /* NodeModelStrings.plist */; };
 		F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = F272943F212D34E4008B38E5 /* UIResponder+Router.m */; };
 		F2729443212D3567008B38E5 /* UIView+Context.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729442212D3567008B38E5 /* UIView+Context.m */; };
-		F2729449212D3657008B38E5 /* NodeModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729447212D3657008B38E5 /* NodeModelViewController.m */; };
+		F2729449212D3657008B38E5 /* NodeModelViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729447212D3657008B38E5 /* NodeModelViewController1.m */; };
 		F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F272944A212D3675008B38E5 /* NodePressAnimationView.m */; };
 		F272944F212D3675008B38E5 /* NodeModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F272944B212D3675008B38E5 /* NodeModelCell.m */; };
 		F2729452212D3910008B38E5 /* NodeCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729451212D3910008B38E5 /* NodeCellView.m */; };
 		F2729455212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2729454212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png */; };
-		F2749C96212BE30D00FB20BF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749C95212BE30D00FB20BF /* BaseViewController.m */; };
+		F2729458212D5DDA008B38E5 /* NodeModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729457212D5DDA008B38E5 /* NodeModelViewController.m */; };
+		F272945B212D63DB008B38E5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F272945A212D63DA008B38E5 /* BaseViewController.m */; };
 		F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749C9A212BF89900FB20BF /* JsonManage.m */; };
 		F2749CA1212C121100FB20BF /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA0212C121100FB20BF /* NodeModel.m */; };
 		F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */; };
@@ -38,8 +39,8 @@
 		F272943F212D34E4008B38E5 /* UIResponder+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
 		F2729441212D3567008B38E5 /* UIView+Context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Context.h"; sourceTree = "<group>"; };
 		F2729442212D3567008B38E5 /* UIView+Context.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Context.m"; sourceTree = "<group>"; };
-		F2729447212D3657008B38E5 /* NodeModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelViewController.m; sourceTree = "<group>"; };
-		F2729448212D3657008B38E5 /* NodeModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelViewController.h; sourceTree = "<group>"; };
+		F2729447212D3657008B38E5 /* NodeModelViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelViewController1.m; sourceTree = "<group>"; };
+		F2729448212D3657008B38E5 /* NodeModelViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelViewController1.h; sourceTree = "<group>"; };
 		F272944A212D3675008B38E5 /* NodePressAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodePressAnimationView.m; sourceTree = "<group>"; };
 		F272944B212D3675008B38E5 /* NodeModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelCell.m; sourceTree = "<group>"; };
 		F272944C212D3675008B38E5 /* NodePressAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodePressAnimationView.h; sourceTree = "<group>"; };
@@ -47,8 +48,10 @@
 		F2729450212D3910008B38E5 /* NodeCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCellView.h; sourceTree = "<group>"; };
 		F2729451212D3910008B38E5 /* NodeCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeCellView.m; sourceTree = "<group>"; };
 		F2729454212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NodeModelViewControllerBack_next@3x.png"; sourceTree = "<group>"; };
-		F2749C94212BE30D00FB20BF /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		F2749C95212BE30D00FB20BF /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		F2729456212D5DDA008B38E5 /* NodeModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelViewController.h; sourceTree = "<group>"; };
+		F2729457212D5DDA008B38E5 /* NodeModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelViewController.m; sourceTree = "<group>"; };
+		F2729459212D63DA008B38E5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		F272945A212D63DA008B38E5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		F2749C99212BF89900FB20BF /* JsonManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonManage.h; sourceTree = "<group>"; };
 		F2749C9A212BF89900FB20BF /* JsonManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsonManage.m; sourceTree = "<group>"; };
 		F2749C9C212C03B800FB20BF /* AutoModelPCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoModelPCH.h; sourceTree = "<group>"; };
@@ -126,8 +129,12 @@
 		F2729445212D3631008B38E5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F2729448212D3657008B38E5 /* NodeModelViewController.h */,
-				F2729447212D3657008B38E5 /* NodeModelViewController.m */,
+				F2729459212D63DA008B38E5 /* BaseViewController.h */,
+				F272945A212D63DA008B38E5 /* BaseViewController.m */,
+				F2729448212D3657008B38E5 /* NodeModelViewController1.h */,
+				F2729447212D3657008B38E5 /* NodeModelViewController1.m */,
+				F2729456212D5DDA008B38E5 /* NodeModelViewController.h */,
+				F2729457212D5DDA008B38E5 /* NodeModelViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -208,8 +215,6 @@
 				F290A5B2212ACFD600DC5891 /* LaunchScreen.storyboard */,
 				F290A5B5212ACFD600DC5891 /* Info.plist */,
 				F290A5B6212ACFD600DC5891 /* main.m */,
-				F2749C94212BE30D00FB20BF /* BaseViewController.h */,
-				F2749C95212BE30D00FB20BF /* BaseViewController.m */,
 			);
 			path = AutoCreateModel;
 			sourceTree = "<group>";
@@ -342,12 +347,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2729452212D3910008B38E5 /* NodeCellView.m in Sources */,
+				F272945B212D63DB008B38E5 /* BaseViewController.m in Sources */,
+				F2729458212D5DDA008B38E5 /* NodeModelViewController.m in Sources */,
 				F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */,
 				F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
 				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
-				F2749C96212BE30D00FB20BF /* BaseViewController.m in Sources */,
-				F2729449212D3657008B38E5 /* NodeModelViewController.m in Sources */,
+				F2729449212D3657008B38E5 /* NodeModelViewController1.m in Sources */,
 				F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */,
 				F2749CA1212C121100FB20BF /* NodeModel.m in Sources */,
 				F290A5B7212ACFD600DC5891 /* main.m in Sources */,

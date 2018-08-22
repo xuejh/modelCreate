@@ -8,9 +8,7 @@
 
 #import "BaseViewController.h"
 
-#ifndef IOS7_OR_LATER_HYEL
-#define IOS7_OR_LATER_HYEL        ([[UIDevice currentDevice] systemVersion].integerValue >= 7)
-#endif
+
 
 @interface BaseViewController ()
 
@@ -24,12 +22,6 @@
     self = [super init];
     if (self) {
         
-        if (IOS7_OR_LATER_HYEL)
-        {
-            self.extendedLayoutIncludesOpaqueBars = NO;
-        }
-        self.hidesBottomBarWhenPushed = YES;
-        
     }
     return self;
 }
@@ -39,10 +31,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    if (IOS7_OR_LATER_HYEL)
-    {
-        self.edgesForExtendedLayout = UIRectEdgeBottom;
-    }
     
 }
 

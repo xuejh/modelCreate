@@ -10,7 +10,7 @@
 
 #import "PropertyInfomation.h"
 #import "NodeModel.h"
-#import "NodeModelViewController.h"
+#import "NodeModelViewController1.h"
 #import "NodePressAnimationView.h"
 
 #define  Width   [UIScreen mainScreen].bounds.size.width
@@ -193,7 +193,7 @@
     
     if (property.propertyType == kNSArray || property.propertyType == kNSDictionary) {
         
-        NodeModelViewController *nodeViewController = [[NodeModelViewController alloc] init];
+        NodeModelViewController1 *nodeViewController = [[NodeModelViewController1 alloc] init];
         nodeViewController.nodeModel                = property.propertyValue;
         [self.viewController.navigationController pushViewController:nodeViewController
                                                             animated:YES];
