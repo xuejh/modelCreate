@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "AutoModelPCH.h"
-
+#import "CommonData.h"
 
 
 @interface ViewController ()
@@ -41,7 +41,7 @@
     NSDictionary *dic = [JsonManage jsonStringToDic:self.textView.text];
     NodeModelViewController *nodeVC = [[NodeModelViewController alloc]init];
     NodeModel *nodeModel = [NodeModel nodeModelWithDictionary:dic modelName:self.textField.text level:0];
-    nodeVC.viewModel.nodeModel = nodeModel;
+    [CommonData shareInstance].nodeModel = nodeModel;
     [self.navigationController pushViewController:nodeVC animated:YES];
     
 }

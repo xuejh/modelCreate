@@ -32,6 +32,8 @@
 		F27B333A212EA69E00124931 /* NodeTopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3339212EA69E00124931 /* NodeTopBaseView.m */; };
 		F27B333D212EA6B300124931 /* NodeBottomBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B333C212EA6B300124931 /* NodeBottomBaseView.m */; };
 		F27B3340212ED48600124931 /* NodeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B333F212ED48600124931 /* NodeContext.m */; };
+		F27B3343212EDD6000124931 /* NodeModelTableViewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3342212EDD6000124931 /* NodeModelTableViewCoordinator.m */; };
+		F27B3346212EDE1A00124931 /* CommonData.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3345212EDE1A00124931 /* CommonData.m */; };
 		F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5A8212ACFD600DC5891 /* AppDelegate.m */; };
 		F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5AB212ACFD600DC5891 /* ViewController.m */; };
 		F290A5AF212ACFD600DC5891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F290A5AD212ACFD600DC5891 /* Main.storyboard */; };
@@ -91,6 +93,10 @@
 		F27B333C212EA6B300124931 /* NodeBottomBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBottomBaseView.m; sourceTree = "<group>"; };
 		F27B333E212ED48600124931 /* NodeContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeContext.h; sourceTree = "<group>"; };
 		F27B333F212ED48600124931 /* NodeContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeContext.m; sourceTree = "<group>"; };
+		F27B3341212EDD6000124931 /* NodeModelTableViewCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelTableViewCoordinator.h; sourceTree = "<group>"; };
+		F27B3342212EDD6000124931 /* NodeModelTableViewCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelTableViewCoordinator.m; sourceTree = "<group>"; };
+		F27B3344212EDE1A00124931 /* CommonData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonData.h; sourceTree = "<group>"; };
+		F27B3345212EDE1A00124931 /* CommonData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonData.m; sourceTree = "<group>"; };
 		F290A5A4212ACFD600DC5891 /* AutoCreateModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCreateModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F290A5A7212ACFD600DC5891 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F290A5A8212ACFD600DC5891 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 				F2729457212D5DDA008B38E5 /* NodeModelViewController.m */,
 				F27B333E212ED48600124931 /* NodeContext.h */,
 				F27B333F212ED48600124931 /* NodeContext.m */,
+				F27B3341212EDD6000124931 /* NodeModelTableViewCoordinator.h */,
+				F27B3342212EDD6000124931 /* NodeModelTableViewCoordinator.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -229,6 +237,8 @@
 				F27B332A212E5C8A00124931 /* CommonFont.m */,
 				F27B3335212E945300124931 /* EnumManage.h */,
 				F27B3336212E945300124931 /* EnumManage.m */,
+				F27B3344212EDE1A00124931 /* CommonData.h */,
+				F27B3345212EDE1A00124931 /* CommonData.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -404,6 +414,7 @@
 				F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
 				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
+				F27B3346212EDE1A00124931 /* CommonData.m in Sources */,
 				F27B3340212ED48600124931 /* NodeContext.m in Sources */,
 				F27B333D212EA6B300124931 /* NodeBottomBaseView.m in Sources */,
 				F2729461212D8AEC008B38E5 /* NodeBaseCellView.m in Sources */,
@@ -418,6 +429,7 @@
 				F27B3328212E5A8F00124931 /* CommonFactory.m in Sources */,
 				F2729443212D3567008B38E5 /* UIView+Context.m in Sources */,
 				F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */,
+				F27B3343212EDD6000124931 /* NodeModelTableViewCoordinator.m in Sources */,
 				F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */,
 				F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */,
 				F272944F212D3675008B38E5 /* NodeModelCell.m in Sources */,

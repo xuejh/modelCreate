@@ -9,9 +9,10 @@
 #import "BaseViewController.h"
 #import "NodeModel.h"
 #import "NodeBaseViewModel.h"
+#import "CommonData.h"
 
 @interface NodeModelViewController : BaseViewController
 
-@property (nonatomic, strong) NodeBaseViewModel *viewModel;
+
 
 @end

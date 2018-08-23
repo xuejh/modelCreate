@@ -9,6 +9,7 @@
 #import "NodeBaseViewModel.h"
 #import "NodeBaseCellViewModel.h"
 #import "PropertyInfomation.h"
+#import "CommonData.h"
 
 @interface NodeBaseViewModel ()
 @property (nonatomic, strong) NSArray *cellViewModelList;
@@ -18,7 +19,7 @@
 
 - (void)fetchData {
     
-    NSArray<PropertyInfomation *> *array =  self.nodeModel.properties;
+    NSArray<PropertyInfomation *> *array =  [CommonData shareInstance].nodeModel.properties;
     self.cellViewModelList = [self convertToCellViewModels:array];
 }
 
