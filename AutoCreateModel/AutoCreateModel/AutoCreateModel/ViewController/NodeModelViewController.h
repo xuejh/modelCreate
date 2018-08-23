@@ -8,9 +8,10 @@
 
 #import "BaseViewController.h"
 #import "NodeModel.h"
+#import "NodeBaseViewModel.h"
 
 @interface NodeModelViewController : BaseViewController
 
-@property (nonatomic, strong) NodeModel *nodeModel;
+@property (nonatomic, strong) NodeBaseViewModel *viewModel;
 
 @end

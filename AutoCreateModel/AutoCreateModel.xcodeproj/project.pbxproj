@@ -23,6 +23,11 @@
 		F2749CA1212C121100FB20BF /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA0212C121100FB20BF /* NodeModel.m */; };
 		F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */; };
 		F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */; };
+		F27B3328212E5A8F00124931 /* CommonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3327212E5A8F00124931 /* CommonFactory.m */; };
+		F27B332B212E5C8A00124931 /* CommonFont.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B332A212E5C8A00124931 /* CommonFont.m */; };
+		F27B332E212E60D500124931 /* NodeBaseCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B332D212E60D500124931 /* NodeBaseCellViewModel.m */; };
+		F27B3331212E611C00124931 /* NodeBaseCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */; };
+		F27B3334212E81EB00124931 /* NodeBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3333212E81EB00124931 /* NodeBaseViewModel.m */; };
 		F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5A8212ACFD600DC5891 /* AppDelegate.m */; };
 		F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5AB212ACFD600DC5891 /* ViewController.m */; };
 		F290A5AF212ACFD600DC5891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F290A5AD212ACFD600DC5891 /* Main.storyboard */; };
@@ -64,6 +69,16 @@
 		F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyInfomation.m; sourceTree = "<group>"; };
 		F2749CAE212C3B5C00FB20BF /* NodeModelStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelStrings.h; sourceTree = "<group>"; };
 		F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelStrings.m; sourceTree = "<group>"; };
+		F27B3326212E5A8F00124931 /* CommonFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFactory.h; sourceTree = "<group>"; };
+		F27B3327212E5A8F00124931 /* CommonFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFactory.m; sourceTree = "<group>"; };
+		F27B3329212E5C8A00124931 /* CommonFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFont.h; sourceTree = "<group>"; };
+		F27B332A212E5C8A00124931 /* CommonFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFont.m; sourceTree = "<group>"; };
+		F27B332C212E60D500124931 /* NodeBaseCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBaseCellViewModel.h; sourceTree = "<group>"; };
+		F27B332D212E60D500124931 /* NodeBaseCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseCellViewModel.m; sourceTree = "<group>"; };
+		F27B332F212E611C00124931 /* NodeBaseCellCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBaseCellCoordinator.h; sourceTree = "<group>"; };
+		F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseCellCoordinator.m; sourceTree = "<group>"; };
+		F27B3332212E81EB00124931 /* NodeBaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBaseViewModel.h; sourceTree = "<group>"; };
+		F27B3333212E81EB00124931 /* NodeBaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseViewModel.m; sourceTree = "<group>"; };
 		F290A5A4212ACFD600DC5891 /* AutoCreateModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCreateModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F290A5A7212ACFD600DC5891 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F290A5A8212ACFD600DC5891 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -125,6 +140,12 @@
 				F272944A212D3675008B38E5 /* NodePressAnimationView.m */,
 				F272945F212D8AEC008B38E5 /* NodeBaseCellView.h */,
 				F2729460212D8AEC008B38E5 /* NodeBaseCellView.m */,
+				F27B332C212E60D500124931 /* NodeBaseCellViewModel.h */,
+				F27B332D212E60D500124931 /* NodeBaseCellViewModel.m */,
+				F27B332F212E611C00124931 /* NodeBaseCellCoordinator.h */,
+				F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */,
+				F27B3332212E81EB00124931 /* NodeBaseViewModel.h */,
+				F27B3333212E81EB00124931 /* NodeBaseViewModel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +205,10 @@
 				F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */,
 				F272945C212D83FE008B38E5 /* UIColor+ColorChange.h */,
 				F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */,
+				F27B3326212E5A8F00124931 /* CommonFactory.h */,
+				F27B3327212E5A8F00124931 /* CommonFactory.m */,
+				F27B3329212E5C8A00124931 /* CommonFont.h */,
+				F27B332A212E5C8A00124931 /* CommonFont.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -352,16 +377,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F272945B212D63DB008B38E5 /* BaseViewController.m in Sources */,
+				F27B3331212E611C00124931 /* NodeBaseCellCoordinator.m in Sources */,
 				F2729458212D5DDA008B38E5 /* NodeModelViewController.m in Sources */,
 				F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */,
 				F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
 				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
 				F2729461212D8AEC008B38E5 /* NodeBaseCellView.m in Sources */,
+				F27B332B212E5C8A00124931 /* CommonFont.m in Sources */,
 				F2729449212D3657008B38E5 /* NodeModelViewController1.m in Sources */,
+				F27B3334212E81EB00124931 /* NodeBaseViewModel.m in Sources */,
+				F27B332E212E60D500124931 /* NodeBaseCellViewModel.m in Sources */,
 				F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */,
 				F2749CA1212C121100FB20BF /* NodeModel.m in Sources */,
 				F290A5B7212ACFD600DC5891 /* main.m in Sources */,
+				F27B3328212E5A8F00124931 /* CommonFactory.m in Sources */,
 				F2729443212D3567008B38E5 /* UIView+Context.m in Sources */,
 				F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */,
 				F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */,

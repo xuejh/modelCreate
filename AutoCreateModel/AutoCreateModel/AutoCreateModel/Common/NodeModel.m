@@ -7,6 +7,7 @@
 //
 
 #import "NodeModel.h"
+#import "AutoModelPCH.h"
 
 static NSPointerArray   *_pointerArray;
 

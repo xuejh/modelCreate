@@ -41,7 +41,7 @@
     NSDictionary *dic = [JsonManage jsonStringToDic:self.textView.text];
     NodeModelViewController *nodeVC = [[NodeModelViewController alloc]init];
     NodeModel *nodeModel = [NodeModel nodeModelWithDictionary:dic modelName:self.textField.text level:0];
-    nodeVC.nodeModel = nodeModel;
+    nodeVC.viewModel.nodeModel = nodeModel;
     [self.navigationController pushViewController:nodeVC animated:YES];
     
 }

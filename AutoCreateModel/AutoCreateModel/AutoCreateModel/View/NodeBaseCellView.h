@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AutoModelPCH.h"
 
 @protocol NodeBaseCellViewDelegate <NSObject>
 @optional
@@ -17,8 +17,8 @@
 
 @interface NodeBaseCellView : UITableViewCell
 
-@property(nonatomic, strong) NSString *propertyType;
-@property(nonatomic, strong) NSString *property;
+@property(nonatomic, assign) PropertyType propertyType;
+@property(nonatomic, weak) id propertyValue;
 @property(nonatomic, weak) id<NodeBaseCellViewDelegate> delegate;
 
 @end

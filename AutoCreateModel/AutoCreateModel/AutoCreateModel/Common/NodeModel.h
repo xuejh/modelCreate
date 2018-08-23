@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PropertyInfomation.h"
+
+@class PropertyInfomation;
 
 static NSString *stringType = @"NSString";
 static NSString *numberType = @"NSNumber";

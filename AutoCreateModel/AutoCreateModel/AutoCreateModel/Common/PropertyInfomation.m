@@ -7,6 +7,7 @@
 //
 
 #import "PropertyInfomation.h"
+#import "AutoModelPCH.h"
 
 @implementation PropertyInfomation
 

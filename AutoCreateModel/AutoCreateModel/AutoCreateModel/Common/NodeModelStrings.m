@@ -7,6 +7,8 @@
 //
 
 #import "NodeModelStrings.h"
+#import "AutoModelPCH.h"
+#import "PropertyInfomation.h"
 
 @interface NodeModelStrings ()
 

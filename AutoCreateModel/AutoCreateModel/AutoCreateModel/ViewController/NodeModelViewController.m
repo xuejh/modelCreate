@@ -9,11 +9,17 @@
 #import "NodeModelViewController.h"
 #import <KVOController/FBKVOController.h>
 #import "AutoModelPCH.h"
+#import "NodeBaseCellView.h"
+#import "NodeBaseCellViewModel.h"
+#import "NodeBaseCellCoordinator.h"
+#import <KVOController/FBKVOController.h>
 
 @interface NodeModelViewController ()<UITableViewDelegate,
 UITableViewDataSource>
 
 @property(nonatomic, strong) UITableView *tableView;
+@property(nonatomic, strong) NSMutableDictionary *coordinatorDic; //用于保存cell协调器，用于和cell一一对应
+@property(nonatomic, strong) FBKVOController *kvoController;
 
 @end
 
@@ -26,16 +32,17 @@ UITableViewDataSource>
     [self setup];
     
     [self addSubView];
-    
+    [self bindData];
+    [self fetchData];
 }
 
 - (void)setup {
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = self.nodeModel.modelName;
+    self.title = self.viewModel.nodeModel.modelName;
     
-    if (self.nodeModel.level == 0) {
+    if (self.viewModel.nodeModel.level == 0) {
         UIButton *createButton       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
         [createButton setTitle:@"生成Model" forState:UIControlStateNormal];
         [createButton setTitleColor:COLOR_3 forState:UIControlStateNormal];
@@ -52,29 +59,45 @@ UITableViewDataSource>
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
     [self.view addSubview:self.tableView];
 }
 
+- (void)bindData {
+    [_kvoController unobserveAll];
+    __weak typeof (self) wearkSelf = self;
+    [self.kvoController observe:self.viewModel keyPath:@"cellViewModelList" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial block:^(id observer, id object, NSDictionary *change) {
+        
+        [wearkSelf.tableView reloadData];
+    }];
+}
+
+- (void)fetchData {
+    [self.viewModel fetchData];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return [self.viewModel.cellViewModelList count];;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 50;
+    NodeBaseCellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
+    return [cellViewModel cellHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSString *identifier = @"ChatPlainTextCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    id cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
+    NSString *identifier = @"identifier";
+    NodeBaseCellView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[NodeBaseCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    NodeBaseCellCoordinator *cellCoordinator = [self getCoordinatorWithCell:cell];
+    [cellCoordinator bindData:cellViewModel];
     return cell;
 }
 
@@ -86,4 +109,38 @@ UITableViewDataSource>
 - (void)createModelBtnClick:(UIButton *)button {
     
 }
+
+
+- (NodeBaseCellCoordinator *)getCoordinatorWithCell:(NodeBaseCellView *)cell {
+    NSNumber *cellAddress = @((UInt64)cell);
+    NodeBaseCellCoordinator *cellCoordinator = [self.coordinatorDic objectForKey:cellAddress];
+    if (!cellCoordinator) {
+        cellCoordinator = [[NodeBaseCellCoordinator alloc] initWithCellView:cell];
+        [self.coordinatorDic setObject:cellCoordinator forKey:cellAddress];
+    }
+    return cellCoordinator;
+}
+
+- (FBKVOController *)kvoController {
+    if (!_kvoController) {
+        _kvoController = [[FBKVOController alloc] initWithObserver:self retainObserved:YES];
+    }
+    
+    return _kvoController;
+}
+
+- (NSMutableDictionary *)coordinatorDic {
+    if (!_coordinatorDic) {
+        _coordinatorDic = [NSMutableDictionary dictionary];
+    }
+    return _coordinatorDic;
+}
+
+- (NodeBaseViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[NodeBaseViewModel alloc] init];
+    }
+    return _viewModel;
+}
+
 @end

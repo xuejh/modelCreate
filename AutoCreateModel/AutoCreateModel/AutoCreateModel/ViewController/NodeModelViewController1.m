@@ -9,9 +9,8 @@
 #import "NodeModelViewController1.h"
 #import "NodeModelCell.h"
 #import "NodeModelStrings.h"
+#import "AutoModelPCH.h"
 
-#define  Width   [UIScreen mainScreen].bounds.size.width
-#define  Height  [UIScreen mainScreen].bounds.size.height
 
 typedef enum : NSUInteger {
     

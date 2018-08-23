@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 typedef enum : NSInteger{
     
     kNSString,
@@ -17,7 +18,6 @@ typedef enum : NSInteger{
     kNSArray,
     
 } PropertyType;
-
 
 @interface PropertyInfomation : NSObject
 
