@@ -28,6 +28,7 @@
 		F27B332E212E60D500124931 /* NodeBaseCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B332D212E60D500124931 /* NodeBaseCellViewModel.m */; };
 		F27B3331212E611C00124931 /* NodeBaseCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */; };
 		F27B3334212E81EB00124931 /* NodeBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3333212E81EB00124931 /* NodeBaseViewModel.m */; };
+		F27B3337212E945300124931 /* EnumManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3336212E945300124931 /* EnumManage.m */; };
 		F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5A8212ACFD600DC5891 /* AppDelegate.m */; };
 		F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5AB212ACFD600DC5891 /* ViewController.m */; };
 		F290A5AF212ACFD600DC5891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F290A5AD212ACFD600DC5891 /* Main.storyboard */; };
@@ -79,6 +80,8 @@
 		F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseCellCoordinator.m; sourceTree = "<group>"; };
 		F27B3332212E81EB00124931 /* NodeBaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBaseViewModel.h; sourceTree = "<group>"; };
 		F27B3333212E81EB00124931 /* NodeBaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseViewModel.m; sourceTree = "<group>"; };
+		F27B3335212E945300124931 /* EnumManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumManage.h; sourceTree = "<group>"; };
+		F27B3336212E945300124931 /* EnumManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumManage.m; sourceTree = "<group>"; };
 		F290A5A4212ACFD600DC5891 /* AutoCreateModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCreateModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F290A5A7212ACFD600DC5891 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F290A5A8212ACFD600DC5891 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				F27B3327212E5A8F00124931 /* CommonFactory.m */,
 				F27B3329212E5C8A00124931 /* CommonFont.h */,
 				F27B332A212E5C8A00124931 /* CommonFont.m */,
+				F27B3335212E945300124931 /* EnumManage.h */,
+				F27B3336212E945300124931 /* EnumManage.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				F27B3334212E81EB00124931 /* NodeBaseViewModel.m in Sources */,
 				F27B332E212E60D500124931 /* NodeBaseCellViewModel.m in Sources */,
 				F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */,
+				F27B3337212E945300124931 /* EnumManage.m in Sources */,
 				F2749CA1212C121100FB20BF /* NodeModel.m in Sources */,
 				F290A5B7212ACFD600DC5891 /* main.m in Sources */,
 				F27B3328212E5A8F00124931 /* CommonFactory.m in Sources */,

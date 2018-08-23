@@ -21,13 +21,17 @@
 }
 + (UIButton*)createPropertyTypeButton{
     
-    return  [CommonFactory createCommonButton];
+    UIButton * button =  [CommonFactory createCommonButton];
+    [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    return  button;
     
 }
 + (UIButton*)createPropertyButton{
     
     UIButton * button =  [CommonFactory createCommonButton];
     [button setTitleColor:COLOR_4 forState:UIControlStateNormal];
+    [button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
+    button.titleLabel.textAlignment = NSTextAlignmentRight;
     return button;
 }
 

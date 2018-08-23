@@ -8,16 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "EnumManage.h"
 
-typedef enum : NSInteger{
-    
-    kNSString,
-    kNSNumber,
-    kNull,
-    kNSDictionary,
-    kNSArray,
-    
-} PropertyType;
 
 @interface PropertyInfomation : NSObject
 

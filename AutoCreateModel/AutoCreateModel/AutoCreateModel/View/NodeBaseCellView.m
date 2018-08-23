@@ -31,22 +31,18 @@
 - (void)initSubViews {
     
     self.propertyTypeButton = [CommonFactory createPropertyTypeButton];
-    
-    self.propertyTypeButton.frame = CGRectMake(0, 0, 100, 44);
+    self.propertyTypeButton.frame = CGRectMake(15, 0, 100, 44);
     [self addSubview:self.propertyTypeButton];
     
     self.propertyButton = [CommonFactory createPropertyButton];
-    
-    [self.propertyButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
-    self.propertyButton.frame = CGRectMake(Width - 170, 0, 150, 44);
-    self.propertyButton.titleLabel.textAlignment = NSTextAlignmentRight;
+    self.propertyButton.frame = CGRectMake(Width - 165, 0, 150, 44);
     [self addSubview:self.propertyButton];
 }
 
 - (void)setPropertyType:(PropertyType)propertyType{
     
     
-    [self.propertyTypeButton setTitle:@"1" forState:UIControlStateNormal];
+    [self.propertyTypeButton setTitle:KPropertyTypeString(propertyType) forState:UIControlStateNormal];
 }
 
 - (void)setPropertyValue:(id)propertyValue{
