@@ -9,10 +9,10 @@
 #import "NodeBaseCellView.h"
 #import "AutoModelPCH.h"
 
+
 @interface NodeBaseCellView()
 
-@property (nonatomic, strong) UIButton *propertyTypeButton;
-@property (nonatomic, strong) UIButton *propertyButton;
+@property (nonatomic,strong)NodeTopBaseView *view;
 
 @end
 
@@ -28,30 +28,25 @@
     return self;
 }
 
+
 - (void)initSubViews {
     
-    self.propertyTypeButton = [CommonFactory createPropertyTypeButton];
-    self.propertyTypeButton.frame = CGRectMake(15, 0, 100, 44);
-    [self addSubview:self.propertyTypeButton];
-    
-    self.propertyButton = [CommonFactory createPropertyButton];
-    self.propertyButton.frame = CGRectMake(Width - 165, 0, 150, 44);
-    [self addSubview:self.propertyButton];
+    self.view = [NodeTopBaseView createSelf];
+    [self addSubview:self.view];
 }
+
 
 - (void)setPropertyType:(PropertyType)propertyType{
     
+    self.view.propertyType = propertyType;
     
-    [self.propertyTypeButton setTitle:KPropertyTypeString(propertyType) forState:UIControlStateNormal];
 }
 
 - (void)setPropertyValue:(id)propertyValue{
     
-    if (self.propertyType == kNSDictionary || self.propertyType == kNSArray) {
-        
-        return;
-    }
-    
-    [self.propertyButton setTitle:@"2" forState:UIControlStateNormal];
+    self.view.propertyValue = propertyValue;
 }
+
+
+
 @end

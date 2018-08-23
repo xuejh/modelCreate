@@ -29,6 +29,9 @@
 		F27B3331212E611C00124931 /* NodeBaseCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */; };
 		F27B3334212E81EB00124931 /* NodeBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3333212E81EB00124931 /* NodeBaseViewModel.m */; };
 		F27B3337212E945300124931 /* EnumManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3336212E945300124931 /* EnumManage.m */; };
+		F27B333A212EA69E00124931 /* NodeTopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3339212EA69E00124931 /* NodeTopBaseView.m */; };
+		F27B333D212EA6B300124931 /* NodeBottomBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B333C212EA6B300124931 /* NodeBottomBaseView.m */; };
+		F27B3340212ED48600124931 /* NodeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B333F212ED48600124931 /* NodeContext.m */; };
 		F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5A8212ACFD600DC5891 /* AppDelegate.m */; };
 		F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5AB212ACFD600DC5891 /* ViewController.m */; };
 		F290A5AF212ACFD600DC5891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F290A5AD212ACFD600DC5891 /* Main.storyboard */; };
@@ -82,6 +85,12 @@
 		F27B3333212E81EB00124931 /* NodeBaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseViewModel.m; sourceTree = "<group>"; };
 		F27B3335212E945300124931 /* EnumManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumManage.h; sourceTree = "<group>"; };
 		F27B3336212E945300124931 /* EnumManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumManage.m; sourceTree = "<group>"; };
+		F27B3338212EA69E00124931 /* NodeTopBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeTopBaseView.h; sourceTree = "<group>"; };
+		F27B3339212EA69E00124931 /* NodeTopBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeTopBaseView.m; sourceTree = "<group>"; };
+		F27B333B212EA6B300124931 /* NodeBottomBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBottomBaseView.h; sourceTree = "<group>"; };
+		F27B333C212EA6B300124931 /* NodeBottomBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBottomBaseView.m; sourceTree = "<group>"; };
+		F27B333E212ED48600124931 /* NodeContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeContext.h; sourceTree = "<group>"; };
+		F27B333F212ED48600124931 /* NodeContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeContext.m; sourceTree = "<group>"; };
 		F290A5A4212ACFD600DC5891 /* AutoCreateModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCreateModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F290A5A7212ACFD600DC5891 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F290A5A8212ACFD600DC5891 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,6 +158,10 @@
 				F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */,
 				F27B3332212E81EB00124931 /* NodeBaseViewModel.h */,
 				F27B3333212E81EB00124931 /* NodeBaseViewModel.m */,
+				F27B3338212EA69E00124931 /* NodeTopBaseView.h */,
+				F27B3339212EA69E00124931 /* NodeTopBaseView.m */,
+				F27B333B212EA6B300124931 /* NodeBottomBaseView.h */,
+				F27B333C212EA6B300124931 /* NodeBottomBaseView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +175,8 @@
 				F2729447212D3657008B38E5 /* NodeModelViewController1.m */,
 				F2729456212D5DDA008B38E5 /* NodeModelViewController.h */,
 				F2729457212D5DDA008B38E5 /* NodeModelViewController.m */,
+				F27B333E212ED48600124931 /* NodeContext.h */,
+				F27B333F212ED48600124931 /* NodeContext.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -385,9 +400,12 @@
 				F27B3331212E611C00124931 /* NodeBaseCellCoordinator.m in Sources */,
 				F2729458212D5DDA008B38E5 /* NodeModelViewController.m in Sources */,
 				F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */,
+				F27B333A212EA69E00124931 /* NodeTopBaseView.m in Sources */,
 				F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
 				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
+				F27B3340212ED48600124931 /* NodeContext.m in Sources */,
+				F27B333D212EA6B300124931 /* NodeBottomBaseView.m in Sources */,
 				F2729461212D8AEC008B38E5 /* NodeBaseCellView.m in Sources */,
 				F27B332B212E5C8A00124931 /* CommonFont.m in Sources */,
 				F2729449212D3657008B38E5 /* NodeModelViewController1.m in Sources */,

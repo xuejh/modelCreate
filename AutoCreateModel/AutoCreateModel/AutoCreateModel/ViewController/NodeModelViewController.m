@@ -13,6 +13,7 @@
 #import "NodeBaseCellViewModel.h"
 #import "NodeBaseCellCoordinator.h"
 #import <KVOController/FBKVOController.h>
+#import "NodeContext.h"
 
 @interface NodeModelViewController ()<UITableViewDelegate,
 UITableViewDataSource>
@@ -29,6 +30,7 @@ UITableViewDataSource>
     
     [super viewDidLoad];
     
+    self.view.context = [[NodeContext alloc]initWithViewController:self];
     [self setup];
     
     [self addSubView];
@@ -141,6 +143,16 @@ UITableViewDataSource>
         _viewModel = [[NodeBaseViewModel alloc] init];
     }
     return _viewModel;
+}
+
+- (void)routeEvent:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
+    //拦截事件
+    if ([eventName isEqualToString:propertyTypeButtonClickEvent]) {
+       
+        id tableViewCell = [userInfo objectForKey:MessageIdKey];
+        NSIndexPath * indexPath = [self.tableView indexPathForCell:tableViewCell];
+        NSLog(@"indexPath:%ld,%ld",indexPath.section,indexPath.row);
+    }
 }
 
 @end

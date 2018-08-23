@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AutoModelPCH.h"
+#import "NodeTopBaseView.h"
 
 @protocol NodeBaseCellViewDelegate <NSObject>
 @optional
