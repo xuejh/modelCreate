@@ -1,25 +1,26 @@
 //
-//  NodeBaseCellCoordinator.m
+//  NodeMultiCellCoordinator.m
 //  AutoCreateModel
 //
-//  Created by 薛锦辉 on 2018/8/23.
+//  Created by jinhui  xue on 2018/8/25.
 //  Copyright © 2018年 薛锦辉. All rights reserved.
 //
 
-#import "NodeBaseCellCoordinator.h"
-#import "NodeBaseCellView.h"
+#import "NodeMultiCellCoordinator.h"
+#import "NodeMultiCellView.h"
 #import "NodeBaseCellViewModel.h"
 
-@interface  NodeBaseCellCoordinator()
+@interface  NodeMultiCellCoordinator()
 
-@property(nonatomic, weak) NodeBaseCellView *cell;
+@property(nonatomic, weak) NodeMultiCellView *cell;
 @property(nonatomic, weak) NodeBaseCellViewModel *cellViewModel;
 
 @end
 
-@implementation NodeBaseCellCoordinator
+@implementation NodeMultiCellCoordinator
 
-- (instancetype)initWithCellView:(NodeBaseCellView *)cell{
+
+- (instancetype)initWithCellView:(NodeMultiCellView *)cell{
     
     if (self = [super init]) {
         self.cell = cell;
@@ -38,7 +39,4 @@
 - (void)didSelectCellView{
     
 }
-
-
-
 @end

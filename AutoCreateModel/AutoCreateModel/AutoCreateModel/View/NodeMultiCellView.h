@@ -1,8 +1,8 @@
 //
-//  NodeBaseCellView.h
+//  NodeMultiCellView.h
 //  AutoCreateModel
 //
-//  Created by 薛锦辉 on 2018/8/22.
+//  Created by jinhui  xue on 2018/8/25.
 //  Copyright © 2018年 薛锦辉. All rights reserved.
 //
 
@@ -10,9 +10,7 @@
 #import "AutoModelPCH.h"
 #import "NodeTopBaseView.h"
 
-
-
-@interface NodeBaseCellView : UITableViewCell
+@interface NodeMultiCellView : UITableViewCell
 
 @property(nonatomic, assign) PropertyType propertyType;
 @property(nonatomic, weak) id propertyValue;

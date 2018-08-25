@@ -48,11 +48,6 @@
 
 - (void)setPropertyValue:(id)propertyValue{
     
-    if (self.propertyType == kNSDictionary || self.propertyType == kNSArray) {
-        
-        return;
-    }
-    
     [self.propertyButton setTitle:propertyValue forState:UIControlStateNormal];
 }
 

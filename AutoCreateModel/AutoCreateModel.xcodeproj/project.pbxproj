@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		356088EE7F1D4104E7AAA8D8 /* libPods-AutoCreateModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */; };
 		3FA30FC2213130EC005C9F0F /* PickViewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FC1213130EC005C9F0F /* PickViewCoordinator.m */; };
+		3FA30FC5213144B0005C9F0F /* NodeMultiCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */; };
+		3FA30FCB2131459F005C9F0F /* NodeMultiCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */; };
 		F272943C212D2F0A008B38E5 /* NodeModelStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F272943B212D2F09008B38E5 /* NodeModelStrings.plist */; };
 		F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = F272943F212D34E4008B38E5 /* UIResponder+Router.m */; };
 		F2729443212D3567008B38E5 /* UIView+Context.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729442212D3567008B38E5 /* UIView+Context.m */; };
@@ -47,6 +49,10 @@
 		14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoCreateModel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA30FC0213130EC005C9F0F /* PickViewCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickViewCoordinator.h; sourceTree = "<group>"; };
 		3FA30FC1213130EC005C9F0F /* PickViewCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickViewCoordinator.m; sourceTree = "<group>"; };
+		3FA30FC3213144B0005C9F0F /* NodeMultiCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellView.h; sourceTree = "<group>"; };
+		3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellView.m; sourceTree = "<group>"; };
+		3FA30FC92131459F005C9F0F /* NodeMultiCellCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellCoordinator.h; sourceTree = "<group>"; };
+		3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellCoordinator.m; sourceTree = "<group>"; };
 		B668B53C49D0476CB1309A3F /* Pods-AutoCreateModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.debug.xcconfig"; sourceTree = "<group>"; };
 		D552446CAA2DD869BB5F0E73 /* Pods-AutoCreateModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.release.xcconfig"; sourceTree = "<group>"; };
 		F272943B212D2F09008B38E5 /* NodeModelStrings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NodeModelStrings.plist; sourceTree = "<group>"; };
@@ -171,6 +177,10 @@
 				F27B3339212EA69E00124931 /* NodeTopBaseView.m */,
 				F27B333B212EA6B300124931 /* NodeBottomBaseView.h */,
 				F27B333C212EA6B300124931 /* NodeBottomBaseView.m */,
+				3FA30FC3213144B0005C9F0F /* NodeMultiCellView.h */,
+				3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */,
+				3FA30FC92131459F005C9F0F /* NodeMultiCellCoordinator.h */,
+				3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -419,6 +429,7 @@
 				F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
 				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
+				3FA30FC5213144B0005C9F0F /* NodeMultiCellView.m in Sources */,
 				F27B3346212EDE1A00124931 /* CommonData.m in Sources */,
 				F27B3340212ED48600124931 /* NodeContext.m in Sources */,
 				3FA30FC2213130EC005C9F0F /* PickViewCoordinator.m in Sources */,
@@ -436,6 +447,7 @@
 				F2729443212D3567008B38E5 /* UIView+Context.m in Sources */,
 				F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */,
 				F27B3343212EDD6000124931 /* NodeModelTableViewCoordinator.m in Sources */,
+				3FA30FCB2131459F005C9F0F /* NodeMultiCellCoordinator.m in Sources */,
 				F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */,
 				F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */,
 				F272944F212D3675008B38E5 /* NodeModelCell.m in Sources */,

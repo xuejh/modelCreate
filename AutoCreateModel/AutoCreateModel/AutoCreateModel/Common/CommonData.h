@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NodeBaseCellViewModel.h"
 #import "NodeModel.h"
 
 @interface CommonData : NSObject
@@ -15,4 +16,5 @@
 
 @property (nonatomic, strong) NodeModel *nodeModel;
 
+- (BOOL)isMultiCell:(NodeBaseCellViewModel*)viewModel;
 @end

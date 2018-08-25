@@ -14,6 +14,9 @@
 #import <KVOController/FBKVOController.h>
 #import "NodeContext.h"
 #import "UIResponder+Router.h"
+#import "NodeMultiCellCoordinator.h"
+#import "CommonData.h"
+#import "NodeMultiCellView.h"
 
 @interface NodeModelTableViewCoordinator ()<UITableViewDelegate,
 UITableViewDataSource,UIResponderEventProtocol>
@@ -22,6 +25,8 @@ UITableViewDataSource,UIResponderEventProtocol>
 @property(nonatomic, strong) FBKVOController *kvoController;
 @property (nonatomic, strong) NodeBaseViewModel *viewModel;
 @property(nonatomic, strong) NSMutableDictionary *coordinatorDic; //用于保存cell协调器，用于和cell一一对应
+@property(nonatomic, strong) NSMutableDictionary *multiCoordinatorDic; //用于保存cell协调器，用于和cell一一对应
+
 @end
 
 @implementation NodeModelTableViewCoordinator
@@ -62,20 +67,43 @@ UITableViewDataSource,UIResponderEventProtocol>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NodeBaseCellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
+    
+    if ([[CommonData shareInstance] isMultiCell:cellViewModel]) {
+        
+        return 100;
+    }
     return [cellViewModel cellHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     id cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
-    NSString *identifier = @"identifier";
-    NodeBaseCellView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [[NodeBaseCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    if ([[CommonData shareInstance] isMultiCell:cellViewModel]) {
+        
+        NSString *identifier = @"identifier";
+        NodeMultiCellView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if (!cell) {
+            cell = [[NodeMultiCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        }
+        NodeMultiCellCoordinator *cellCoordinator = [self getMultiCoordinatorWithCell:cell];
+        [cellCoordinator bindData:cellViewModel];
+        return cell;
+        
+        
+    }else{
+        
+        NSString *identifier = @"identifier1";
+        NodeBaseCellView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if (!cell) {
+            cell = [[NodeBaseCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        }
+        NodeBaseCellCoordinator *cellCoordinator = [self getCoordinatorWithCell:cell];
+        [cellCoordinator bindData:cellViewModel];
+        return cell;
+        
     }
-    NodeBaseCellCoordinator *cellCoordinator = [self getCoordinatorWithCell:cell];
-    [cellCoordinator bindData:cellViewModel];
-    return cell;
+    
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,6 +124,17 @@ UITableViewDataSource,UIResponderEventProtocol>
     return cellCoordinator;
 }
 
+- (NodeMultiCellCoordinator *)getMultiCoordinatorWithCell:(NodeMultiCellView *)cell {
+    NSNumber *cellAddress = @((UInt64)cell);
+    NodeMultiCellCoordinator *cellCoordinator = [self.multiCoordinatorDic objectForKey:cellAddress];
+    if (!cellCoordinator) {
+        cellCoordinator = [[NodeMultiCellCoordinator alloc] initWithCellView:cell];
+        [self.multiCoordinatorDic setObject:cellCoordinator forKey:cellAddress];
+    }
+    return cellCoordinator;
+}
+
+
 - (FBKVOController *)kvoController {
     if (!_kvoController) {
         _kvoController = [[FBKVOController alloc] initWithObserver:self retainObserved:YES];
@@ -109,6 +148,14 @@ UITableViewDataSource,UIResponderEventProtocol>
         _coordinatorDic = [NSMutableDictionary dictionary];
     }
     return _coordinatorDic;
+}
+
+- (NSMutableDictionary *)multiCoordinatorDic{
+    
+    if (!_multiCoordinatorDic) {
+        _multiCoordinatorDic = [NSMutableDictionary dictionary];
+    }
+    return _multiCoordinatorDic;
 }
 
 - (NodeBaseViewModel *)viewModel {

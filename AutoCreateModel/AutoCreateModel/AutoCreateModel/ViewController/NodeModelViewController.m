@@ -12,6 +12,7 @@
 #import "NodeContext.h"
 #import "NodeTopBaseView.h"
 #import "PickViewCoordinator.h"
+#import "NodeBaseCellView.h"
 
 @interface NodeModelViewController ()
 
@@ -78,10 +79,14 @@
     if ([eventName isEqualToString:propertyTypeButtonClickEvent]) {
         
         id tableViewCell = [userInfo objectForKey:MessageIdKey];
-        self.selectIndexPath = [self.tableView indexPathForCell:tableViewCell];
+        
+        if ([tableViewCell isKindOfClass:[NodeBaseCellView class]]) {
+            
+            self.selectIndexPath = [self.tableView indexPathForCell:tableViewCell];
+            [self.view addSubview:self.pickView];
+        }
         
         
-        [self.view addSubview:self.pickView];
     }else if ([eventName isEqualToString:pickViewCoordinatorClickEvent]) {
         
         NSNumber* rowNum = [userInfo objectForKey:MessageIdKey];

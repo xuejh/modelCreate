@@ -7,6 +7,7 @@
 //
 
 #import "CommonData.h"
+#import "AutoModelPCH.h"
 
 @implementation CommonData
 
@@ -21,4 +22,11 @@
     return (CommonData *)s_instance_dj_singleton;
 }
 
+- (BOOL)isMultiCell:(NodeBaseCellViewModel*)viewModel{
+    
+    if (viewModel.propertyType == kNSDictionary || viewModel.propertyType == kNSArray) {
+        return YES;
+    }
+    return NO;
+}
 @end
