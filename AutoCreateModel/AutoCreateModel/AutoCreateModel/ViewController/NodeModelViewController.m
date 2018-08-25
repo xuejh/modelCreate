@@ -45,7 +45,8 @@
     
     self.title = [CommonData shareInstance].nodeModel.modelName;
     
-    if ([CommonData shareInstance].nodeModel.level == 0) {
+    
+    if ([CommonData shareInstance].subNum == 0) {
         UIButton *createButton       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
         [createButton setTitle:@"生成Model" forState:UIControlStateNormal];
         [createButton setTitleColor:COLOR_3 forState:UIControlStateNormal];
@@ -56,6 +57,14 @@
     
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    
+    [super viewDidDisappear:animated];
+    if ([CommonData shareInstance].subNum >0) {
+        
+        [CommonData shareInstance].subNum -- ;
+    }
+}
 
 - (void)createModelBtnClick:(UIButton *)button {
     

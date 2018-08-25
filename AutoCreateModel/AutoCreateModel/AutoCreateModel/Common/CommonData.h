@@ -15,6 +15,9 @@
 + (CommonData *)shareInstance;
 
 @property (nonatomic, strong) NodeModel *nodeModel;
+@property (nonatomic, strong) NodeModel *wholeNodeModel;
+@property (nonatomic, strong) NodeModel *subNodeModel;
+@property (nonatomic, assign) NSInteger subNum;
 
 - (BOOL)isMultiCell:(NodeBaseCellViewModel*)viewModel;
 @end

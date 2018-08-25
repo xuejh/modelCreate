@@ -24,7 +24,17 @@
 
 - (void)fetchData {
     
-    NSArray<PropertyInfomation *> *array =  [CommonData shareInstance].nodeModel.properties;
+    NSArray<PropertyInfomation *> *array = nil;
+    if ([CommonData shareInstance].subNum >0) {
+         [CommonData shareInstance].nodeModel = [CommonData shareInstance].subNodeModel;
+        array =  [CommonData shareInstance].subNodeModel.properties;
+       
+    }else{
+         [CommonData shareInstance].nodeModel = [CommonData shareInstance].wholeNodeModel;
+        array =  [CommonData shareInstance].wholeNodeModel.properties;
+    }
+    
+    
     self.cellViewModelList = [self convertToCellViewModels:array];
 }
 

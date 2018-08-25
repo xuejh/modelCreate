@@ -18,6 +18,9 @@
 #import "CommonData.h"
 #import "NodeMultiCellView.h"
 #import "NodeMultiCellViewModel.h"
+#import "UIView+Context.h"
+#import "NodeContext.h"
+#import "NodeModelViewController.h"
 
 @interface NodeModelTableViewCoordinator ()<UITableViewDelegate,
 UITableViewDataSource,UIResponderEventProtocol>
@@ -105,6 +108,17 @@ UITableViewDataSource,UIResponderEventProtocol>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    id tableViewCell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([tableViewCell isKindOfClass:[NodeMultiCellView class]]) {
+        
+        NodeBaseCellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
+        NodeModel * subNodeModel = cellViewModel.propertyValue;
+        NodeContext * context = tableView.context;
+        NodeModelViewController * controller = [[NodeModelViewController alloc]init];
+        [CommonData shareInstance].subNum ++;
+        [CommonData shareInstance].subNodeModel = subNodeModel;
+        [context.controller.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 #pragma mark -
