@@ -31,4 +31,6 @@ const static NSString *propertyValueButtonClickEvent = @"propertyValueButtonClic
 const static NSString *MessageIdKey = @"MessageId";
 
 const static NSString *pickViewCoordinatorClickEvent = @"pickViewCoordinatorClickEvent";
+const static NSString *modelButtonClickEvent = @"modelButtonClickEvent";
+const static NSString *doneButtonClickEvent = @"doneButtonClickEvent";
 

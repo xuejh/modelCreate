@@ -10,4 +10,8 @@
 
 @interface NodeBottomBaseView : UIView
 
+@property (nonatomic, strong) NSString *modelName;
+
++ (NodeBottomBaseView *)createSelf;
+
 @end

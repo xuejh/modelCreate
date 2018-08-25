@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 #import "NodeModel.h"
-#import "NodeBaseViewModel.h"
+#import "NodeViewModel.h"
 #import "CommonData.h"
 
 @interface NodeModelViewController : BaseViewController

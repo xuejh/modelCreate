@@ -17,13 +17,14 @@
 #import "NodeMultiCellCoordinator.h"
 #import "CommonData.h"
 #import "NodeMultiCellView.h"
+#import "NodeMultiCellViewModel.h"
 
 @interface NodeModelTableViewCoordinator ()<UITableViewDelegate,
 UITableViewDataSource,UIResponderEventProtocol>
 
 @property (nonatomic, weak) UITableView *tableView;
 @property(nonatomic, strong) FBKVOController *kvoController;
-@property (nonatomic, strong) NodeBaseViewModel *viewModel;
+@property (nonatomic, strong) NodeViewModel *viewModel;
 @property(nonatomic, strong) NSMutableDictionary *coordinatorDic; //用于保存cell协调器，用于和cell一一对应
 @property(nonatomic, strong) NSMutableDictionary *multiCoordinatorDic; //用于保存cell协调器，用于和cell一一对应
 
@@ -68,17 +69,13 @@ UITableViewDataSource,UIResponderEventProtocol>
     
     NodeBaseCellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
     
-    if ([[CommonData shareInstance] isMultiCell:cellViewModel]) {
-        
-        return 100;
-    }
     return [cellViewModel cellHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     id cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
-    if ([[CommonData shareInstance] isMultiCell:cellViewModel]) {
+    if ([cellViewModel isKindOfClass:[NodeMultiCellViewModel class]]) {
         
         NSString *identifier = @"identifier";
         NodeMultiCellView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -158,9 +155,9 @@ UITableViewDataSource,UIResponderEventProtocol>
     return _multiCoordinatorDic;
 }
 
-- (NodeBaseViewModel *)viewModel {
+- (NodeViewModel *)viewModel {
     if (!_viewModel) {
-        _viewModel = [[NodeBaseViewModel alloc] init];
+        _viewModel = [[NodeViewModel alloc] init];
     }
     return _viewModel;
 }

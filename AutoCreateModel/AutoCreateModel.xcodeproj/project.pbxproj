@@ -11,6 +11,8 @@
 		3FA30FC2213130EC005C9F0F /* PickViewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FC1213130EC005C9F0F /* PickViewCoordinator.m */; };
 		3FA30FC5213144B0005C9F0F /* NodeMultiCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */; };
 		3FA30FCB2131459F005C9F0F /* NodeMultiCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */; };
+		3FA30FCE21316F10005C9F0F /* NodeMultiCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FCD21316F10005C9F0F /* NodeMultiCellViewModel.m */; };
+		3FA30FD1213174FE005C9F0F /* EditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FD0213174FE005C9F0F /* EditView.m */; };
 		F272943C212D2F0A008B38E5 /* NodeModelStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F272943B212D2F09008B38E5 /* NodeModelStrings.plist */; };
 		F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = F272943F212D34E4008B38E5 /* UIResponder+Router.m */; };
 		F2729443212D3567008B38E5 /* UIView+Context.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729442212D3567008B38E5 /* UIView+Context.m */; };
@@ -30,7 +32,7 @@
 		F27B332B212E5C8A00124931 /* CommonFont.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B332A212E5C8A00124931 /* CommonFont.m */; };
 		F27B332E212E60D500124931 /* NodeBaseCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B332D212E60D500124931 /* NodeBaseCellViewModel.m */; };
 		F27B3331212E611C00124931 /* NodeBaseCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */; };
-		F27B3334212E81EB00124931 /* NodeBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3333212E81EB00124931 /* NodeBaseViewModel.m */; };
+		F27B3334212E81EB00124931 /* NodeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3333212E81EB00124931 /* NodeViewModel.m */; };
 		F27B3337212E945300124931 /* EnumManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3336212E945300124931 /* EnumManage.m */; };
 		F27B333A212EA69E00124931 /* NodeTopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3339212EA69E00124931 /* NodeTopBaseView.m */; };
 		F27B333D212EA6B300124931 /* NodeBottomBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B333C212EA6B300124931 /* NodeBottomBaseView.m */; };
@@ -53,6 +55,10 @@
 		3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellView.m; sourceTree = "<group>"; };
 		3FA30FC92131459F005C9F0F /* NodeMultiCellCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellCoordinator.h; sourceTree = "<group>"; };
 		3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellCoordinator.m; sourceTree = "<group>"; };
+		3FA30FCC21316F10005C9F0F /* NodeMultiCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellViewModel.h; sourceTree = "<group>"; };
+		3FA30FCD21316F10005C9F0F /* NodeMultiCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellViewModel.m; sourceTree = "<group>"; };
+		3FA30FCF213174FE005C9F0F /* EditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditView.h; sourceTree = "<group>"; };
+		3FA30FD0213174FE005C9F0F /* EditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditView.m; sourceTree = "<group>"; };
 		B668B53C49D0476CB1309A3F /* Pods-AutoCreateModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.debug.xcconfig"; sourceTree = "<group>"; };
 		D552446CAA2DD869BB5F0E73 /* Pods-AutoCreateModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.release.xcconfig"; sourceTree = "<group>"; };
 		F272943B212D2F09008B38E5 /* NodeModelStrings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NodeModelStrings.plist; sourceTree = "<group>"; };
@@ -92,8 +98,8 @@
 		F27B332D212E60D500124931 /* NodeBaseCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseCellViewModel.m; sourceTree = "<group>"; };
 		F27B332F212E611C00124931 /* NodeBaseCellCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBaseCellCoordinator.h; sourceTree = "<group>"; };
 		F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseCellCoordinator.m; sourceTree = "<group>"; };
-		F27B3332212E81EB00124931 /* NodeBaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBaseViewModel.h; sourceTree = "<group>"; };
-		F27B3333212E81EB00124931 /* NodeBaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBaseViewModel.m; sourceTree = "<group>"; };
+		F27B3332212E81EB00124931 /* NodeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeViewModel.h; sourceTree = "<group>"; };
+		F27B3333212E81EB00124931 /* NodeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeViewModel.m; sourceTree = "<group>"; };
 		F27B3335212E945300124931 /* EnumManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumManage.h; sourceTree = "<group>"; };
 		F27B3336212E945300124931 /* EnumManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumManage.m; sourceTree = "<group>"; };
 		F27B3338212EA69E00124931 /* NodeTopBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeTopBaseView.h; sourceTree = "<group>"; };
@@ -171,8 +177,8 @@
 				F27B332D212E60D500124931 /* NodeBaseCellViewModel.m */,
 				F27B332F212E611C00124931 /* NodeBaseCellCoordinator.h */,
 				F27B3330212E611C00124931 /* NodeBaseCellCoordinator.m */,
-				F27B3332212E81EB00124931 /* NodeBaseViewModel.h */,
-				F27B3333212E81EB00124931 /* NodeBaseViewModel.m */,
+				F27B3332212E81EB00124931 /* NodeViewModel.h */,
+				F27B3333212E81EB00124931 /* NodeViewModel.m */,
 				F27B3338212EA69E00124931 /* NodeTopBaseView.h */,
 				F27B3339212EA69E00124931 /* NodeTopBaseView.m */,
 				F27B333B212EA6B300124931 /* NodeBottomBaseView.h */,
@@ -181,6 +187,10 @@
 				3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */,
 				3FA30FC92131459F005C9F0F /* NodeMultiCellCoordinator.h */,
 				3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */,
+				3FA30FCC21316F10005C9F0F /* NodeMultiCellViewModel.h */,
+				3FA30FCD21316F10005C9F0F /* NodeMultiCellViewModel.m */,
+				3FA30FCF213174FE005C9F0F /* EditView.h */,
+				3FA30FD0213174FE005C9F0F /* EditView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -427,6 +437,7 @@
 				F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */,
 				F27B333A212EA69E00124931 /* NodeTopBaseView.m in Sources */,
 				F272944E212D3675008B38E5 /* NodePressAnimationView.m in Sources */,
+				3FA30FD1213174FE005C9F0F /* EditView.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
 				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
 				3FA30FC5213144B0005C9F0F /* NodeMultiCellView.m in Sources */,
@@ -437,7 +448,7 @@
 				F2729461212D8AEC008B38E5 /* NodeBaseCellView.m in Sources */,
 				F27B332B212E5C8A00124931 /* CommonFont.m in Sources */,
 				F2729449212D3657008B38E5 /* NodeModelViewController1.m in Sources */,
-				F27B3334212E81EB00124931 /* NodeBaseViewModel.m in Sources */,
+				F27B3334212E81EB00124931 /* NodeViewModel.m in Sources */,
 				F27B332E212E60D500124931 /* NodeBaseCellViewModel.m in Sources */,
 				F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */,
 				F27B3337212E945300124931 /* EnumManage.m in Sources */,
@@ -450,6 +461,7 @@
 				3FA30FCB2131459F005C9F0F /* NodeMultiCellCoordinator.m in Sources */,
 				F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */,
 				F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */,
+				3FA30FCE21316F10005C9F0F /* NodeMultiCellViewModel.m in Sources */,
 				F272944F212D3675008B38E5 /* NodeModelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,8 @@
 #import "NodeTopBaseView.h"
 #import "PickViewCoordinator.h"
 #import "NodeBaseCellView.h"
+#import "NodeMultiCellView.h"
+#import "EditView.h"
 
 @interface NodeModelViewController ()
 
@@ -21,6 +23,7 @@
 @property (nonatomic, strong) PickViewCoordinator *pickViewCD;
 @property (nonatomic, weak)  UIPickerView * pickView;
 @property (nonatomic, strong) NSIndexPath * selectIndexPath;
+@property (nonatomic, strong) EditView * editView;
 
 @end
 
@@ -71,6 +74,8 @@
     self.pickViewCD = [[PickViewCoordinator alloc]initWithContext:self];
     self.pickView = self.pickViewCD.pickView;
     
+    self.editView = [EditView createWithContext:self];
+    [self.view addSubview:self.editView];
 }
 
 
@@ -93,7 +98,27 @@
         PropertyInfomation* info = [CommonData shareInstance].nodeModel.properties[self.selectIndexPath.row];
         info.propertyType = [rowNum integerValue];
         [self.tableViewCD reloadData];
+    }else if ([eventName isEqualToString:modelButtonClickEvent]) {
+        
+        id tableViewCell = [userInfo objectForKey:MessageIdKey];
+        
+        if ([tableViewCell isKindOfClass:[NodeMultiCellView class]]) {
+            
+            self.selectIndexPath = [self.tableView indexPathForCell:tableViewCell];
+            PropertyInfomation* info = [CommonData shareInstance].nodeModel.properties[self.selectIndexPath.row];
+            NodeModel *node             = info.propertyValue;
+            [self.editView showWithText:node.modelName];
+        }
+    }else if ([eventName isEqualToString:doneButtonClickEvent]) {
+        
+        NSString* editText = [userInfo objectForKey:MessageIdKey];
+        PropertyInfomation* info = [CommonData shareInstance].nodeModel.properties[self.selectIndexPath.row];
+        NodeModel *node             = info.propertyValue;
+        node.modelName = editText;
+        [self.tableViewCD reloadData];
     }
+    
+    
 }
 
 @end

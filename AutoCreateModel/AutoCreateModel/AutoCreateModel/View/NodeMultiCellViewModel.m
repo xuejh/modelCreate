@@ -10,24 +10,16 @@
 
 @interface NodeMultiCellViewModel()
 
-@property (nonatomic, strong) PropertyInfomation *propertyInfomation;
 
 @end
 
 @implementation NodeMultiCellViewModel
 
-- (instancetype)initWithPropertyInfomation:(PropertyInfomation *)propertyInfomation{
-    
-    if (self=[super init]) {
-        self.propertyType = propertyInfomation.propertyType;
-        self.propertyValue = propertyInfomation.propertyValue;
-    }
-    return self;
-}
+
 
 - (NSUInteger)cellHeight{
     
-    return 44.0;
+    return 88.0;
 }
 
 @end

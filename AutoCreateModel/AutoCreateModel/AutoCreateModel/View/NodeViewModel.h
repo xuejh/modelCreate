@@ -11,7 +11,7 @@
 @class NodeModel;
 @class NodeBaseCellViewModel;
 
-@interface NodeBaseViewModel : NSObject
+@interface NodeViewModel : NSObject
 
 @property (nonatomic, strong, readonly) NSArray<NodeBaseCellViewModel *> *cellViewModelList;  //Model
 - (void)fetchData;

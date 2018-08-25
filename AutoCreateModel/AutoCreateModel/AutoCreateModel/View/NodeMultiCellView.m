@@ -9,10 +9,13 @@
 #import "NodeMultiCellView.h"
 #import "NodeTopBaseView.h"
 #import "NodeModel.h"
+#import "NodeBottomBaseView.h"
 
 @interface NodeMultiCellView()
 
-@property (nonatomic,strong)NodeTopBaseView *view;
+@property (nonatomic,strong)NodeTopBaseView *topView;
+@property (nonatomic,strong)NodeBottomBaseView *bottomView;
+
 
 @end
 
@@ -31,24 +34,26 @@
 
 - (void)initSubViews {
     
-    self.view = [NodeTopBaseView createSelf];
-    [self addSubview:self.view];
+    self.topView = [NodeTopBaseView createSelf];
+    [self addSubview:self.topView];
+    
+    self.bottomView = [NodeBottomBaseView createSelf];
+    [self addSubview:self.bottomView];
 }
 
 
 - (void)setPropertyType:(PropertyType)propertyType{
     
-    self.view.propertyType = propertyType;
+    self.topView.propertyType = propertyType;
     
 }
 
 - (void)setPropertyValue:(id)propertyValue{
     
     
-    
     NodeModel *node  = propertyValue;
-    
-    self.view.propertyValue = node.listType;
+    self.topView.propertyValue = node.listType;
+    self.bottomView.modelName = node.modelName;
 }
 
 @end
