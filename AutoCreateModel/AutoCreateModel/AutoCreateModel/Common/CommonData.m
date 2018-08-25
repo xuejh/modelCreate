@@ -31,13 +31,5 @@
     return NO;
 }
 
-- (void)setSubNum:(NSInteger)subNum{
-    
-    _subNum = subNum;
-    if (subNum >0) {
-        [CommonData shareInstance].nodeModel = [CommonData shareInstance].subNodeModel;
-    }else{
-        [CommonData shareInstance].nodeModel = [CommonData shareInstance].wholeNodeModel;
-    }
-}
+
 @end

@@ -12,6 +12,7 @@
 #import "CommonData.h"
 #import <KVOController/FBKVOController.h>
 #import "NodeMultiCellViewModel.h"
+#import "NodeContext.h"
 
 @interface NodeViewModel ()
 
@@ -24,17 +25,9 @@
 
 - (void)fetchData {
     
-    NSArray<PropertyInfomation *> *array = nil;
-    if ([CommonData shareInstance].subNum >0) {
-         [CommonData shareInstance].nodeModel = [CommonData shareInstance].subNodeModel;
-        array =  [CommonData shareInstance].subNodeModel.properties;
-       
-    }else{
-         [CommonData shareInstance].nodeModel = [CommonData shareInstance].wholeNodeModel;
-        array =  [CommonData shareInstance].wholeNodeModel.properties;
-    }
     
     
+    NSArray<PropertyInfomation *> *array =  self.nodeModel.properties;
     self.cellViewModelList = [self convertToCellViewModels:array];
 }
 

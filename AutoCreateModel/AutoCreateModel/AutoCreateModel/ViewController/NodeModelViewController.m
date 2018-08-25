@@ -15,6 +15,7 @@
 #import "NodeBaseCellView.h"
 #import "NodeMultiCellView.h"
 #import "EditView.h"
+#import "NodeModelStrings.h"
 
 @interface NodeModelViewController ()
 
@@ -34,6 +35,9 @@
     [super viewDidLoad];
     
     self.view.context = [[NodeContext alloc]initWithViewController:self];
+    NodeContext * context =self.view.context;
+    context.nodeModel = self.nodeModel;
+    
     [self setup];
     
     [self addSubView];
@@ -43,10 +47,10 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = [CommonData shareInstance].nodeModel.modelName;
+    self.title = self.nodeModel.modelName;
     
     
-    if ([CommonData shareInstance].subNum == 0) {
+    if (self.nodeModel.level == 0) {
         UIButton *createButton       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
         [createButton setTitle:@"生成Model" forState:UIControlStateNormal];
         [createButton setTitleColor:COLOR_3 forState:UIControlStateNormal];
@@ -57,16 +61,17 @@
     
 }
 
-- (void)viewDidDisappear:(BOOL)animated{
-    
-    [super viewDidDisappear:animated];
-    if ([CommonData shareInstance].subNum >0) {
-        
-        [CommonData shareInstance].subNum -- ;
-    }
-}
+
 
 - (void)createModelBtnClick:(UIButton *)button {
+    
+    for (NodeModel *node in self.nodeModel.allSubNodes) {
+        
+        NodeModelStrings *nodeModelString = [NodeModelStrings nodeModelStringsWithNodeModel:node];
+        [nodeModelString createFile];
+    }
+    
+    NSLog(@"生成的文件在以下地址: \n%@", [NSHomeDirectory() stringByAppendingPathComponent:@"/Documents/"]);
     
 }
 
@@ -104,7 +109,7 @@
     }else if ([eventName isEqualToString:pickViewCoordinatorClickEvent]) {
         
         NSNumber* rowNum = [userInfo objectForKey:MessageIdKey];
-        PropertyInfomation* info = [CommonData shareInstance].nodeModel.properties[self.selectIndexPath.row];
+        PropertyInfomation* info = self.nodeModel.properties[self.selectIndexPath.row];
         info.propertyType = [rowNum integerValue];
         [self.tableViewCD reloadData];
     }else if ([eventName isEqualToString:modelButtonClickEvent]) {
@@ -114,14 +119,14 @@
         if ([tableViewCell isKindOfClass:[NodeMultiCellView class]]) {
             
             self.selectIndexPath = [self.tableView indexPathForCell:tableViewCell];
-            PropertyInfomation* info = [CommonData shareInstance].nodeModel.properties[self.selectIndexPath.row];
+            PropertyInfomation* info = self.nodeModel.properties[self.selectIndexPath.row];
             NodeModel *node             = info.propertyValue;
             [self.editView showWithText:node.modelName];
         }
     }else if ([eventName isEqualToString:doneButtonClickEvent]) {
         
         NSString* editText = [userInfo objectForKey:MessageIdKey];
-        PropertyInfomation* info = [CommonData shareInstance].nodeModel.properties[self.selectIndexPath.row];
+        PropertyInfomation* info = self.nodeModel.properties[self.selectIndexPath.row];
         NodeModel *node             = info.propertyValue;
         node.modelName = editText;
         [self.tableViewCD reloadData];

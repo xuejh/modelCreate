@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "UIView+Context.h"
+#import "NodeModel.h"
 
 @interface NodeContext : NSObject <UIViewContextProtocol>
 
+@property (nonatomic,strong)NodeModel *nodeModel;
 @end

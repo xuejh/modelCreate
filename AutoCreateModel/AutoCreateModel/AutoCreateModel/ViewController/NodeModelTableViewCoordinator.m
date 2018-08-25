@@ -115,8 +115,7 @@ UITableViewDataSource,UIResponderEventProtocol>
         NodeModel * subNodeModel = cellViewModel.propertyValue;
         NodeContext * context = tableView.context;
         NodeModelViewController * controller = [[NodeModelViewController alloc]init];
-        [CommonData shareInstance].subNum ++;
-        [CommonData shareInstance].subNodeModel = subNodeModel;
+        controller.nodeModel = subNodeModel;
         [context.controller.navigationController pushViewController:controller animated:YES];
     }
 }
@@ -172,6 +171,8 @@ UITableViewDataSource,UIResponderEventProtocol>
 - (NodeViewModel *)viewModel {
     if (!_viewModel) {
         _viewModel = [[NodeViewModel alloc] init];
+        NodeContext * context =self.tableView.context;
+        _viewModel.nodeModel = context.nodeModel;
     }
     return _viewModel;
 }

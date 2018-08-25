@@ -13,6 +13,6 @@
 
 @interface NodeModelViewController : BaseViewController
 
-
+@property (nonatomic,strong)NodeModel *nodeModel;
 
 @end

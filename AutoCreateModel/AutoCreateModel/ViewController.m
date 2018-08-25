@@ -28,21 +28,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)btnTouchup:(id)sender {
-    
-    NSDictionary *dic = [JsonManage jsonStringToDic:self.textView.text];
-    NodeModel *nodeModel = [NodeModel nodeModelWithDictionary:dic modelName:self.textField.text level:0];
-    NodeModelViewController1 *nodeVC = [[NodeModelViewController1 alloc]init];
-    nodeVC.nodeModel = nodeModel;
-    [self.navigationController pushViewController:nodeVC animated:YES];
-}
+
 - (IBAction)modelBtnTouchup:(id)sender {
     
     NSDictionary *dic = [JsonManage jsonStringToDic:self.textView.text];
     NodeModelViewController *nodeVC = [[NodeModelViewController alloc]init];
     NodeModel *nodeModel = [NodeModel nodeModelWithDictionary:dic modelName:self.textField.text level:0];
-    [CommonData shareInstance].subNum = 0;
-    [CommonData shareInstance].wholeNodeModel = nodeModel;
+    nodeVC.nodeModel = nodeModel;
     [self.navigationController pushViewController:nodeVC animated:YES];
     
 }

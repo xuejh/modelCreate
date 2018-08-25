@@ -13,6 +13,7 @@
 
 @interface NodeViewModel : NSObject
 
+@property (nonatomic,strong)NodeModel *nodeModel;
 @property (nonatomic, strong, readonly) NSArray<NodeBaseCellViewModel *> *cellViewModelList;  //Model
 - (void)fetchData;
 
