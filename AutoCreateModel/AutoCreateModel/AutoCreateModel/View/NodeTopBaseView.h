@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AutoModelPCH.h"
 
-const static NSString *propertyTypeButtonClickEvent = @"propertyTypeButtonClickEvent";
-const static NSString *propertyValueButtonClickEvent = @"propertyValueButtonClickEvent";
-const static NSString *MessageIdKey = @"MessageId";
+
 
 @interface NodeTopBaseView : UIView
 

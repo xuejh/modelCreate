@@ -16,4 +16,5 @@
 @property (nonatomic, strong, readonly) NSArray<NodeBaseCellViewModel *> *cellViewModelList;  //Model
 - (void)fetchData;
 
+
 @end

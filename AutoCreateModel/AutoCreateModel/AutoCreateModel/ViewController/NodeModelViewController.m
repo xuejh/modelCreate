@@ -10,10 +10,16 @@
 #import "AutoModelPCH.h"
 #import "NodeModelTableViewCoordinator.h"
 #import "NodeContext.h"
+#import "NodeTopBaseView.h"
+#import "PickViewCoordinator.h"
 
 @interface NodeModelViewController ()
 
 @property (nonatomic, strong) NodeModelTableViewCoordinator *tableViewCD;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) PickViewCoordinator *pickViewCD;
+@property (nonatomic, weak)  UIPickerView * pickView;
+@property (nonatomic, strong) NSIndexPath * selectIndexPath;
 
 @end
 
@@ -46,6 +52,11 @@
     
 }
 
+
+- (void)createModelBtnClick:(UIButton *)button {
+    
+}
+
 - (void)addSubView {
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
     tableView.tableFooterView = [[UIView alloc] init];
@@ -54,9 +65,30 @@
     [self.view addSubview:tableView];
     
     self.tableViewCD = [[NodeModelTableViewCoordinator alloc] initWithTableView:tableView];
+    self.tableView = tableView;
+    
+    self.pickViewCD = [[PickViewCoordinator alloc]initWithContext:self];
+    self.pickView = self.pickViewCD.pickView;
+    
 }
 
 
-
+- (void)routeEvent:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
+    //拦截事件
+    if ([eventName isEqualToString:propertyTypeButtonClickEvent]) {
+        
+        id tableViewCell = [userInfo objectForKey:MessageIdKey];
+        self.selectIndexPath = [self.tableView indexPathForCell:tableViewCell];
+        
+        
+        [self.view addSubview:self.pickView];
+    }else if ([eventName isEqualToString:pickViewCoordinatorClickEvent]) {
+        
+        NSNumber* rowNum = [userInfo objectForKey:MessageIdKey];
+        PropertyInfomation* info = [CommonData shareInstance].nodeModel.properties[self.selectIndexPath.row];
+        info.propertyType = [rowNum integerValue];
+        [self.tableViewCD reloadData];
+    }
+}
 
 @end

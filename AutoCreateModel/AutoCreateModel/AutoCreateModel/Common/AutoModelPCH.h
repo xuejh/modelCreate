@@ -26,7 +26,9 @@
 #define COLOR_6  [UIColor colorWithHexString:@"0xff6e00"]
 
 
+const static NSString *propertyTypeButtonClickEvent = @"propertyTypeButtonClickEvent";
+const static NSString *propertyValueButtonClickEvent = @"propertyValueButtonClickEvent";
+const static NSString *MessageIdKey = @"MessageId";
 
-
-
+const static NSString *pickViewCoordinatorClickEvent = @"pickViewCoordinatorClickEvent";
 

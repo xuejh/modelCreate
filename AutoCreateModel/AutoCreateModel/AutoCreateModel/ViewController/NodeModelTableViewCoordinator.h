@@ -13,4 +13,5 @@
 
 - (instancetype)initWithTableView:(UITableView *)tableView;
 
+-  (void)reloadData;
 @end

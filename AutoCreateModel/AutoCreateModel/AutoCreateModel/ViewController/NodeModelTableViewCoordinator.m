@@ -31,10 +31,11 @@ UITableViewDataSource,UIResponderEventProtocol>
         _tableView = tableView;
         tableView.delegate = self;
         tableView.dataSource = self;
-        tableView.eventDelegate = self;
+//        tableView.eventDelegate = self;
         
         [self bindData];
         [self fetchData];
+        
     }
     
     return self;
@@ -82,9 +83,7 @@ UITableViewDataSource,UIResponderEventProtocol>
 }
 
 #pragma mark -
-- (void)createModelBtnClick:(UIButton *)button {
-    
-}
+
 
 
 - (NodeBaseCellCoordinator *)getCoordinatorWithCell:(NodeBaseCellView *)cell {
@@ -119,14 +118,10 @@ UITableViewDataSource,UIResponderEventProtocol>
     return _viewModel;
 }
 
-- (void)routeEvent:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
-    //拦截事件
-    if ([eventName isEqualToString:propertyTypeButtonClickEvent]) {
-        
-        id tableViewCell = [userInfo objectForKey:MessageIdKey];
-        NSIndexPath * indexPath = [self.tableView indexPathForCell:tableViewCell];
-        NSLog(@"indexPath:%ld,%ld",indexPath.section,indexPath.row);
-    }
+-  (void)reloadData{
+    
+    [self fetchData];
+    [self.tableView reloadData];
 }
 
 @end

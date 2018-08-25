@@ -10,9 +10,13 @@
 #import "NodeBaseCellViewModel.h"
 #import "PropertyInfomation.h"
 #import "CommonData.h"
+#import <KVOController/FBKVOController.h>
 
 @interface NodeBaseViewModel ()
+
 @property (nonatomic, strong) NSArray *cellViewModelList;
+@property(nonatomic, strong) FBKVOController *kvoController;
+
 @end
 
 @implementation NodeBaseViewModel
@@ -34,10 +38,23 @@
     return cellVMArray;
 }
 
+
+
+
+
 + (NodeBaseCellViewModel *)createCellViewModel:(PropertyInfomation *)info {
     
     NodeBaseCellViewModel *cellViewModel = [[NodeBaseCellViewModel alloc] initWithPropertyInfomation:info];
     return cellViewModel;
+}
+
+
+- (FBKVOController *)kvoController {
+    if (!_kvoController) {
+        _kvoController = [[FBKVOController alloc] initWithObserver:self retainObserved:YES];
+    }
+    
+    return _kvoController;
 }
 
 @end
