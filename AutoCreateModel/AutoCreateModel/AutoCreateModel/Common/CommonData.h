@@ -14,7 +14,9 @@
 
 + (CommonData *)shareInstance;
 
-
-
 - (BOOL)isMultiCell:(NodeBaseCellViewModel*)viewModel;
+
+@property (nonatomic,strong)NSString *preText;
+
+- (void)convertNodeModel:(NodeModel*)nodeModel preText:(NSString*)preText;
 @end

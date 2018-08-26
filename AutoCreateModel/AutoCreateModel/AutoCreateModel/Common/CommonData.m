@@ -31,5 +31,30 @@
     return NO;
 }
 
-
+- (void)convertNodeModel:(NodeModel*)nodeModel preText:(NSString*)preText{
+    
+    nodeModel.modelName = [NSString stringWithFormat:@"%@%@",preText,nodeModel.modelName];
+    for (NodeModel *node in nodeModel.allSubNodes){
+        
+        for (PropertyInfomation *property in node.properties) {
+            
+            switch (property.propertyType) {
+                    
+                case kNSDictionary:
+                case kNSArray:{
+                    
+                    NodeModel *subNode = property.propertyValue;
+                    subNode.modelName = [NSString stringWithFormat:@"%@%@",preText,subNode.modelName];
+                    
+                }
+                 break;
+                    
+                default:
+                    break;
+            }
+        }
+        
+    }
+    
+}
 @end

@@ -55,12 +55,20 @@
                                     <action selector="modelBtnTouchup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ff2-Su-1qh"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入文件名前缀" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGk-w9-X2I">
+                                <rect key="frame" x="28" y="520" width="140" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="测试页面" id="2fa-Yw-JRT"/>
                     <connections>
+                        <outlet property="preTextField" destination="kGk-w9-X2I" id="98B-WZ-9h8"/>
                         <outlet property="textField" destination="kMa-YB-jrM" id="WRg-SL-r1e"/>
                         <outlet property="textView" destination="6ee-Mj-LO6" id="uqN-7U-FDW"/>
                     </connections>

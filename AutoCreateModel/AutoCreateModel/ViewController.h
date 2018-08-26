@@ -15,5 +15,8 @@
 
 @property (nonatomic,strong)IBOutlet UITextField *textField;
 
+@property (nonatomic,strong)IBOutlet UITextField *preTextField;
+
+
 @end
 

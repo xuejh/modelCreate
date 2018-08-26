@@ -25,8 +25,6 @@
 
 - (void)fetchData {
     
-    
-    
     NSArray<PropertyInfomation *> *array =  self.nodeModel.properties;
     self.cellViewModelList = [self convertToCellViewModels:array];
 }

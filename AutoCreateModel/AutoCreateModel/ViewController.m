@@ -34,6 +34,12 @@
     NSDictionary *dic = [JsonManage jsonStringToDic:self.textView.text];
     NodeModelViewController *nodeVC = [[NodeModelViewController alloc]init];
     NodeModel *nodeModel = [NodeModel nodeModelWithDictionary:dic modelName:self.textField.text level:0];
+    
+    
+    NSString * preText = self.preTextField.text;
+    preText = [preText stringByReplacingOccurrencesOfString:@" " withString:@""];
+    [CommonData shareInstance].preText = preText;
+    [[CommonData shareInstance] convertNodeModel:nodeModel preText:preText];
     nodeVC.nodeModel = nodeModel;
     [self.navigationController pushViewController:nodeVC animated:YES];
     
