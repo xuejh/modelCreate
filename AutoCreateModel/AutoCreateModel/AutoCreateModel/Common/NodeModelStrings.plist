@@ -2,89 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SwiftArrayTypeString</key>
-	<string>        // Array: [Swift-Array-Key]
-        if key == &quot;[Swift-Array-Key]&quot; {
-        
-            var modelsArray         = [[Swift-Model-Name]]();
-            let array : [AnyObject] = value as! [AnyObject]
-            
-            for value in array {
-            
-                let dictionary = value as! [String : AnyObject]
-                let model      = [Swift-Model-Name](dictionary: dictionary)
-                modelsArray.append(model!)
-            }
-            
-            super.setValue(modelsArray, forKey: key)
-            return
-        }
-</string>
-	<key>SwiftDictionaryTypeString</key>
-	<string>        // Dictionary: [Swift-Dictionary-Key]
-        if key == &quot;[Swift-Dictionary-Key]&quot; {
-
-            let dictionary = value as! [String : AnyObject]
-            let model      = [Swift-Model-Name](dictionary: dictionary)
-            
-            super.setValue(model, forKey: key)
-            return
-        }
-</string>
-	<key>SwiftTotalFile</key>
-	<string>//
-//  [Swift-Model-Name].swift
-//
-//  http://www.cnblogs.com/YouXianMing/
-//  https://github.com/YouXianMing
-//
-//  Copyright (c) YouXianMing All rights reserved.
-//
-
-import UIKit
-
-class [Swift-Model-Name]: NSObject {
-    
-    
-    // stored propety
-    
-[Swift-Stored-Propety]
-    
-    // init method
-    
-    override init() {
-        
-    }
-    
-    init?(dictionary : [String : AnyObject]?) {
-        
-        super.init()
-        
-        if let _ : [String : AnyObject] = dictionary {
-            
-            setValuesForKeysWithDictionary(dictionary!)
-            
-        } else {
-            
-            return nil
-        }
-    }
-    
-    
-    // setValueForKey &amp; setValueForUndefinedKey
-    
-    override func setValue(value: AnyObject?, forKey key: String) {
-        
-[Swift-List-Type-Propety]
-        super.setValue(value, forKey: key)
-    }
-    
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-        
-        print(&quot;The file \(self.classForCoder).h has an undefined key \&quot;\(key)\&quot;, and the key&apos;s type is \(value?.classForCoder).&quot;)
-    }
-}
-</string>
 	<key>dictionaryTypeString</key>
 	<string>    // [PropertyName]
     if ([key isEqualToString:@&quot;[PropertyName]&quot;] &amp;&amp; [value isKindOfClass:[NSDictionary class]]) {
@@ -112,10 +29,9 @@ class [Swift-Model-Name]: NSObject {
 	<string>//
 //  [ModelName-WaitForReplaced].m
 //
-//  http://www.cnblogs.com/YouXianMing/
-//  https://github.com/YouXianMing
+//  https://github.com/xuejh/modelCreate
 //
-//  Copyright (c) YouXianMing All rights reserved.
+//  Copyright (c) Xuejinhui All rights reserved.
 //
 
 
@@ -169,10 +85,9 @@ class [Swift-Model-Name]: NSObject {
 	<string>//
 //  [ModelName-WaitForReplaced].h
 //
-//  http://www.cnblogs.com/YouXianMing/
-//  https://github.com/YouXianMing
+//  https://github.com/xuejh/modelCreate
 //
-//  Copyright (c) YouXianMing All rights reserved.
+//  Copyright (c) Xuejinhui All rights reserved.
 //
 
 

@@ -17,7 +17,6 @@
 @property (nonatomic, strong) NSString     *modelHeaderFileString;
 @property (nonatomic, strong) NSString     *modelMFileString;
 
-@property (nonatomic, strong) NSString     *modelSwiftTotalFileString;
 
 @end
 
@@ -31,7 +30,6 @@
         self.modelHeaderFileString = self.nodeModelStringsPlist[@"modelHeaderFileString"];
         self.modelMFileString      = self.nodeModelStringsPlist[@"modelMFileString"];
         
-        self.modelSwiftTotalFileString = self.nodeModelStringsPlist[@"SwiftTotalFile"];
     }
     
     return self;
@@ -60,99 +58,10 @@
 
 - (void)createFile {
     
-    [self createSwiftFile];
     [self createOBjectiveCFile];
 }
 
-- (void)createSwiftFile {
-    
-    // 替换文件名字
-    NSString *fileName             = self.nodeModel.modelName;
-    self.modelSwiftTotalFileString = [self.modelSwiftTotalFileString stringByReplacingOccurrencesOfString:@"[Swift-Model-Name]"
-                                                                                               withString:fileName];
-    // 替换头文件属性
-    NSString *propetiesString = @"";
-    for (PropertyInfomation *property in self.nodeModel.properties) {
-        
-        switch (property.propertyType) {
-                
-            case kNSString: {
-                
-                NSString *tmpSting = [NSString stringWithFormat:@"    var %@  : String?\n", property.propertyValue];
-                propetiesString = [propetiesString stringByAppendingString:tmpSting];
-                
-            } break;
-                
-            case kNSNumber: {
-                
-                NSString *tmpSting = [NSString stringWithFormat:@"    var %@  : NSNumber?\n", property.propertyValue];
-                propetiesString = [propetiesString stringByAppendingString:tmpSting];
-                
-            } break;
-                
-            case kNull: {
-                
-                NSString *tmpSting = [NSString stringWithFormat:@"    // key \"%@\" has null value.\n", property.propertyValue];
-                propetiesString = [propetiesString stringByAppendingString:tmpSting];
-                
-            } break;
-                
-            case kNSDictionary: {
-                
-                NodeModel *nodeModel = property.propertyValue;
-                NSString *tmpSting   = [NSString stringWithFormat:@"    var %@  : %@?\n", nodeModel.listType, nodeModel.modelName];
-                propetiesString = [propetiesString stringByAppendingString:tmpSting];
-                
-            } break;
-                
-            case kNSArray:{
-                
-                NodeModel *nodeModel = property.propertyValue;
-                NSString *tmpSting   = [NSString stringWithFormat:@"    var %@  : [%@]?\n", nodeModel.listType, nodeModel.modelName];
-                propetiesString = [propetiesString stringByAppendingString:tmpSting];
-                
-            } break;
-                
-            default:
-                break;
-        }
-    }
-    self.modelSwiftTotalFileString = [self.modelSwiftTotalFileString stringByReplacingOccurrencesOfString:@"[Swift-Stored-Propety]"
-                                                                                               withString:propetiesString];
-    
-    // 替换实现文件
-    NSMutableString *mPropertyString = [NSMutableString string];
-    for (PropertyInfomation *property in self.nodeModel.properties) {
-        
-        if (property.propertyType == kNSDictionary) {
-            
-            NodeModel *nodeModel      = property.propertyValue;
-            NSString *listTypeString  = [NSString stringWithFormat:@"%@\n", self.nodeModelStringsPlist[@"SwiftDictionaryTypeString"]];
-            listTypeString = [listTypeString stringByReplacingOccurrencesOfString:@"[Swift-Dictionary-Key]" withString:nodeModel.listType];
-            listTypeString = [listTypeString stringByReplacingOccurrencesOfString:@"[Swift-Model-Name]" withString:nodeModel.modelName];
-            
-            [mPropertyString appendString:listTypeString];
-        }
-        
-        if (property.propertyType == kNSArray) {
-            
-            NodeModel *nodeModel      = property.propertyValue;
-            NSString *listTypeString  = [NSString stringWithFormat:@"%@\n", self.nodeModelStringsPlist[@"SwiftArrayTypeString"]];
-            listTypeString = [listTypeString stringByReplacingOccurrencesOfString:@"[Swift-Array-Key]" withString:nodeModel.listType];
-            listTypeString = [listTypeString stringByReplacingOccurrencesOfString:@"[Swift-Model-Name]" withString:nodeModel.modelName];
-            
-            [mPropertyString appendString:listTypeString];
-        }
-    }
-    
-    self.modelSwiftTotalFileString = [self.modelSwiftTotalFileString stringByReplacingOccurrencesOfString:@"[Swift-List-Type-Propety]"
-                                                                                               withString:mPropertyString];
-    
-    [self.modelSwiftTotalFileString writeToFile:[self filePathWithFileName:[self.nodeModel.modelName stringByAppendingString:@".swift"]]
-                                     atomically:YES
-                                       encoding:NSUTF8StringEncoding
-                                          error:nil];
-}
+
 
 - (void)createOBjectiveCFile {
     
