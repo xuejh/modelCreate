@@ -24,8 +24,8 @@ const static NSArray *___PropertyType;
 @"NSString",\
 @"NSNumber",\
 @"Null",\
-@"NSArray",\
-@"NSDictionary", nil] : ___PropertyType)
+@"NSDictionary",\
+@"NSArray", nil] : ___PropertyType)
 // 枚举 to 字串
 #define KPropertyTypeString(type) ([cPropertyTypeGet objectAtIndex:type])
 // 字串 to 枚举
