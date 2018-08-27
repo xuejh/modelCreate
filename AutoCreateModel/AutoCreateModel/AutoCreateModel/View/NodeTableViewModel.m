@@ -6,22 +6,22 @@
 //  Copyright © 2018年 薛锦辉. All rights reserved.
 //
 
-#import "NodeViewModel.h"
-#import "NodeBaseCellViewModel.h"
+#import "NodeTableViewModel.h"
+#import "NodeCellViewModel.h"
 #import "PropertyInfomation.h"
 #import "CommonData.h"
 #import <KVOController/FBKVOController.h>
 #import "NodeMultiCellViewModel.h"
 #import "NodeContext.h"
 
-@interface NodeViewModel ()
+@interface NodeTableViewModel ()
 
 @property (nonatomic, strong) NSArray *cellViewModelList;
 @property(nonatomic, strong) FBKVOController *kvoController;
 
 @end
 
-@implementation NodeViewModel
+@implementation NodeTableViewModel
 
 - (void)fetchData {
     
@@ -34,7 +34,7 @@
     NSMutableArray *cellVMArray = [NSMutableArray array];
     for (int i=0; i<[array count]; i++) {
         PropertyInfomation *model = array[i];
-        NodeBaseCellViewModel *cellViewModel = [NodeViewModel createCellViewModel:model];
+        NodeCellViewModel *cellViewModel = [NodeTableViewModel createCellViewModel:model];
         [cellVMArray addObject:cellViewModel];
     }
     return cellVMArray;
@@ -44,14 +44,14 @@
 
 
 
-+ (NodeBaseCellViewModel *)createCellViewModel:(PropertyInfomation *)info {
++ (NodeCellViewModel *)createCellViewModel:(PropertyInfomation *)info {
     
     if (info.propertyType == kNSDictionary || info.propertyType == kNSArray) {
-        NodeBaseCellViewModel *cellViewModel = [[NodeMultiCellViewModel alloc] initWithPropertyInfomation:info];
+        NodeCellViewModel *cellViewModel = [[NodeMultiCellViewModel alloc] initWithPropertyInfomation:info];
         return cellViewModel;
     }
     
-    NodeBaseCellViewModel *cellViewModel = [[NodeBaseCellViewModel alloc] initWithPropertyInfomation:info];
+    NodeCellViewModel *cellViewModel = [[NodeCellViewModel alloc] initWithPropertyInfomation:info];
     return cellViewModel;
 }
 

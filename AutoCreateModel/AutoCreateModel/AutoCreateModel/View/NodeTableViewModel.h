@@ -9,12 +9,28 @@
 #import <Foundation/Foundation.h>
 
 @class NodeModel;
-@class NodeBaseCellViewModel;
+@class NodeCellViewModel;
 
-@interface NodeViewModel : NSObject
+@interface NodeTableViewModel : NSObject
+
+/**
+ * tableViewModel所用的数据源nodeModel
+ *
+ */
 
 @property (nonatomic,strong)NodeModel *nodeModel;
-@property (nonatomic, strong, readonly) NSArray<NodeBaseCellViewModel *> *cellViewModelList;  //Model
+
+/**
+ * cellViewModel数组
+ *
+ */
+
+@property (nonatomic, strong, readonly) NSArray<NodeCellViewModel *> *cellViewModelList;
+
+/**
+ * 获取数据
+ *
+ */
 - (void)fetchData;
 
 

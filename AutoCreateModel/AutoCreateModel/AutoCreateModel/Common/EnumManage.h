@@ -32,6 +32,11 @@ const static NSArray *___PropertyType;
 #define KPropertyTypeEnum(string) ([cPropertyTypeGet indexOfObject:string])
 
 
+/**
+ *    枚举管理类
+ */
+
+
 @interface EnumManage : NSObject
 
 

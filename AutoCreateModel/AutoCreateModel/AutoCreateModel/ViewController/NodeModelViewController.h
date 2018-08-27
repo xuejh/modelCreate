@@ -8,10 +8,15 @@
 
 #import "BaseViewController.h"
 #import "NodeModel.h"
-#import "NodeViewModel.h"
+#import "NodeTableViewModel.h"
 #import "CommonData.h"
 
 @interface NodeModelViewController : BaseViewController
+
+/**
+ * tableViewModel所用的数据源nodeModel
+ *
+ */
 
 @property (nonatomic,strong)NodeModel *nodeModel;
 

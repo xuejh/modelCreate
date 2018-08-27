@@ -1,17 +1,17 @@
 //
-//  NodeMultiCellCoordinator.h
+//  NodeBaseCellCoordinator.h
 //  AutoCreateModel
 //
-//  Created by jinhui  xue on 2018/8/25.
+//  Created by 薛锦辉 on 2018/8/23.
 //  Copyright © 2018年 薛锦辉. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@class NodeMultiCellView;
+@class NodeCellView;
 @class NodeCellViewModel;
 
-@interface NodeMultiCellCoordinator : NSObject
+@interface NodeCellCoordinator : NSObject
 
 /**
  *    初始化cell协调器
@@ -21,7 +21,7 @@
  *
  */
 
-- (instancetype)initWithCellView:(NodeMultiCellView *)cell;
+- (instancetype)initWithCellView:(NodeCellView *)cell;
 
 /**
  *    实现Model与cell的数据绑定
@@ -39,5 +39,4 @@
  */
 
 - (void)didSelectCellView;
-
 @end

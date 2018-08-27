@@ -10,7 +10,18 @@
 
 @protocol UIViewContextProtocol <NSObject>
 
+/**
+ *    上下文对应的controller
+ */
+
 @property(nonatomic, weak, readonly) UIViewController *controller;
+
+/**
+ *    初始化函数
+ *
+ *    @param controller controller名称
+ *
+ */
 
 - (instancetype)initWithViewController:(UIViewController *)controller;
 
@@ -18,6 +29,9 @@
 
 @interface UIView (Context)
 
+/**
+ *    view对应的上下文
+ */
 @property(nonatomic, strong) id<UIViewContextProtocol> context;
 
 @end

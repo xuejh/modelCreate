@@ -23,7 +23,7 @@
     return (CommonData *)s_instance_dj_singleton;
 }
 
-- (BOOL)isMultiCell:(NodeBaseCellViewModel*)viewModel{
+- (BOOL)isMultiCell:(NodeCellViewModel*)viewModel{
     
     if (viewModel.propertyType == kNSDictionary || viewModel.propertyType == kNSArray) {
         return YES;

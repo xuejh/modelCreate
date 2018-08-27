@@ -11,9 +11,21 @@
 
 @interface ViewController : BaseViewController
 
+/**
+ *  json字符串对应的textView
+ */
+
 @property (nonatomic,strong)IBOutlet UITextView *textView;
 
+/**
+ *  第一层model名字对应的textField
+ */
+
 @property (nonatomic,strong)IBOutlet UITextField *textField;
+
+/**
+ *  前缀对应的textField
+ */
 
 @property (nonatomic,strong)IBOutlet UITextField *preTextField;
 

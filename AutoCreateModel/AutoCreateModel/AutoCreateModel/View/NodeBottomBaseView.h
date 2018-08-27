@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *    NodeMultiCellView的下半部分
+ *
+ */
+
 @interface NodeBottomBaseView : UIView
 
+/**
+ *    NSArray，dictionary展示的model名字
+ *
+ */
+
 @property (nonatomic, strong) NSString *modelName;
+
+/**
+ *    返回已封装好的自身view
+ */
 
 + (NodeBottomBaseView *)createSelf;
 

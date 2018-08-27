@@ -12,5 +12,10 @@
 
 @interface NodeContext : NSObject <UIViewContextProtocol>
 
+/**
+ * tableViewModel所用的数据源nodeModel
+ *
+ */
+
 @property (nonatomic,strong)NodeModel *nodeModel;
 @end

@@ -6,20 +6,20 @@
 //  Copyright © 2018年 薛锦辉. All rights reserved.
 //
 
-#import "NodeBaseCellCoordinator.h"
-#import "NodeBaseCellView.h"
-#import "NodeBaseCellViewModel.h"
+#import "NodeCellCoordinator.h"
+#import "NodeCellView.h"
+#import "NodeCellViewModel.h"
 
-@interface  NodeBaseCellCoordinator()
+@interface  NodeCellCoordinator()
 
-@property(nonatomic, weak) NodeBaseCellView *cell;
-@property(nonatomic, weak) NodeBaseCellViewModel *cellViewModel;
+@property(nonatomic, weak) NodeCellView *cell;
+@property(nonatomic, weak) NodeCellViewModel *cellViewModel;
 
 @end
 
-@implementation NodeBaseCellCoordinator
+@implementation NodeCellCoordinator
 
-- (instancetype)initWithCellView:(NodeBaseCellView *)cell{
+- (instancetype)initWithCellView:(NodeCellView *)cell{
     
     if (self = [super init]) {
         self.cell = cell;
@@ -28,7 +28,7 @@
     
 }
 
-- (void)bindData:(NodeBaseCellViewModel *)cellViewModel{
+- (void)bindData:(NodeCellViewModel *)cellViewModel{
     
     self.cellViewModel = cellViewModel;
     self.cell.propertyType = cellViewModel.propertyType;

@@ -6,21 +6,22 @@
 //  Copyright © 2018年 薛锦辉. All rights reserved.
 //
 
-#import "NodeBaseCellView.h"
+#import "NodeCellView.h"
 #import "AutoModelPCH.h"
 
-
-@interface NodeBaseCellView()
+@interface NodeCellView()
 
 @property (nonatomic,strong)NodeTopBaseView *view;
 
 @end
 
-@implementation NodeBaseCellView
+@implementation NodeCellView
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
         [self initSubViews];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
@@ -39,7 +40,6 @@
 - (void)setPropertyType:(PropertyType)propertyType{
     
     self.view.propertyType = propertyType;
-    
 }
 
 - (void)setPropertyValue:(id)propertyValue{

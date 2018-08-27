@@ -10,7 +10,15 @@
 
 @interface UIColor (ColorChange)
 
-// 颜色转换：iOS中（以#开头）十六进制的颜色转换为UIColor(RGB)
+
+/**
+ *    颜色转换：iOS中（以#开头）十六进制的颜色转换为UIColor(RGB)
+ *
+ *    @param color 十六进制颜色
+ *    @return 返回对应的color对象
+ *
+ */
+
 + (UIColor *) colorWithHexString: (NSString *)color;
 
 @end

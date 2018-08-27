@@ -12,7 +12,7 @@
 #import "NodeContext.h"
 #import "NodeTopBaseView.h"
 #import "PickViewCoordinator.h"
-#import "NodeBaseCellView.h"
+#import "NodeCellView.h"
 #import "NodeMultiCellView.h"
 #import "EditView.h"
 #import "NodeModelStrings.h"
@@ -99,7 +99,7 @@
         
         id tableViewCell = [userInfo objectForKey:MessageIdKey];
         
-        if ([tableViewCell isKindOfClass:[NodeBaseCellView class]]) {
+        if ([tableViewCell isKindOfClass:[NodeCellView class]]) {
             
             self.selectIndexPath = [self.tableView indexPathForCell:tableViewCell];
             [self.view addSubview:self.pickView];

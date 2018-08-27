@@ -11,7 +11,33 @@
 
 @interface CommonFactory : NSObject
 
+/**
+ *    产生本项目使用的通用button
+ *
+ *
+ *    @return 返回对应的UIButton对象
+ *
+ */
+
 + (UIButton*)createCommonButton;
+
+/**
+ *    产生属性类型使用的通用button
+ *
+ *
+ *    @return 返回对应的UIButton对象
+ *
+ */
+
 + (UIButton*)createPropertyTypeButton;
+
+/**
+ *    产生属性值使用的通用button
+ *
+ *
+ *    @return 返回对应的UIButton对象
+ *
+ */
+
 + (UIButton*)createPropertyButton;
 @end

@@ -10,11 +10,18 @@
 #import "AutoModelPCH.h"
 #import "NodeTopBaseView.h"
 
+@interface NodeCellView : UITableViewCell
 
-
-@interface NodeBaseCellView : UITableViewCell
+/**
+ *    model对应的类型，为kNSString，kNSNumber等
+ */
 
 @property(nonatomic, assign) PropertyType propertyType;
+
+/**
+ *    model对应的属性值
+ */
+
 @property(nonatomic, weak) id propertyValue;
 
 @end

@@ -11,7 +11,20 @@
 
 @interface NodeModelTableViewCoordinator : NSObject
 
+/**
+ *    初始化tableview协调器
+ *
+ *    @param tableView tableView对象
+ *
+ *
+ */
+
 - (instancetype)initWithTableView:(UITableView *)tableView;
+
+/**
+ *    tableview reload，这里增加了一些特殊操作
+ *
+ */
 
 -  (void)reloadData;
 @end

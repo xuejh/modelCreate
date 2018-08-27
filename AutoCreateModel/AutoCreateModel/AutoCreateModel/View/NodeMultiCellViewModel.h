@@ -6,9 +6,9 @@
 //  Copyright © 2018年 薛锦辉. All rights reserved.
 //
 
-#import "NodeBaseCellViewModel.h"
+#import "NodeCellViewModel.h"
 
 
-@interface NodeMultiCellViewModel : NodeBaseCellViewModel
+@interface NodeMultiCellViewModel : NodeCellViewModel
 
 @end

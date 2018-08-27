@@ -19,6 +19,7 @@ static char *UIViewContextProtocol = "UIViewContextProtocolKey";
 }
 
 - (id<UIViewContextProtocol>)context {
+    
     id<UIViewContextProtocol> context = [self p_context:self];
     if (!context) {
         context = [self parentContext:self.superview];
@@ -27,6 +28,7 @@ static char *UIViewContextProtocol = "UIViewContextProtocolKey";
 }
 
 - (id<UIViewContextProtocol>)parentContext:(UIView *)parentView {
+    
     if (!parentView) {
         return nil;
     }
@@ -41,8 +43,8 @@ static char *UIViewContextProtocol = "UIViewContextProtocolKey";
 }
 
 - (id<UIViewContextProtocol>)p_context:(id)object {
-    id<UIViewContextProtocol> context = objc_getAssociatedObject(object, UIViewContextProtocol);
     
+    id<UIViewContextProtocol> context = objc_getAssociatedObject(object, UIViewContextProtocol);
     return context;
 }
 

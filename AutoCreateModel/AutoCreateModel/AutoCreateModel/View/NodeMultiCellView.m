@@ -16,7 +16,6 @@
 @property (nonatomic,strong)NodeTopBaseView *topView;
 @property (nonatomic,strong)NodeBottomBaseView *bottomView;
 
-
 @end
 
 @implementation NodeMultiCellView
@@ -49,7 +48,6 @@
 }
 
 - (void)setPropertyValue:(id)propertyValue{
-    
     
     NodeModel *node  = propertyValue;
     self.topView.propertyValue = node.listType;

@@ -8,12 +8,12 @@
 
 #import "NodeMultiCellCoordinator.h"
 #import "NodeMultiCellView.h"
-#import "NodeBaseCellViewModel.h"
+#import "NodeCellViewModel.h"
 
 @interface  NodeMultiCellCoordinator()
 
 @property(nonatomic, weak) NodeMultiCellView *cell;
-@property(nonatomic, weak) NodeBaseCellViewModel *cellViewModel;
+@property(nonatomic, weak) NodeCellViewModel *cellViewModel;
 
 @end
 
@@ -29,7 +29,7 @@
     
 }
 
-- (void)bindData:(NodeBaseCellViewModel *)cellViewModel{
+- (void)bindData:(NodeCellViewModel *)cellViewModel{
     
     self.cellViewModel = cellViewModel;
     self.cell.propertyType = cellViewModel.propertyType;

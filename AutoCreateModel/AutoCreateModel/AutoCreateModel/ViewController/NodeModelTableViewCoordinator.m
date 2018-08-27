@@ -8,9 +8,9 @@
 
 #import "NodeModelTableViewCoordinator.h"
 #import <KVOController/FBKVOController.h>
-#import "NodeBaseCellView.h"
-#import "NodeBaseCellViewModel.h"
-#import "NodeBaseCellCoordinator.h"
+#import "NodeCellView.h"
+#import "NodeCellViewModel.h"
+#import "NodeCellCoordinator.h"
 #import <KVOController/FBKVOController.h>
 #import "NodeContext.h"
 #import "UIResponder+Router.h"
@@ -27,7 +27,7 @@ UITableViewDataSource,UIResponderEventProtocol>
 
 @property (nonatomic, weak) UITableView *tableView;
 @property(nonatomic, strong) FBKVOController *kvoController;
-@property (nonatomic, strong) NodeViewModel *viewModel;
+@property (nonatomic, strong) NodeTableViewModel *viewModel;
 @property(nonatomic, strong) NSMutableDictionary *coordinatorDic; //用于保存cell协调器，用于和cell一一对应
 @property(nonatomic, strong) NSMutableDictionary *multiCoordinatorDic; //用于保存cell协调器，用于和cell一一对应
 
@@ -70,7 +70,7 @@ UITableViewDataSource,UIResponderEventProtocol>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NodeBaseCellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
+    NodeCellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
     
     return [cellViewModel cellHeight];
 }
@@ -93,11 +93,11 @@ UITableViewDataSource,UIResponderEventProtocol>
     }else{
         
         NSString *identifier = @"identifier1";
-        NodeBaseCellView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        NodeCellView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
         if (!cell) {
-            cell = [[NodeBaseCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            cell = [[NodeCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
-        NodeBaseCellCoordinator *cellCoordinator = [self getCoordinatorWithCell:cell];
+        NodeCellCoordinator *cellCoordinator = [self getCoordinatorWithCell:cell];
         [cellCoordinator bindData:cellViewModel];
         return cell;
         
@@ -111,7 +111,7 @@ UITableViewDataSource,UIResponderEventProtocol>
     id tableViewCell = [tableView cellForRowAtIndexPath:indexPath];
     if ([tableViewCell isKindOfClass:[NodeMultiCellView class]]) {
         
-        NodeBaseCellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
+        NodeCellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
         NodeModel * subNodeModel = cellViewModel.propertyValue;
         NodeContext * context = tableView.context;
         NodeModelViewController * controller = [[NodeModelViewController alloc]init];
@@ -124,11 +124,11 @@ UITableViewDataSource,UIResponderEventProtocol>
 
 
 
-- (NodeBaseCellCoordinator *)getCoordinatorWithCell:(NodeBaseCellView *)cell {
+- (NodeCellCoordinator *)getCoordinatorWithCell:(NodeCellView *)cell {
     NSNumber *cellAddress = @((UInt64)cell);
-    NodeBaseCellCoordinator *cellCoordinator = [self.coordinatorDic objectForKey:cellAddress];
+    NodeCellCoordinator *cellCoordinator = [self.coordinatorDic objectForKey:cellAddress];
     if (!cellCoordinator) {
-        cellCoordinator = [[NodeBaseCellCoordinator alloc] initWithCellView:cell];
+        cellCoordinator = [[NodeCellCoordinator alloc] initWithCellView:cell];
         [self.coordinatorDic setObject:cellCoordinator forKey:cellAddress];
     }
     return cellCoordinator;
@@ -168,9 +168,9 @@ UITableViewDataSource,UIResponderEventProtocol>
     return _multiCoordinatorDic;
 }
 
-- (NodeViewModel *)viewModel {
+- (NodeTableViewModel *)viewModel {
     if (!_viewModel) {
-        _viewModel = [[NodeViewModel alloc] init];
+        _viewModel = [[NodeTableViewModel alloc] init];
         NodeContext * context =self.tableView.context;
         _viewModel.nodeModel = context.nodeModel;
     }
