@@ -8,33 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		356088EE7F1D4104E7AAA8D8 /* libPods-AutoCreateModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */; };
-		3FA30FC2213130EC005C9F0F /* PickViewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FC1213130EC005C9F0F /* PickViewCoordinator.m */; };
-		3FA30FC5213144B0005C9F0F /* NodeMultiCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */; };
-		3FA30FCB2131459F005C9F0F /* NodeMultiCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */; };
-		3FA30FCE21316F10005C9F0F /* NodeMultiCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FCD21316F10005C9F0F /* NodeMultiCellViewModel.m */; };
-		3FA30FD1213174FE005C9F0F /* EditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA30FD0213174FE005C9F0F /* EditView.m */; };
-		F272943C212D2F0A008B38E5 /* NodeModelStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F272943B212D2F09008B38E5 /* NodeModelStrings.plist */; };
-		F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = F272943F212D34E4008B38E5 /* UIResponder+Router.m */; };
-		F2729443212D3567008B38E5 /* UIView+Context.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729442212D3567008B38E5 /* UIView+Context.m */; };
-		F2729455212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2729454212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png */; };
-		F2729458212D5DDA008B38E5 /* NodeModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729457212D5DDA008B38E5 /* NodeModelViewController.m */; };
-		F272945B212D63DB008B38E5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F272945A212D63DA008B38E5 /* BaseViewController.m */; };
 		F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */; };
-		F2729461212D8AEC008B38E5 /* NodeCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2729460212D8AEC008B38E5 /* NodeCellView.m */; };
-		F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749C9A212BF89900FB20BF /* JsonManage.m */; };
-		F2749CA1212C121100FB20BF /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA0212C121100FB20BF /* NodeModel.m */; };
-		F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */; };
-		F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */; };
 		F27B3328212E5A8F00124931 /* CommonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3327212E5A8F00124931 /* CommonFactory.m */; };
 		F27B332B212E5C8A00124931 /* CommonFont.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B332A212E5C8A00124931 /* CommonFont.m */; };
-		F27B332E212E60D500124931 /* NodeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B332D212E60D500124931 /* NodeCellViewModel.m */; };
-		F27B3331212E611C00124931 /* NodeCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3330212E611C00124931 /* NodeCellCoordinator.m */; };
-		F27B3334212E81EB00124931 /* NodeTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3333212E81EB00124931 /* NodeTableViewModel.m */; };
 		F27B3337212E945300124931 /* EnumManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3336212E945300124931 /* EnumManage.m */; };
-		F27B333A212EA69E00124931 /* NodeTopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3339212EA69E00124931 /* NodeTopBaseView.m */; };
-		F27B333D212EA6B300124931 /* NodeBottomBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B333C212EA6B300124931 /* NodeBottomBaseView.m */; };
-		F27B3340212ED48600124931 /* NodeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B333F212ED48600124931 /* NodeContext.m */; };
-		F27B3343212EDD6000124931 /* NodeModelTableViewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3342212EDD6000124931 /* NodeModelTableViewCoordinator.m */; };
 		F27B3346212EDE1A00124931 /* CommonData.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3345212EDE1A00124931 /* CommonData.m */; };
 		F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5A8212ACFD600DC5891 /* AppDelegate.m */; };
 		F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5AB212ACFD600DC5891 /* ViewController.m */; };
@@ -42,65 +19,44 @@
 		F290A5B1212ACFD600DC5891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F290A5B0212ACFD600DC5891 /* Assets.xcassets */; };
 		F290A5B4212ACFD600DC5891 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F290A5B2212ACFD600DC5891 /* LaunchScreen.storyboard */; };
 		F290A5B7212ACFD600DC5891 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5B6212ACFD600DC5891 /* main.m */; };
+		F29D403021341D6300464621 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D402D21341D6300464621 /* UIResponder+Router.m */; };
+		F29D403121341D6300464621 /* UIView+Context.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D402F21341D6300464621 /* UIView+Context.m */; };
+		F29D403721341DC300464621 /* NodeModelViewControllerBack_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F29D403621341DC300464621 /* NodeModelViewControllerBack_next@3x.png */; };
+		F29D404221341E5300464621 /* JsonManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D403A21341E5300464621 /* JsonManage.m */; };
+		F29D404321341E5300464621 /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D403C21341E5300464621 /* NodeModel.m */; };
+		F29D404421341E5300464621 /* NodeModelStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D403E21341E5300464621 /* NodeModelStrings.m */; };
+		F29D404521341E5300464621 /* NodeModelStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29D403F21341E5300464621 /* NodeModelStrings.plist */; };
+		F29D404621341E5300464621 /* PropertyInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D404121341E5300464621 /* PropertyInfomation.m */; };
+		F29D406B21341FA300464621 /* EditView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D404A21341FA300464621 /* EditView.m */; };
+		F29D406C21341FA300464621 /* NodeModelTableViewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D404D21341FA300464621 /* NodeModelTableViewCoordinator.m */; };
+		F29D406D21341FA300464621 /* NodeTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D404F21341FA300464621 /* NodeTableViewModel.m */; };
+		F29D406E21341FA300464621 /* NodeBottomBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D405221341FA300464621 /* NodeBottomBaseView.m */; };
+		F29D406F21341FA300464621 /* NodeCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D405421341FA300464621 /* NodeCellCoordinator.m */; };
+		F29D407021341FA300464621 /* NodeCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D405621341FA300464621 /* NodeCellView.m */; };
+		F29D407121341FA300464621 /* NodeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D405821341FA300464621 /* NodeCellViewModel.m */; };
+		F29D407221341FA300464621 /* NodeMultiCellCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D405A21341FA300464621 /* NodeMultiCellCoordinator.m */; };
+		F29D407321341FA300464621 /* NodeMultiCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D405C21341FA300464621 /* NodeMultiCellView.m */; };
+		F29D407421341FA300464621 /* NodeMultiCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D405E21341FA300464621 /* NodeMultiCellViewModel.m */; };
+		F29D407521341FA300464621 /* NodeTopBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D406021341FA300464621 /* NodeTopBaseView.m */; };
+		F29D407621341FA300464621 /* PickViewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D406321341FA300464621 /* PickViewCoordinator.m */; };
+		F29D407721341FA300464621 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D406621341FA300464621 /* BaseViewController.m */; };
+		F29D407821341FA300464621 /* NodeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D406821341FA300464621 /* NodeContext.m */; };
+		F29D407921341FA300464621 /* NodeModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D406A21341FA300464621 /* NodeModelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoCreateModel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FA30FC0213130EC005C9F0F /* PickViewCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickViewCoordinator.h; sourceTree = "<group>"; };
-		3FA30FC1213130EC005C9F0F /* PickViewCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickViewCoordinator.m; sourceTree = "<group>"; };
-		3FA30FC3213144B0005C9F0F /* NodeMultiCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellView.h; sourceTree = "<group>"; };
-		3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellView.m; sourceTree = "<group>"; };
-		3FA30FC92131459F005C9F0F /* NodeMultiCellCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellCoordinator.h; sourceTree = "<group>"; };
-		3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellCoordinator.m; sourceTree = "<group>"; };
-		3FA30FCC21316F10005C9F0F /* NodeMultiCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellViewModel.h; sourceTree = "<group>"; };
-		3FA30FCD21316F10005C9F0F /* NodeMultiCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellViewModel.m; sourceTree = "<group>"; };
-		3FA30FCF213174FE005C9F0F /* EditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditView.h; sourceTree = "<group>"; };
-		3FA30FD0213174FE005C9F0F /* EditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditView.m; sourceTree = "<group>"; };
 		B668B53C49D0476CB1309A3F /* Pods-AutoCreateModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.debug.xcconfig"; sourceTree = "<group>"; };
 		D552446CAA2DD869BB5F0E73 /* Pods-AutoCreateModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.release.xcconfig"; sourceTree = "<group>"; };
-		F272943B212D2F09008B38E5 /* NodeModelStrings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NodeModelStrings.plist; sourceTree = "<group>"; };
-		F272943E212D34E4008B38E5 /* UIResponder+Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
-		F272943F212D34E4008B38E5 /* UIResponder+Router.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
-		F2729441212D3567008B38E5 /* UIView+Context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Context.h"; sourceTree = "<group>"; };
-		F2729442212D3567008B38E5 /* UIView+Context.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Context.m"; sourceTree = "<group>"; };
-		F2729454212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NodeModelViewControllerBack_next@3x.png"; sourceTree = "<group>"; };
-		F2729456212D5DDA008B38E5 /* NodeModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelViewController.h; sourceTree = "<group>"; };
-		F2729457212D5DDA008B38E5 /* NodeModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelViewController.m; sourceTree = "<group>"; };
-		F2729459212D63DA008B38E5 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		F272945A212D63DA008B38E5 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		F272945C212D83FE008B38E5 /* UIColor+ColorChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorChange.h"; sourceTree = "<group>"; };
 		F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorChange.m"; sourceTree = "<group>"; };
-		F272945F212D8AEC008B38E5 /* NodeCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCellView.h; sourceTree = "<group>"; };
-		F2729460212D8AEC008B38E5 /* NodeCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeCellView.m; sourceTree = "<group>"; };
-		F2749C99212BF89900FB20BF /* JsonManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonManage.h; sourceTree = "<group>"; };
-		F2749C9A212BF89900FB20BF /* JsonManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsonManage.m; sourceTree = "<group>"; };
 		F2749C9C212C03B800FB20BF /* AutoModelPCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoModelPCH.h; sourceTree = "<group>"; };
-		F2749C9F212C121100FB20BF /* NodeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
-		F2749CA0212C121100FB20BF /* NodeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
-		F2749CA2212C37FC00FB20BF /* PropertyInfomation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyInfomation.h; sourceTree = "<group>"; };
-		F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyInfomation.m; sourceTree = "<group>"; };
-		F2749CAE212C3B5C00FB20BF /* NodeModelStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelStrings.h; sourceTree = "<group>"; };
-		F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelStrings.m; sourceTree = "<group>"; };
 		F27B3326212E5A8F00124931 /* CommonFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFactory.h; sourceTree = "<group>"; };
 		F27B3327212E5A8F00124931 /* CommonFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFactory.m; sourceTree = "<group>"; };
 		F27B3329212E5C8A00124931 /* CommonFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFont.h; sourceTree = "<group>"; };
 		F27B332A212E5C8A00124931 /* CommonFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFont.m; sourceTree = "<group>"; };
-		F27B332C212E60D500124931 /* NodeCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCellViewModel.h; sourceTree = "<group>"; };
-		F27B332D212E60D500124931 /* NodeCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeCellViewModel.m; sourceTree = "<group>"; };
-		F27B332F212E611C00124931 /* NodeCellCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeCellCoordinator.h; sourceTree = "<group>"; };
-		F27B3330212E611C00124931 /* NodeCellCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeCellCoordinator.m; sourceTree = "<group>"; };
-		F27B3332212E81EB00124931 /* NodeTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeTableViewModel.h; sourceTree = "<group>"; };
-		F27B3333212E81EB00124931 /* NodeTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeTableViewModel.m; sourceTree = "<group>"; };
 		F27B3335212E945300124931 /* EnumManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumManage.h; sourceTree = "<group>"; };
 		F27B3336212E945300124931 /* EnumManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumManage.m; sourceTree = "<group>"; };
-		F27B3338212EA69E00124931 /* NodeTopBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeTopBaseView.h; sourceTree = "<group>"; };
-		F27B3339212EA69E00124931 /* NodeTopBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeTopBaseView.m; sourceTree = "<group>"; };
-		F27B333B212EA6B300124931 /* NodeBottomBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeBottomBaseView.h; sourceTree = "<group>"; };
-		F27B333C212EA6B300124931 /* NodeBottomBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeBottomBaseView.m; sourceTree = "<group>"; };
-		F27B333E212ED48600124931 /* NodeContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeContext.h; sourceTree = "<group>"; };
-		F27B333F212ED48600124931 /* NodeContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeContext.m; sourceTree = "<group>"; };
-		F27B3341212EDD6000124931 /* NodeModelTableViewCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeModelTableViewCoordinator.h; sourceTree = "<group>"; };
-		F27B3342212EDD6000124931 /* NodeModelTableViewCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeModelTableViewCoordinator.m; sourceTree = "<group>"; };
 		F27B3344212EDE1A00124931 /* CommonData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonData.h; sourceTree = "<group>"; };
 		F27B3345212EDE1A00124931 /* CommonData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonData.m; sourceTree = "<group>"; };
 		F290A5A4212ACFD600DC5891 /* AutoCreateModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCreateModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +69,50 @@
 		F290A5B3212ACFD600DC5891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F290A5B5212ACFD600DC5891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F290A5B6212ACFD600DC5891 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F29D402C21341D6300464621 /* UIResponder+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
+		F29D402D21341D6300464621 /* UIResponder+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
+		F29D402E21341D6300464621 /* UIView+Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Context.h"; sourceTree = "<group>"; };
+		F29D402F21341D6300464621 /* UIView+Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Context.m"; sourceTree = "<group>"; };
+		F29D403621341DC300464621 /* NodeModelViewControllerBack_next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NodeModelViewControllerBack_next@3x.png"; sourceTree = "<group>"; };
+		F29D403921341E5300464621 /* JsonManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonManage.h; sourceTree = "<group>"; };
+		F29D403A21341E5300464621 /* JsonManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonManage.m; sourceTree = "<group>"; };
+		F29D403B21341E5300464621 /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
+		F29D403C21341E5300464621 /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
+		F29D403D21341E5300464621 /* NodeModelStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelStrings.h; sourceTree = "<group>"; };
+		F29D403E21341E5300464621 /* NodeModelStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelStrings.m; sourceTree = "<group>"; };
+		F29D403F21341E5300464621 /* NodeModelStrings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NodeModelStrings.plist; sourceTree = "<group>"; };
+		F29D404021341E5300464621 /* PropertyInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyInfomation.h; sourceTree = "<group>"; };
+		F29D404121341E5300464621 /* PropertyInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyInfomation.m; sourceTree = "<group>"; };
+		F29D404921341FA300464621 /* EditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditView.h; sourceTree = "<group>"; };
+		F29D404A21341FA300464621 /* EditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditView.m; sourceTree = "<group>"; };
+		F29D404C21341FA300464621 /* NodeModelTableViewCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelTableViewCoordinator.h; sourceTree = "<group>"; };
+		F29D404D21341FA300464621 /* NodeModelTableViewCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelTableViewCoordinator.m; sourceTree = "<group>"; };
+		F29D404E21341FA300464621 /* NodeTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeTableViewModel.h; sourceTree = "<group>"; };
+		F29D404F21341FA300464621 /* NodeTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeTableViewModel.m; sourceTree = "<group>"; };
+		F29D405121341FA300464621 /* NodeBottomBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeBottomBaseView.h; sourceTree = "<group>"; };
+		F29D405221341FA300464621 /* NodeBottomBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeBottomBaseView.m; sourceTree = "<group>"; };
+		F29D405321341FA300464621 /* NodeCellCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeCellCoordinator.h; sourceTree = "<group>"; };
+		F29D405421341FA300464621 /* NodeCellCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeCellCoordinator.m; sourceTree = "<group>"; };
+		F29D405521341FA300464621 /* NodeCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeCellView.h; sourceTree = "<group>"; };
+		F29D405621341FA300464621 /* NodeCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeCellView.m; sourceTree = "<group>"; };
+		F29D405721341FA300464621 /* NodeCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeCellViewModel.h; sourceTree = "<group>"; };
+		F29D405821341FA300464621 /* NodeCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeCellViewModel.m; sourceTree = "<group>"; };
+		F29D405921341FA300464621 /* NodeMultiCellCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellCoordinator.h; sourceTree = "<group>"; };
+		F29D405A21341FA300464621 /* NodeMultiCellCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellCoordinator.m; sourceTree = "<group>"; };
+		F29D405B21341FA300464621 /* NodeMultiCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellView.h; sourceTree = "<group>"; };
+		F29D405C21341FA300464621 /* NodeMultiCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellView.m; sourceTree = "<group>"; };
+		F29D405D21341FA300464621 /* NodeMultiCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeMultiCellViewModel.h; sourceTree = "<group>"; };
+		F29D405E21341FA300464621 /* NodeMultiCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMultiCellViewModel.m; sourceTree = "<group>"; };
+		F29D405F21341FA300464621 /* NodeTopBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeTopBaseView.h; sourceTree = "<group>"; };
+		F29D406021341FA300464621 /* NodeTopBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeTopBaseView.m; sourceTree = "<group>"; };
+		F29D406221341FA300464621 /* PickViewCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickViewCoordinator.h; sourceTree = "<group>"; };
+		F29D406321341FA300464621 /* PickViewCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickViewCoordinator.m; sourceTree = "<group>"; };
+		F29D406521341FA300464621 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		F29D406621341FA300464621 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		F29D406721341FA300464621 /* NodeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeContext.h; sourceTree = "<group>"; };
+		F29D406821341FA300464621 /* NodeContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeContext.m; sourceTree = "<group>"; };
+		F29D406921341FA300464621 /* NodeModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelViewController.h; sourceTree = "<group>"; };
+		F29D406A21341FA300464621 /* NodeModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,83 +144,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F272943D212D34BA008B38E5 /* MUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				F272943E212D34E4008B38E5 /* UIResponder+Router.h */,
-				F272943F212D34E4008B38E5 /* UIResponder+Router.m */,
-				F2729441212D3567008B38E5 /* UIView+Context.h */,
-				F2729442212D3567008B38E5 /* UIView+Context.m */,
-			);
-			path = MUIKit;
-			sourceTree = "<group>";
-		};
-		F2729444212D3631008B38E5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F272945F212D8AEC008B38E5 /* NodeCellView.h */,
-				F2729460212D8AEC008B38E5 /* NodeCellView.m */,
-				F27B332C212E60D500124931 /* NodeCellViewModel.h */,
-				F27B332D212E60D500124931 /* NodeCellViewModel.m */,
-				F27B332F212E611C00124931 /* NodeCellCoordinator.h */,
-				F27B3330212E611C00124931 /* NodeCellCoordinator.m */,
-				F27B3332212E81EB00124931 /* NodeTableViewModel.h */,
-				F27B3333212E81EB00124931 /* NodeTableViewModel.m */,
-				F27B3338212EA69E00124931 /* NodeTopBaseView.h */,
-				F27B3339212EA69E00124931 /* NodeTopBaseView.m */,
-				F27B333B212EA6B300124931 /* NodeBottomBaseView.h */,
-				F27B333C212EA6B300124931 /* NodeBottomBaseView.m */,
-				3FA30FC3213144B0005C9F0F /* NodeMultiCellView.h */,
-				3FA30FC4213144B0005C9F0F /* NodeMultiCellView.m */,
-				3FA30FC92131459F005C9F0F /* NodeMultiCellCoordinator.h */,
-				3FA30FCA2131459F005C9F0F /* NodeMultiCellCoordinator.m */,
-				3FA30FCC21316F10005C9F0F /* NodeMultiCellViewModel.h */,
-				3FA30FCD21316F10005C9F0F /* NodeMultiCellViewModel.m */,
-				3FA30FCF213174FE005C9F0F /* EditView.h */,
-				3FA30FD0213174FE005C9F0F /* EditView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F2729445212D3631008B38E5 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F2729459212D63DA008B38E5 /* BaseViewController.h */,
-				F272945A212D63DA008B38E5 /* BaseViewController.m */,
-				F2729456212D5DDA008B38E5 /* NodeModelViewController.h */,
-				F2729457212D5DDA008B38E5 /* NodeModelViewController.m */,
-				F27B333E212ED48600124931 /* NodeContext.h */,
-				F27B333F212ED48600124931 /* NodeContext.m */,
-				F27B3341212EDD6000124931 /* NodeModelTableViewCoordinator.h */,
-				F27B3342212EDD6000124931 /* NodeModelTableViewCoordinator.m */,
-				3FA30FC0213130EC005C9F0F /* PickViewCoordinator.h */,
-				3FA30FC1213130EC005C9F0F /* PickViewCoordinator.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		F2729446212D3631008B38E5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F2729453212D41DB008B38E5 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				F2729454212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
 		F2749C97212BF86F00FB20BF /* AutoCreateModel */ = {
 			isa = PBXGroup;
 			children = (
-				F2729453212D41DB008B38E5 /* Image */,
-				F2729446212D3631008B38E5 /* Model */,
-				F2729444212D3631008B38E5 /* View */,
-				F2729445212D3631008B38E5 /* ViewController */,
+				F29D404721341FA300464621 /* UI */,
+				F29D403821341E5300464621 /* Parser */,
 				F2749C98212BF88500FB20BF /* Common */,
 			);
 			path = AutoCreateModel;
@@ -229,16 +157,8 @@
 		F2749C98212BF88500FB20BF /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F272943B212D2F09008B38E5 /* NodeModelStrings.plist */,
-				F2749C99212BF89900FB20BF /* JsonManage.h */,
-				F2749C9A212BF89900FB20BF /* JsonManage.m */,
+				F29D402B21341D6300464621 /* MUIKit */,
 				F2749C9C212C03B800FB20BF /* AutoModelPCH.h */,
-				F2749C9F212C121100FB20BF /* NodeModel.h */,
-				F2749CA0212C121100FB20BF /* NodeModel.m */,
-				F2749CA2212C37FC00FB20BF /* PropertyInfomation.h */,
-				F2749CA3212C37FC00FB20BF /* PropertyInfomation.m */,
-				F2749CAE212C3B5C00FB20BF /* NodeModelStrings.h */,
-				F2749CAF212C3B5C00FB20BF /* NodeModelStrings.m */,
 				F272945C212D83FE008B38E5 /* UIColor+ColorChange.h */,
 				F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */,
 				F27B3326212E5A8F00124931 /* CommonFactory.h */,
@@ -274,7 +194,7 @@
 		F290A5A6212ACFD600DC5891 /* AutoCreateModel */ = {
 			isa = PBXGroup;
 			children = (
-				F272943D212D34BA008B38E5 /* MUIKit */,
+				F29D403521341DC300464621 /* Image */,
 				F2749C97212BF86F00FB20BF /* AutoCreateModel */,
 				F290A5A7212ACFD600DC5891 /* AppDelegate.h */,
 				F290A5A8212ACFD600DC5891 /* AppDelegate.m */,
@@ -287,6 +207,118 @@
 				F290A5B6212ACFD600DC5891 /* main.m */,
 			);
 			path = AutoCreateModel;
+			sourceTree = "<group>";
+		};
+		F29D402B21341D6300464621 /* MUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F29D402C21341D6300464621 /* UIResponder+Router.h */,
+				F29D402D21341D6300464621 /* UIResponder+Router.m */,
+				F29D402E21341D6300464621 /* UIView+Context.h */,
+				F29D402F21341D6300464621 /* UIView+Context.m */,
+			);
+			path = MUIKit;
+			sourceTree = "<group>";
+		};
+		F29D403521341DC300464621 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F29D403621341DC300464621 /* NodeModelViewControllerBack_next@3x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		F29D403821341E5300464621 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				F29D403921341E5300464621 /* JsonManage.h */,
+				F29D403A21341E5300464621 /* JsonManage.m */,
+				F29D403B21341E5300464621 /* NodeModel.h */,
+				F29D403C21341E5300464621 /* NodeModel.m */,
+				F29D403D21341E5300464621 /* NodeModelStrings.h */,
+				F29D403E21341E5300464621 /* NodeModelStrings.m */,
+				F29D403F21341E5300464621 /* NodeModelStrings.plist */,
+				F29D404021341E5300464621 /* PropertyInfomation.h */,
+				F29D404121341E5300464621 /* PropertyInfomation.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		F29D404721341FA300464621 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F29D404821341FA300464621 /* EditView */,
+				F29D404B21341FA300464621 /* ModelTableView */,
+				F29D405021341FA300464621 /* ModelTableViewCell */,
+				F29D406121341FA300464621 /* PickView */,
+				F29D406421341FA300464621 /* ViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F29D404821341FA300464621 /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				F29D404921341FA300464621 /* EditView.h */,
+				F29D404A21341FA300464621 /* EditView.m */,
+			);
+			path = EditView;
+			sourceTree = "<group>";
+		};
+		F29D404B21341FA300464621 /* ModelTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F29D404C21341FA300464621 /* NodeModelTableViewCoordinator.h */,
+				F29D404D21341FA300464621 /* NodeModelTableViewCoordinator.m */,
+				F29D404E21341FA300464621 /* NodeTableViewModel.h */,
+				F29D404F21341FA300464621 /* NodeTableViewModel.m */,
+			);
+			path = ModelTableView;
+			sourceTree = "<group>";
+		};
+		F29D405021341FA300464621 /* ModelTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F29D405121341FA300464621 /* NodeBottomBaseView.h */,
+				F29D405221341FA300464621 /* NodeBottomBaseView.m */,
+				F29D405321341FA300464621 /* NodeCellCoordinator.h */,
+				F29D405421341FA300464621 /* NodeCellCoordinator.m */,
+				F29D405521341FA300464621 /* NodeCellView.h */,
+				F29D405621341FA300464621 /* NodeCellView.m */,
+				F29D405721341FA300464621 /* NodeCellViewModel.h */,
+				F29D405821341FA300464621 /* NodeCellViewModel.m */,
+				F29D405921341FA300464621 /* NodeMultiCellCoordinator.h */,
+				F29D405A21341FA300464621 /* NodeMultiCellCoordinator.m */,
+				F29D405B21341FA300464621 /* NodeMultiCellView.h */,
+				F29D405C21341FA300464621 /* NodeMultiCellView.m */,
+				F29D405D21341FA300464621 /* NodeMultiCellViewModel.h */,
+				F29D405E21341FA300464621 /* NodeMultiCellViewModel.m */,
+				F29D405F21341FA300464621 /* NodeTopBaseView.h */,
+				F29D406021341FA300464621 /* NodeTopBaseView.m */,
+			);
+			path = ModelTableViewCell;
+			sourceTree = "<group>";
+		};
+		F29D406121341FA300464621 /* PickView */ = {
+			isa = PBXGroup;
+			children = (
+				F29D406221341FA300464621 /* PickViewCoordinator.h */,
+				F29D406321341FA300464621 /* PickViewCoordinator.m */,
+			);
+			path = PickView;
+			sourceTree = "<group>";
+		};
+		F29D406421341FA300464621 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F29D406521341FA300464621 /* BaseViewController.h */,
+				F29D406621341FA300464621 /* BaseViewController.m */,
+				F29D406721341FA300464621 /* NodeContext.h */,
+				F29D406821341FA300464621 /* NodeContext.m */,
+				F29D406921341FA300464621 /* NodeModelViewController.h */,
+				F29D406A21341FA300464621 /* NodeModelViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,10 +383,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F290A5B4212ACFD600DC5891 /* LaunchScreen.storyboard in Resources */,
-				F272943C212D2F0A008B38E5 /* NodeModelStrings.plist in Resources */,
 				F290A5B1212ACFD600DC5891 /* Assets.xcassets in Resources */,
 				F290A5AF212ACFD600DC5891 /* Main.storyboard in Resources */,
-				F2729455212D41DB008B38E5 /* NodeModelViewControllerBack_next@3x.png in Resources */,
+				F29D403721341DC300464621 /* NodeModelViewControllerBack_next@3x.png in Resources */,
+				F29D404521341E5300464621 /* NodeModelStrings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,35 +448,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F272945B212D63DB008B38E5 /* BaseViewController.m in Sources */,
-				F27B3331212E611C00124931 /* NodeCellCoordinator.m in Sources */,
-				F2729458212D5DDA008B38E5 /* NodeModelViewController.m in Sources */,
-				F2749CA4212C37FC00FB20BF /* PropertyInfomation.m in Sources */,
-				F27B333A212EA69E00124931 /* NodeTopBaseView.m in Sources */,
-				3FA30FD1213174FE005C9F0F /* EditView.m in Sources */,
+				F29D407121341FA300464621 /* NodeCellViewModel.m in Sources */,
+				F29D404421341E5300464621 /* NodeModelStrings.m in Sources */,
+				F29D406D21341FA300464621 /* NodeTableViewModel.m in Sources */,
+				F29D407921341FA300464621 /* NodeModelViewController.m in Sources */,
+				F29D404621341E5300464621 /* PropertyInfomation.m in Sources */,
+				F29D407221341FA300464621 /* NodeMultiCellCoordinator.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
-				F2749C9B212BF89900FB20BF /* JsonManage.m in Sources */,
-				3FA30FC5213144B0005C9F0F /* NodeMultiCellView.m in Sources */,
 				F27B3346212EDE1A00124931 /* CommonData.m in Sources */,
-				F27B3340212ED48600124931 /* NodeContext.m in Sources */,
-				3FA30FC2213130EC005C9F0F /* PickViewCoordinator.m in Sources */,
-				F27B333D212EA6B300124931 /* NodeBottomBaseView.m in Sources */,
-				F2729461212D8AEC008B38E5 /* NodeCellView.m in Sources */,
+				F29D406F21341FA300464621 /* NodeCellCoordinator.m in Sources */,
+				F29D407421341FA300464621 /* NodeMultiCellViewModel.m in Sources */,
+				F29D403021341D6300464621 /* UIResponder+Router.m in Sources */,
 				F27B332B212E5C8A00124931 /* CommonFont.m in Sources */,
-				F27B3334212E81EB00124931 /* NodeTableViewModel.m in Sources */,
-				F27B332E212E60D500124931 /* NodeCellViewModel.m in Sources */,
-				F2749CB0212C3B5C00FB20BF /* NodeModelStrings.m in Sources */,
 				F27B3337212E945300124931 /* EnumManage.m in Sources */,
-				F2749CA1212C121100FB20BF /* NodeModel.m in Sources */,
+				F29D404321341E5300464621 /* NodeModel.m in Sources */,
+				F29D407021341FA300464621 /* NodeCellView.m in Sources */,
+				F29D407521341FA300464621 /* NodeTopBaseView.m in Sources */,
+				F29D406C21341FA300464621 /* NodeModelTableViewCoordinator.m in Sources */,
+				F29D407621341FA300464621 /* PickViewCoordinator.m in Sources */,
 				F290A5B7212ACFD600DC5891 /* main.m in Sources */,
 				F27B3328212E5A8F00124931 /* CommonFactory.m in Sources */,
-				F2729443212D3567008B38E5 /* UIView+Context.m in Sources */,
+				F29D407721341FA300464621 /* BaseViewController.m in Sources */,
 				F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */,
-				F27B3343212EDD6000124931 /* NodeModelTableViewCoordinator.m in Sources */,
-				3FA30FCB2131459F005C9F0F /* NodeMultiCellCoordinator.m in Sources */,
+				F29D404221341E5300464621 /* JsonManage.m in Sources */,
+				F29D406E21341FA300464621 /* NodeBottomBaseView.m in Sources */,
+				F29D407321341FA300464621 /* NodeMultiCellView.m in Sources */,
+				F29D403121341D6300464621 /* UIView+Context.m in Sources */,
+				F29D406B21341FA300464621 /* EditView.m in Sources */,
 				F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */,
-				F2729440212D34E4008B38E5 /* UIResponder+Router.m in Sources */,
-				3FA30FCE21316F10005C9F0F /* NodeMultiCellViewModel.m in Sources */,
+				F29D407821341FA300464621 /* NodeContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
