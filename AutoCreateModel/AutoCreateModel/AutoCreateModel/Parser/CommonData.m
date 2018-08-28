@@ -8,7 +8,8 @@
 
 #import "CommonData.h"
 #import "AutoModelPCH.h"
-
+#import "NodeModelStrings.h"
+#import "CreateFrameFile.h"
 
 @implementation CommonData
 
@@ -55,6 +56,28 @@
         }
         
     }
+    
+}
+
+- (void)createFrameFile{
+    
+    CreateFrameFile *file = [[CreateFrameFile alloc]init];
+    file.modelInCellName = [NSString stringWithFormat:@"%@%@",self.preText,self.modelInCellName];
+    file.frameName = [NSString stringWithFormat:@"%@%@",self.preText,self.frameName];
+    [file createFile];
+    
+    NSLog(@"生成的文件在以下地址: \n%@", [NSHomeDirectory() stringByAppendingPathComponent:@"/Documents/"]);
+}
+
+- (void)createModelFile{
+    
+    for (NodeModel *node in self.nodeModel.allSubNodes) {
+        
+        NodeModelStrings *nodeModelString = [NodeModelStrings nodeModelStringsWithNodeModel:node];
+        [nodeModelString createFile];
+    }
+    
+    NSLog(@"生成的文件在以下地址: \n%@", [NSHomeDirectory() stringByAppendingPathComponent:@"/Documents/"]);
     
 }
 @end

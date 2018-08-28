@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>viewControllerHeaderFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]ViewController.h
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &lt;UIKit/UIKit.h&gt;
+
+@interface [FileName-WaitForReplaced]ViewController : UIViewController
+
+@end</string>
+	<key>viewControllerMFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]ViewController.m
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &quot;[FileName-WaitForReplaced]ViewController.h&quot;
+#import &quot;[FileName-WaitForReplaced]TableViewCoordinator.h&quot;
+#import &quot;UIResponder+Router.h&quot;
+#import &quot;UIView+Context.h&quot;
+#import &quot;[FileName-WaitForReplaced]Context.h&quot;
+
+@interface [FileName-WaitForReplaced]ViewController ()
+@property (nonatomic, strong) [FileName-WaitForReplaced]TableViewCoordinator *tableViewCD;
+@end
+
+@implementation [FileName-WaitForReplaced]ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.context = [[[FileName-WaitForReplaced]Context alloc] initWithViewController:self];
+    
+    // Do any additional setup after loading the view.
+    [self installSubModule];
+    
+    
+}
+
+- (void)installSubModule {
+    [self installTableViewModule];
+}
+
+- (void)installTableViewModule {
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
+    tableView.tableFooterView = [[UIView alloc] init];
+    tableView.backgroundColor = [UIColor clearColor];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:tableView];
+    
+    self.tableViewCD = [[[FileName-WaitForReplaced]TableViewCoordinator alloc] initWithTableView:tableView];
+}
+
+
+
+- (void)routeEvent:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
+    //拦截事件
+    
+}
+@end
+</string>
+	<key>contextHeaderFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]Context.h
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &lt;UIKit/UIKit.h&gt;
+#import &quot;UIView+Context.h&quot;
+
+
+
+@interface [FileName-WaitForReplaced]Context : NSObject &lt;UIViewContextProtocol&gt;
+
+
+
+@end
+</string>
+	<key>contextMFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]Context.m
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &quot;[FileName-WaitForReplaced]Context.h&quot;
+
+@interface [FileName-WaitForReplaced]Context ()
+@property(nonatomic, weak) UIViewController *controller;
+@end
+@implementation [FileName-WaitForReplaced]Context
+- (instancetype)initWithViewController:(UIViewController *)controller {
+    if (self=[super init]) {
+        self.controller = controller;
+    }
+    
+    return self;
+}
+@end</string>
+	<key>tableViewCoordinaterHeaderFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]TableViewCoordinator.h
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &lt;Foundation/Foundation.h&gt;
+#import &lt;UIKit/UIKit.h&gt;
+
+@interface [FileName-WaitForReplaced]TableViewCoordinator : NSObject
+
+- (instancetype)initWithTableView:(UITableView *)tableView;
+
+@end
+</string>
+	<key>tableViewCoordinaterMFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]TableViewCoordinator.m
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &quot;[FileName-WaitForReplaced]TableViewCoordinator.h&quot;
+#import &quot;[FileName-WaitForReplaced]TableViewModel.h&quot;
+#import &quot;[FileName-WaitForReplaced]CellViewModel.h&quot;
+#import &quot;[FileName-WaitForReplaced]CellCoordinator.h&quot;
+#import &quot;[FileName-WaitForReplaced]CellView.h&quot;
+#import &quot;UIView+Context.h&quot;
+#import &quot;[FileName-WaitForReplaced]Context.h&quot;
+#import &lt;KVOController/FBKVOController.h&gt;
+
+@interface [FileName-WaitForReplaced]TableViewCoordinator ()&lt;UITableViewDelegate,
+UITableViewDataSource&gt;
+
+@property (nonatomic, weak) UITableView *tableView;
+@property(nonatomic, strong) FBKVOController *kvoController;
+@property(nonatomic, strong) [FileName-WaitForReplaced]TableViewModel *viewModel;
+@property(nonatomic, strong) NSMutableDictionary *coordinatorDic; //用于保存cell协调器，用于和cell一一对应
+@end
+@implementation [FileName-WaitForReplaced]TableViewCoordinator
+- (instancetype)initWithTableView:(UITableView *)tableView {
+    if (self=[super init]) {
+        _tableView = tableView;
+        tableView.delegate = self;
+        tableView.dataSource = self;
+        
+        [self bindData];
+        [self fetchData];
+    }
+    
+    return self;
+}
+
+
+
+- (void)bindData {
+    [_kvoController unobserveAll];
+    __weak typeof (self) wearkSelf = self;
+    [self.kvoController observe:self.viewModel keyPath:@&quot;cellViewModelList&quot; options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial block:^(id observer, id object, NSDictionary *change) {
+        
+        [wearkSelf.tableView reloadData];
+    }];
+    
+    
+}
+
+- (void)fetchData {
+    [self.viewModel fetchData];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.viewModel.cellViewModelList count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    [FileName-WaitForReplaced]CellViewModel *cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
+    return [cellViewModel cellHeight];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id cellViewModel = self.viewModel.cellViewModelList[indexPath.row];
+    NSString *identifier = @&quot;[FileName-WaitForReplaced]PlainTextCell&quot;;
+    [FileName-WaitForReplaced]CellView *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[[FileName-WaitForReplaced]CellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    [FileName-WaitForReplaced]CellCoordinator *cellCoordinator = [self getCoordinatorWithCell:cell];
+    [cellCoordinator bindData:cellViewModel];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSNumber *cellAddress = @((UInt64)cell);
+    [FileName-WaitForReplaced]CellCoordinator *cellCoordinator = [self.coordinatorDic objectForKey:cellAddress];
+    [cellCoordinator didSelectCellView];
+}
+
+- ([FileName-WaitForReplaced]CellCoordinator *)getCoordinatorWithCell:([FileName-WaitForReplaced]CellView *)cell {
+    NSNumber *cellAddress = @((UInt64)cell);
+    [FileName-WaitForReplaced]CellCoordinator *cellCoordinator = [self.coordinatorDic objectForKey:cellAddress];
+    if (!cellCoordinator) {
+        cellCoordinator = [[[FileName-WaitForReplaced]CellCoordinator alloc] initWithCellView:cell];
+        [self.coordinatorDic setObject:cellCoordinator forKey:cellAddress];
+    }
+    return cellCoordinator;
+}
+
+- (FBKVOController *)kvoController {
+    if (!_kvoController) {
+        _kvoController = [[FBKVOController alloc] initWithObserver:self retainObserved:YES];
+    }
+    
+    return _kvoController;
+}
+
+- (NSMutableDictionary *)coordinatorDic {
+    if (!_coordinatorDic) {
+        _coordinatorDic = [NSMutableDictionary dictionary];
+    }
+    return _coordinatorDic;
+}
+
+- ([FileName-WaitForReplaced]TableViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[[FileName-WaitForReplaced]TableViewModel alloc] init];
+    }
+    return _viewModel;
+}
+@end
+</string>
+	<key>tableViewModelHeaderFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]TableViewModel.h
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &lt;Foundation/Foundation.h&gt;
+
+@class [FileName-WaitForReplaced]CellViewModel;
+@interface [FileName-WaitForReplaced]TableViewModel : NSObject
+@property (nonatomic, strong, readonly) NSArray&lt;[FileName-WaitForReplaced]CellViewModel *&gt; *cellViewModelList;  //Model
+- (void)fetchData;
+@end
+</string>
+	<key>tableViewModelMFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]TableViewModel.m
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &quot;[FileName-WaitForReplaced]TableViewModel.h&quot;
+#import &quot;[ModelName-WaitForReplaced].h&quot;
+#import &quot;[FileName-WaitForReplaced]CellViewModel.h&quot;
+
+@interface [FileName-WaitForReplaced]TableViewModel ()
+@property (nonatomic, strong) NSArray&lt;[FileName-WaitForReplaced]CellViewModel *&gt; *cellViewModelList;  //Model
+@end
+@implementation [FileName-WaitForReplaced]TableViewModel
+- (void)fetchData {
+    
+    
+}
+
+- (NSArray *)convertToCellViewModels:(NSArray&lt;[ModelName-WaitForReplaced] *&gt; *)array {
+    
+    NSMutableArray *cellVMArray = [NSMutableArray array];
+    for (int i=0; i&lt;[array count]; i++) {
+        [ModelName-WaitForReplaced] *model = array[i];
+        [FileName-WaitForReplaced]CellViewModel *cellViewModel = [[FileName-WaitForReplaced]TableViewModel createCellViewModel:model];
+        
+        [cellVMArray addObject:cellViewModel];
+    }
+    return cellVMArray;
+}
+
+- (NSArray&lt;[ModelName-WaitForReplaced] *&gt; *)fetchDataList {
+    
+    return nil;
+}
+
++ ([FileName-WaitForReplaced]CellViewModel *)createCellViewModel:([ModelName-WaitForReplaced] *)model {
+    [FileName-WaitForReplaced]CellViewModel *cellViewModel = [[[FileName-WaitForReplaced]CellViewModel alloc] initWithModel:model];
+    
+    return cellViewModel;
+}
+@end
+</string>
+	<key>cellViewHeaderFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]CellView.h
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &lt;UIKit/UIKit.h&gt;
+
+
+
+@interface [FileName-WaitForReplaced]CellView : UITableViewCell
+
+[PropertiesList-WaitForReplaced]
+
+@end
+</string>
+	<key>cellViewMFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]CellView.m
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &quot;[FileName-WaitForReplaced]CellView.h&quot;
+
+@interface [FileName-WaitForReplaced]CellView ()
+
+@end
+@implementation [FileName-WaitForReplaced]CellView
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self initSubViews];
+    }
+    return self;
+}
+
+- (void)initSubViews {
+    
+}
+
+
+
+
+[PropertiesList-WaitForReplaced]
+
+
+@end
+</string>
+	<key>cellViewModelHeaderFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]CellViewModel.h
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &lt;Foundation/Foundation.h&gt;
+
+@class [ModelName-WaitForReplaced];
+@interface [FileName-WaitForReplaced]CellViewModel : NSObject
+
+[PropertiesList-WaitForReplaced]
+
+- (instancetype)initWithModel:([ModelName-WaitForReplaced] *)[ModelLowName-WaitForReplaced];
+- (NSUInteger)cellHeight;
+@end
+</string>
+	<key>cellViewModelMFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]CellViewModel.m
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &quot;[FileName-WaitForReplaced]CellViewModel.h&quot;
+#import &quot;[ModelName-WaitForReplaced].h&quot;
+
+@interface [FileName-WaitForReplaced]CellViewModel ()
+@property (nonatomic, strong) [ModelName-WaitForReplaced] *[ModelLowName-WaitForReplaced];
+@end
+@implementation [FileName-WaitForReplaced]CellViewModel
+- (instancetype)initWithModel:([ModelName-WaitForReplaced] *)[ModelLowName-WaitForReplaced] {
+    if (self=[super init]) {
+        
+    }
+    return self;
+}
+
+
+
+- (NSUInteger)cellHeight {
+    
+    return 0;
+    
+}
+@end
+</string>
+	<key>cellCoordinaterHeaderFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]CellCoordinator.h
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &lt;Foundation/Foundation.h&gt;
+
+@class [FileName-WaitForReplaced]CellView;
+@class [FileName-WaitForReplaced]CellViewModel;
+@interface [FileName-WaitForReplaced]CellCoordinator : NSObject
+- (instancetype)initWithCellView:([FileName-WaitForReplaced]CellView *)cell;
+- (void)bindData:([FileName-WaitForReplaced]CellViewModel *)cellViewModel;
+- (void)didSelectCellView;
+@end
+</string>
+	<key>cellCoordinaterMFileString</key>
+	<string>//
+//  [FileName-WaitForReplaced]CellCoordinator.m
+//  AppFramework
+//
+//  Created by xuejinhui 
+//  Copyright © 2018年 nd. All rights reserved.
+//
+
+#import &quot;[FileName-WaitForReplaced]CellCoordinator.h&quot;
+#import &quot;[FileName-WaitForReplaced]CellView.h&quot;
+#import &quot;[FileName-WaitForReplaced]CellViewModel.h&quot;
+#import &quot;UIView+Context.h&quot;
+#import &quot;[FileName-WaitForReplaced]Context.h&quot;
+#import &lt;KVOController/FBKVOController.h&gt;
+#import &lt;MBProgressHUD/MBProgressHUD.h&gt;
+
+@interface [FileName-WaitForReplaced]CellCoordinator ()
+@property(nonatomic, weak) [FileName-WaitForReplaced]CellView *cell;
+@property(nonatomic, weak) [FileName-WaitForReplaced]CellViewModel *cellViewModel;
+@property(nonatomic, strong) FBKVOController *kvoController;
+@end
+@implementation [FileName-WaitForReplaced]CellCoordinator
+- (instancetype)initWithCellView:([FileName-WaitForReplaced]CellView *)cell {
+    if (self = [super init]) {
+        self.cell = cell;
+    }
+    return self;
+}
+
+- (void)bindData:([FileName-WaitForReplaced]CellViewModel *)cellViewModel {
+    [_kvoController unobserveAll];
+    
+}
+
+- (void)didSelectCellView {
+    
+}
+
+
+
+- (FBKVOController *)kvoController {
+    if (!_kvoController) {
+        _kvoController = [[FBKVOController alloc] initWithObserver:self retainObserved:YES];
+    }
+    
+    return _kvoController;
+}
+@end
+</string>
+</dict>
+</plist>

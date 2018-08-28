@@ -21,7 +21,7 @@
  *  第一层model名字对应的textField
  */
 
-@property (nonatomic,strong)IBOutlet UITextField *textField;
+@property (nonatomic,strong)IBOutlet UITextField *rootModeltextField;
 
 /**
  *  前缀对应的textField
@@ -29,6 +29,10 @@
 
 @property (nonatomic,strong)IBOutlet UITextField *preTextField;
 
+
+@property (nonatomic,strong)IBOutlet UITextField *cellModelTextField;
+
+@property (nonatomic,strong)IBOutlet UITextField *frameTextField;
 
 @end
 

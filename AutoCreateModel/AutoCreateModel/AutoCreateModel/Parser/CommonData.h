@@ -21,6 +21,11 @@
  */
 @property (nonatomic,strong)NSString *preText;
 
+@property (nonatomic,strong)NodeModel *nodeModel;
+
+@property (nonatomic,strong)NSString *frameName;
+@property (nonatomic,strong)NSString *modelInCellName;
+
 /**
  *    单例类
  *
@@ -49,4 +54,8 @@
  *
  */
 - (void)convertNodeModel:(NodeModel*)nodeModel preText:(NSString*)preText;
+
+- (void)createFrameFile;
+
+- (void)createModelFile;
 @end

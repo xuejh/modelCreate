@@ -13,6 +13,9 @@
 
 @interface ViewController ()
 
+@property (nonatomic,strong)NodeModel *nodeModel;
+@property (nonatomic,strong)NSString * preText;
+@property (nonatomic,assign)BOOL clickReview;
 @end
 
 @implementation ViewController
@@ -29,20 +32,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)modelBtnTouchup:(id)sender {
+- (IBAction)reviewModelBtnTouchup:(id)sender {
     
-    NSDictionary *dic = [JsonManage jsonStringToDic:self.textView.text];
+    [self initModelData];
+    self.preText = self.textView.text;
+    self.clickReview = YES;
     NodeModelViewController *nodeVC = [[NodeModelViewController alloc]init];
-    NodeModel *nodeModel = [NodeModel nodeModelWithDictionary:dic modelName:self.textField.text level:0];
-    
-    
+    nodeVC.nodeModel = self.nodeModel;
+    [self.navigationController pushViewController:nodeVC animated:YES];
+}
+
+- (void)initModelData{
+    NSDictionary *dic = [JsonManage jsonStringToDic:self.textView.text];
+    self.nodeModel = [NodeModel nodeModelWithDictionary:dic modelName:self.rootModeltextField.text level:0];
     NSString * preText = self.preTextField.text;
     preText = [preText stringByReplacingOccurrencesOfString:@" " withString:@""];
     [CommonData shareInstance].preText = preText;
-    [[CommonData shareInstance] convertNodeModel:nodeModel preText:preText];
-    nodeVC.nodeModel = nodeModel;
-    [self.navigationController pushViewController:nodeVC animated:YES];
+    [[CommonData shareInstance] convertNodeModel:self.nodeModel preText:preText];
+}
+
+- (IBAction)createModelFileBtnTouchup:(id)sender {
     
+    if(self.clickReview && [self.preText isEqualToString:self.textView.text]){
+        
+        [[CommonData shareInstance]createModelFile];
+    }else{
+        [self initModelData];
+        [[CommonData shareInstance]createModelFile];
+    }
+    
+}
+
+
+- (void)initFrameData{
+    
+    [CommonData shareInstance].preText = self.preTextField.text;
+    [CommonData shareInstance].frameName = self.frameTextField.text;
+    [CommonData shareInstance].modelInCellName = self.cellModelTextField.text;
+}
+
+- (IBAction)createFrameFileBtnTouchup:(id)sender {
+    
+    [self initFrameData];
+    [[CommonData shareInstance]createFrameFile];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

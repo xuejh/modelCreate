@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		356088EE7F1D4104E7AAA8D8 /* libPods-AutoCreateModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */; };
+		F227C4C4213563DC00D66397 /* CreateFrameFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F227C4C2213563DB00D66397 /* CreateFrameFile.m */; };
+		F227C4C62135644100D66397 /* mainFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = F227C4C52135644100D66397 /* mainFile.plist */; };
+		F227C4C9213564C100D66397 /* CommonData.m in Sources */ = {isa = PBXBuildFile; fileRef = F227C4C7213564C100D66397 /* CommonData.m */; };
 		F272945E212D83FE008B38E5 /* UIColor+ColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */; };
 		F27B3328212E5A8F00124931 /* CommonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3327212E5A8F00124931 /* CommonFactory.m */; };
 		F27B332B212E5C8A00124931 /* CommonFont.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B332A212E5C8A00124931 /* CommonFont.m */; };
 		F27B3337212E945300124931 /* EnumManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3336212E945300124931 /* EnumManage.m */; };
-		F27B3346212EDE1A00124931 /* CommonData.m in Sources */ = {isa = PBXBuildFile; fileRef = F27B3345212EDE1A00124931 /* CommonData.m */; };
 		F290A5A9212ACFD600DC5891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5A8212ACFD600DC5891 /* AppDelegate.m */; };
 		F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F290A5AB212ACFD600DC5891 /* ViewController.m */; };
 		F290A5AF212ACFD600DC5891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F290A5AD212ACFD600DC5891 /* Main.storyboard */; };
@@ -48,6 +50,11 @@
 		14CFA6ECA3B58833C8E5C061 /* libPods-AutoCreateModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoCreateModel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B668B53C49D0476CB1309A3F /* Pods-AutoCreateModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.debug.xcconfig"; sourceTree = "<group>"; };
 		D552446CAA2DD869BB5F0E73 /* Pods-AutoCreateModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoCreateModel.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoCreateModel/Pods-AutoCreateModel.release.xcconfig"; sourceTree = "<group>"; };
+		F227C4C2213563DB00D66397 /* CreateFrameFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateFrameFile.m; sourceTree = "<group>"; };
+		F227C4C3213563DB00D66397 /* CreateFrameFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateFrameFile.h; sourceTree = "<group>"; };
+		F227C4C52135644100D66397 /* mainFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainFile.plist; sourceTree = "<group>"; };
+		F227C4C7213564C100D66397 /* CommonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonData.m; sourceTree = "<group>"; };
+		F227C4C8213564C100D66397 /* CommonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonData.h; sourceTree = "<group>"; };
 		F272945C212D83FE008B38E5 /* UIColor+ColorChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorChange.h"; sourceTree = "<group>"; };
 		F272945D212D83FE008B38E5 /* UIColor+ColorChange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorChange.m"; sourceTree = "<group>"; };
 		F2749C9C212C03B800FB20BF /* AutoModelPCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoModelPCH.h; sourceTree = "<group>"; };
@@ -57,8 +64,6 @@
 		F27B332A212E5C8A00124931 /* CommonFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFont.m; sourceTree = "<group>"; };
 		F27B3335212E945300124931 /* EnumManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnumManage.h; sourceTree = "<group>"; };
 		F27B3336212E945300124931 /* EnumManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnumManage.m; sourceTree = "<group>"; };
-		F27B3344212EDE1A00124931 /* CommonData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonData.h; sourceTree = "<group>"; };
-		F27B3345212EDE1A00124931 /* CommonData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonData.m; sourceTree = "<group>"; };
 		F290A5A4212ACFD600DC5891 /* AutoCreateModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoCreateModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F290A5A7212ACFD600DC5891 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F290A5A8212ACFD600DC5891 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,8 +172,6 @@
 				F27B332A212E5C8A00124931 /* CommonFont.m */,
 				F27B3335212E945300124931 /* EnumManage.h */,
 				F27B3336212E945300124931 /* EnumManage.m */,
-				F27B3344212EDE1A00124931 /* CommonData.h */,
-				F27B3345212EDE1A00124931 /* CommonData.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -231,6 +234,11 @@
 		F29D403821341E5300464621 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				F227C4C8213564C100D66397 /* CommonData.h */,
+				F227C4C7213564C100D66397 /* CommonData.m */,
+				F227C4C52135644100D66397 /* mainFile.plist */,
+				F227C4C3213563DB00D66397 /* CreateFrameFile.h */,
+				F227C4C2213563DB00D66397 /* CreateFrameFile.m */,
 				F29D403921341E5300464621 /* JsonManage.h */,
 				F29D403A21341E5300464621 /* JsonManage.m */,
 				F29D403B21341E5300464621 /* NodeModel.h */,
@@ -387,6 +395,7 @@
 				F290A5AF212ACFD600DC5891 /* Main.storyboard in Resources */,
 				F29D403721341DC300464621 /* NodeModelViewControllerBack_next@3x.png in Resources */,
 				F29D404521341E5300464621 /* NodeModelStrings.plist in Resources */,
+				F227C4C62135644100D66397 /* mainFile.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,12 +464,13 @@
 				F29D404621341E5300464621 /* PropertyInfomation.m in Sources */,
 				F29D407221341FA300464621 /* NodeMultiCellCoordinator.m in Sources */,
 				F290A5AC212ACFD600DC5891 /* ViewController.m in Sources */,
-				F27B3346212EDE1A00124931 /* CommonData.m in Sources */,
 				F29D406F21341FA300464621 /* NodeCellCoordinator.m in Sources */,
+				F227C4C9213564C100D66397 /* CommonData.m in Sources */,
 				F29D407421341FA300464621 /* NodeMultiCellViewModel.m in Sources */,
 				F29D403021341D6300464621 /* UIResponder+Router.m in Sources */,
 				F27B332B212E5C8A00124931 /* CommonFont.m in Sources */,
 				F27B3337212E945300124931 /* EnumManage.m in Sources */,
+				F227C4C4213563DC00D66397 /* CreateFrameFile.m in Sources */,
 				F29D404321341E5300464621 /* NodeModel.m in Sources */,
 				F29D407021341FA300464621 /* NodeCellView.m in Sources */,
 				F29D407521341FA300464621 /* NodeTopBaseView.m in Sources */,

@@ -50,30 +50,30 @@
     self.title = self.nodeModel.modelName;
     
     
-    if (self.nodeModel.level == 0) {
-        UIButton *createButton       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-        [createButton setTitle:@"生成Model" forState:UIControlStateNormal];
-        [createButton setTitleColor:COLOR_3 forState:UIControlStateNormal];
-        [createButton setTitleColor:COLOR_6 forState:UIControlStateHighlighted];
-        [createButton addTarget:self action:@selector(createModelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:createButton];
-    }
+//    if (self.nodeModel.level == 0) {
+//        UIButton *createButton       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+//        [createButton setTitle:@"生成Model" forState:UIControlStateNormal];
+//        [createButton setTitleColor:COLOR_3 forState:UIControlStateNormal];
+//        [createButton setTitleColor:COLOR_6 forState:UIControlStateHighlighted];
+//        [createButton addTarget:self action:@selector(createModelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:createButton];
+//    }
     
 }
 
 
 
-- (void)createModelBtnClick:(UIButton *)button {
-    
-    for (NodeModel *node in self.nodeModel.allSubNodes) {
-        
-        NodeModelStrings *nodeModelString = [NodeModelStrings nodeModelStringsWithNodeModel:node];
-        [nodeModelString createFile];
-    }
-    
-    NSLog(@"生成的文件在以下地址: \n%@", [NSHomeDirectory() stringByAppendingPathComponent:@"/Documents/"]);
-    
-}
+//- (void)createModelBtnClick:(UIButton *)button {
+//
+//    for (NodeModel *node in self.nodeModel.allSubNodes) {
+//
+//        NodeModelStrings *nodeModelString = [NodeModelStrings nodeModelStringsWithNodeModel:node];
+//        [nodeModelString createFile];
+//    }
+//    
+//    NSLog(@"生成的文件在以下地址: \n%@", [NSHomeDirectory() stringByAppendingPathComponent:@"/Documents/"]);
+//
+//}
 
 - (void)addSubView {
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height)];
