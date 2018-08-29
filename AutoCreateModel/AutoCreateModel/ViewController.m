@@ -48,6 +48,7 @@
     NSString * preText = self.preTextField.text;
     preText = [preText stringByReplacingOccurrencesOfString:@" " withString:@""];
     [CommonData shareInstance].preText = preText;
+    [CommonData shareInstance].nodeModel = self.nodeModel;
     [[CommonData shareInstance] convertNodeModel:self.nodeModel preText:preText];
 }
 

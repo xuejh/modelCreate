@@ -7,6 +7,8 @@
 //
 
 #import "CreateFrameFile.h"
+#import "CommonData.h"
+#import "PropertyInfomation.h"
 
 @interface CreateFrameFile()
 
@@ -54,7 +56,7 @@
     [self createContextFile];
     [self createTableViewModelFile];
     [self createCellViewFile];
-    [self createCellViewModelFile];
+//    [self createCellViewModelFile];
     [self createTableViewCoordinatorFile];
     [self createCellCoordinatorFile];
 }
@@ -136,73 +138,190 @@
    [self writeMFile:tableViewModelMFileString MfileName:tableViewModelFileName];
 }
 
-- (void)createCellViewFile{
+- (NSString *)convertModelInCellHeadPropertyFile{
+    NodeModel *nodeModel = [self getModelInCell];
+    NSString *propetiesString = @"";
     
+    for (PropertyInfomation *property in nodeModel.properties) {
+        
+        switch (property.propertyType) {
+                
+            case kNSString: {
+                
+                NSString *tmpSting = [NSString stringWithFormat:@"@property (nonatomic, strong) NSString *%@;\n", property.propertyValue];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            case kNSNumber: {
+                
+                NSString *tmpSting = [NSString stringWithFormat:@"@property (nonatomic, strong) NSNumber *%@;\n", property.propertyValue];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            case kNSDictionary: {
+                
+                NodeModel *nodeModel = property.propertyValue;
+                NSString *tmpSting = [NSString stringWithFormat:@"@property (nonatomic, strong) %@ *%@;\n", nodeModel.modelName, nodeModel.listType];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            default:
+                break;
+        }
+    }
+    return propetiesString;
+}
+
+- (NSString *)convertModelInCellHeadFile{
+    
+    NodeModel *nodeModel = [self getModelInCell];
+    NSString *inputHeaderString = @"";
+    for (PropertyInfomation *property in nodeModel.properties) {
+        
+        if (property.propertyType == kNSDictionary || property.propertyType == kNSArray) {
+            
+            NodeModel *node        = property.propertyValue;
+            NSString *importString = [NSString stringWithFormat:@"#import \"%@.h\"\n", node.modelName];
+            inputHeaderString      = [inputHeaderString stringByAppendingString:importString];
+        }
+    }
+    return inputHeaderString;
+}
+
+- (NSString *)convertModelInCellMPropertyFile{
+    NodeModel *nodeModel = [self getModelInCell];
+    NSString *propetiesString = @"";
+    
+    for (PropertyInfomation *property in nodeModel.properties) {
+        NSString * bValue = [NSString stringWithFormat:@"%@%@",[[property.propertyValue substringToIndex:1]uppercaseString],[property.propertyValue substringFromIndex:1]];
+        switch (property.propertyType) {
+                
+            case kNSString: {
+                NSString *tmpSting = [NSString stringWithFormat:@"- (void)set%@:(NSString *)%@ {\n    _%@ = %@;\n}\n\n",bValue,property.propertyValue,property.propertyValue,property.propertyValue];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            case kNSNumber: {
+                
+                NSString *tmpSting = [NSString stringWithFormat:@"- (void)set%@:(NSNumber *)%@ {\n    _%@ = %@;\n}\n\n",bValue,property.propertyValue,property.propertyValue,property.propertyValue];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            case kNSDictionary: {
+                
+                NodeModel *nodeModel = property.propertyValue;
+                bValue = [NSString stringWithFormat:@"%@%@",[[nodeModel.listType substringToIndex:1]uppercaseString],[nodeModel.listType substringFromIndex:1]];
+                NSString *tmpSting = [NSString stringWithFormat:@"- (void)set%@:(%@ *)%@ {\n    _%@ = %@;\n}\n\n",bValue,nodeModel.modelName,nodeModel.listType,nodeModel.listType,nodeModel.listType];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            default:
+                break;
+        }
+    }
+    return propetiesString;
+}
+
+- (void)createCellViewFile{
+
     NSString *cellViewHeaderFileString = self.plistDic[@"cellViewHeaderFileString"];
     NSString * cellViewFileName = [NSString stringWithFormat:@"%@%@",self.frameName,@"CellView"];
+
+
     
-    NSDictionary * data = [self getCellModelPlist];
     
-    
-    NSString *propetiesString = [self convertHeadProperty:data];
-    
+    NSString * propetiesString = [self convertModelInCellHeadPropertyFile];
     cellViewHeaderFileString = [cellViewHeaderFileString stringByReplacingOccurrencesOfString:@"[PropertiesList-WaitForReplaced]"
                                                                                        withString:propetiesString];
+    
+    NSString *inputHeaderString = [self convertModelInCellHeadFile];
+    
+    cellViewHeaderFileString = [cellViewHeaderFileString stringByReplacingOccurrencesOfString:@"[FileHeaders-WaitForReplaced]"
+                                                                                       withString:inputHeaderString];
+    
 
     [self writeHeadFile:cellViewHeaderFileString headfileName:cellViewFileName];
-    
-    
+
+
     NSString *cellViewMFileString = self.plistDic[@"cellViewMFileString"];
-    NSArray * keys = [data allKeys];
-    propetiesString = @"";
-    for (int i=0; i<keys.count; i++) {
-        
-        NSString *value = [keys objectAtIndex:i];
-        NSString *type = [data objectForKey:value];
-        NSString * bValue = [NSString stringWithFormat:@"%@%@",[[value substringToIndex:1]uppercaseString],[value substringFromIndex:1]];
-        
-        NSString *tmpSting = [NSString stringWithFormat:@"- (void)set%@:(%@ *)%@ {\n    _%@ = %@;\n}\n\n",bValue, type,value,value,value];
-        propetiesString = [propetiesString stringByAppendingString:tmpSting];
-        
-    }
     
+    propetiesString = [self convertModelInCellMPropertyFile];
+    
+
     cellViewMFileString = [cellViewMFileString stringByReplacingOccurrencesOfString:@"[PropertiesList-WaitForReplaced]"
                                                                                    withString:propetiesString];
-    
+
     [self writeMFile:cellViewMFileString MfileName:cellViewFileName];
-    
-    
+
+
 }
 
-- (void)createCellViewModelFile{
+//- (void)createCellViewModelFile{
+//
+//    NSString *cellViewModelHeaderFileString = self.plistDic[@"cellViewModelHeaderFileString"];
+//    NSString * cellViewModelFileName = [NSString stringWithFormat:@"%@%@",self.frameName,@"CellViewModel"];
+//
+//    cellViewModelHeaderFileString  = [cellViewModelHeaderFileString  stringByReplacingOccurrencesOfString:@"[ModelName-WaitForReplaced]"
+//                                                                                       withString:self.modelInCellName];
+//    NSString *lowerStr = [NSString stringWithFormat:@"%@%@",[[self.modelInCellName substringToIndex:1]lowercaseString],[self.modelInCellName substringFromIndex:1]];
+//    cellViewModelHeaderFileString  = [cellViewModelHeaderFileString  stringByReplacingOccurrencesOfString:@"[ModelLowName-WaitForReplaced]"
+//                                                                                               withString:lowerStr];
+//    NSDictionary * data = [self getCellModelPlist];
+//    NSString *propetiesString = [self convertHeadProperty:data];
+//
+//    cellViewModelHeaderFileString = [cellViewModelHeaderFileString stringByReplacingOccurrencesOfString:@"[PropertiesList-WaitForReplaced]"
+//
+//                                                                                             withString:propetiesString];
+//
+//    [self writeHeadFile:cellViewModelHeaderFileString headfileName:cellViewModelFileName];
+//
+//
+//    NSString *cellViewModelMFileString = self.plistDic[@"cellViewModelMFileString"];
+//    cellViewModelMFileString  = [cellViewModelMFileString  stringByReplacingOccurrencesOfString:@"[ModelName-WaitForReplaced]"
+//                                                                                               withString:self.modelInCellName];
+//    cellViewModelMFileString  = [cellViewModelMFileString  stringByReplacingOccurrencesOfString:@"[ModelLowName-WaitForReplaced]"
+//                                                                                               withString:lowerStr];
+//    [self writeMFile:cellViewModelMFileString MfileName:cellViewModelFileName];
+//}
+
+
+- (NodeModel*)getModelInCell{
     
-    NSString *cellViewModelHeaderFileString = self.plistDic[@"cellViewModelHeaderFileString"];
-    NSString * cellViewModelFileName = [NSString stringWithFormat:@"%@%@",self.frameName,@"CellViewModel"];
+    NodeModel *nodeModel = nil;
+    NSString *ModelInCellName = [NSString stringWithFormat:@"%@%@",[CommonData shareInstance].preText,[CommonData shareInstance].modelInCellName];
     
-    cellViewModelHeaderFileString  = [cellViewModelHeaderFileString  stringByReplacingOccurrencesOfString:@"[ModelName-WaitForReplaced]"
-                                                                                       withString:self.modelInCellName];
-    NSString *lowerStr = [NSString stringWithFormat:@"%@%@",[[self.modelInCellName substringToIndex:1]lowercaseString],[self.modelInCellName substringFromIndex:1]];
-    cellViewModelHeaderFileString  = [cellViewModelHeaderFileString  stringByReplacingOccurrencesOfString:@"[ModelLowName-WaitForReplaced]"
-                                                                                               withString:lowerStr];
-    NSDictionary * data = [self getCellModelPlist];
-    NSString *propetiesString = [self convertHeadProperty:data];
-    
-    cellViewModelHeaderFileString = [cellViewModelHeaderFileString stringByReplacingOccurrencesOfString:@"[PropertiesList-WaitForReplaced]"
-    
-                                                                                             withString:propetiesString];
-    
-    [self writeHeadFile:cellViewModelHeaderFileString headfileName:cellViewModelFileName];
-    
-    
-    NSString *cellViewModelMFileString = self.plistDic[@"cellViewModelMFileString"];
-    cellViewModelMFileString  = [cellViewModelMFileString  stringByReplacingOccurrencesOfString:@"[ModelName-WaitForReplaced]"
-                                                                                               withString:self.modelInCellName];
-    cellViewModelMFileString  = [cellViewModelMFileString  stringByReplacingOccurrencesOfString:@"[ModelLowName-WaitForReplaced]"
-                                                                                               withString:lowerStr];
-    [self writeMFile:cellViewModelMFileString MfileName:cellViewModelFileName];
+    if ([ModelInCellName isEqualToString:[CommonData shareInstance].nodeModel.modelName]) {
+        nodeModel = [CommonData shareInstance].nodeModel;
+        return nodeModel;
+    }else{
+        
+        for (PropertyInfomation *property in [CommonData shareInstance].nodeModel.properties) {
+            
+            switch (property.propertyType) {
+                case kNSDictionary:
+                case kNSArray:
+                {
+                    
+                    NodeModel *subNodeModel = property.propertyValue;
+                    if ([ModelInCellName isEqualToString:subNodeModel.modelName]) {
+                        nodeModel = subNodeModel;
+                        return nodeModel;
+                    }
+                    
+                } break;
+                default:
+                    break;
+            }
+        }
+    }
+    return nil;
 }
-
-
 
 - (void)createTableViewCoordinatorFile{
     
@@ -239,27 +358,7 @@
     return [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"/Documents/%@", name]];
 }
 
-- (NSDictionary*)getCellModelPlist{
-    NSString     *path = [[NSBundle mainBundle] pathForResource:@"cellModel.plist" ofType:nil];
-    NSDictionary *data = [[NSDictionary alloc] initWithContentsOfFile:path];
-    return data;
-}
 
-- (NSString*)convertHeadProperty:(NSDictionary*)data{
-    
-    // 替换头文件属性
-    NSString *propetiesString = @"";
-    
-    NSArray * keys = [data allKeys];
-    for (int i=0; i<keys.count; i++) {
-        
-        NSString *value = [keys objectAtIndex:i];
-        NSString *type = [data objectForKey:value];
-        
-        NSString *tmpSting = [NSString stringWithFormat:@"@property (nonatomic, strong) %@ *%@;\n", type,value];
-        propetiesString = [propetiesString stringByAppendingString:tmpSting];
-        
-    }
-    return propetiesString;
-}
+
+
 @end

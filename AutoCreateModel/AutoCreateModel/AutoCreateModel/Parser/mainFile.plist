@@ -321,7 +321,7 @@ UITableViewDataSource&gt;
 //
 
 #import &lt;UIKit/UIKit.h&gt;
-
+[FileHeaders-WaitForReplaced]
 
 
 @interface [FileName-WaitForReplaced]CellView : UITableViewCell
