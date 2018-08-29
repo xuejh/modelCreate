@@ -407,7 +407,7 @@ UITableViewDataSource&gt;
     if (self=[super init]) {
         
         self.model = model;
-        
+        [ModelBind-WaitForReplaced]
     }
     return self;
 }

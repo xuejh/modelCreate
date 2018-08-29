@@ -228,6 +228,40 @@
     return propetiesString;
 }
 
+
+- (NSString *)convertModelBindMFile{
+    NodeModel *nodeModel = [self getModelInCell];
+    NSString *propetiesString = @"";
+    
+    for (PropertyInfomation *property in nodeModel.properties) {
+        
+        switch (property.propertyType) {
+                
+            case kNSString:
+            case kNSNumber:
+            {
+                NSString *tmpSting = [NSString stringWithFormat:@"self.%@ = model.%@;\n        ",property.propertyValue,property.propertyValue];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+          
+            case kNSDictionary: {
+                
+                NodeModel *subNodeModel = property.propertyValue;
+                NSString *tmpSting = [NSString stringWithFormat:@"self.%@ = model.%@;\n        ",subNodeModel.listType,subNodeModel.listType];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            default:
+                break;
+        }
+    }
+    return propetiesString;
+}
+
+
+
 - (void)createCellViewFile{
 
     NSString *cellViewHeaderFileString = self.plistDic[@"cellViewHeaderFileString"];
@@ -274,7 +308,6 @@
     cellViewModelHeaderFileString = [cellViewModelHeaderFileString stringByReplacingOccurrencesOfString:@"[FileHeaders-WaitForReplaced]"
                                                                                    withString:inputHeaderString];
     
-     NSString *lowerStr = [NSString stringWithFormat:@"%@%@",[[self.modelInCellName substringToIndex:1]lowercaseString],[self.modelInCellName substringFromIndex:1]];
     
     cellViewModelHeaderFileString  = [cellViewModelHeaderFileString  stringByReplacingOccurrencesOfString:@"[ModelName-WaitForReplaced]"
                                                                                                withString:self.modelInCellName];
@@ -286,7 +319,9 @@
     NSString *cellViewModelMFileString = self.plistDic[@"cellViewModelMFileString"];
     cellViewModelMFileString  = [cellViewModelMFileString  stringByReplacingOccurrencesOfString:@"[ModelName-WaitForReplaced]"
                                                                                                withString:self.modelInCellName];
-    
+    NSString * convertBindString = [self convertModelBindMFile];
+    cellViewModelMFileString  = [cellViewModelMFileString  stringByReplacingOccurrencesOfString:@"[ModelBind-WaitForReplaced]"
+                                                                                     withString:convertBindString];
     [self writeMFile:cellViewModelMFileString MfileName:cellViewModelFileName];
 }
 
