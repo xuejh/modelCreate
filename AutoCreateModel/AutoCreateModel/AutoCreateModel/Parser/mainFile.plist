@@ -376,13 +376,14 @@ UITableViewDataSource&gt;
 //
 
 #import &lt;Foundation/Foundation.h&gt;
+[FileHeaders-WaitForReplaced]
 
 @class [ModelName-WaitForReplaced];
 @interface [FileName-WaitForReplaced]CellViewModel : NSObject
 
 [PropertiesList-WaitForReplaced]
 
-- (instancetype)initWithModel:([ModelName-WaitForReplaced] *)[ModelLowName-WaitForReplaced];
+- (instancetype)initWithModel:([ModelName-WaitForReplaced] *)model;
 - (NSUInteger)cellHeight;
 @end
 </string>
@@ -399,11 +400,13 @@ UITableViewDataSource&gt;
 #import &quot;[ModelName-WaitForReplaced].h&quot;
 
 @interface [FileName-WaitForReplaced]CellViewModel ()
-@property (nonatomic, strong) [ModelName-WaitForReplaced] *[ModelLowName-WaitForReplaced];
+@property (nonatomic, strong) [ModelName-WaitForReplaced] *model;
 @end
 @implementation [FileName-WaitForReplaced]CellViewModel
-- (instancetype)initWithModel:([ModelName-WaitForReplaced] *)[ModelLowName-WaitForReplaced] {
+- (instancetype)initWithModel:([ModelName-WaitForReplaced] *)model {
     if (self=[super init]) {
+        
+        self.model = model;
         
     }
     return self;
