@@ -472,7 +472,8 @@ UITableViewDataSource&gt;
 
 - (void)bindData:([FileName-WaitForReplaced]CellViewModel *)cellViewModel {
     [_kvoController unobserveAll];
-    
+    self.cellViewModel = cellViewModel;
+    [ModelBind-WaitForReplaced]
 }
 
 - (void)didSelectCellView {

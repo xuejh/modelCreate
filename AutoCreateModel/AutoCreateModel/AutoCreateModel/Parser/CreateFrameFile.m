@@ -371,6 +371,36 @@
     [self writeMFile:tableViewCoordinaterMFileString MfileName:tableViewCoordinatorFileName];
 }
 
+- (NSString *)convertCellCoordinateBindMFile{
+    NodeModel *nodeModel = [self getModelInCell];
+    NSString *propetiesString = @"";
+    
+    for (PropertyInfomation *property in nodeModel.properties) {
+        
+        switch (property.propertyType) {
+                
+            case kNSString:
+            case kNSNumber:
+            {
+                NSString *tmpSting = [NSString stringWithFormat:@"self.cell.%@ = cellViewModel.%@;\n    ",property.propertyValue,property.propertyValue];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            case kNSDictionary: {
+                
+                NodeModel *subNodeModel = property.propertyValue;
+                NSString *tmpSting = [NSString stringWithFormat:@"self.cell.%@ = cellViewModel.%@;\n    ",subNodeModel.listType,subNodeModel.listType];
+                propetiesString = [propetiesString stringByAppendingString:tmpSting];
+                
+            } break;
+                
+            default:
+                break;
+        }
+    }
+    return propetiesString;
+}
 
 - (void)createCellCoordinatorFile{
     
@@ -382,6 +412,10 @@
     
     cellCoordinaterMFileString  = [cellCoordinaterMFileString  stringByReplacingOccurrencesOfString:@"[ModelName-WaitForReplaced]"
                                                                                                    withString:self.modelInCellName];
+    NSString * convertCellCoordinateBindString = [self convertCellCoordinateBindMFile];
+    cellCoordinaterMFileString  = [cellCoordinaterMFileString  stringByReplacingOccurrencesOfString:@"[ModelBind-WaitForReplaced]"
+                                                                                     withString:convertCellCoordinateBindString];
+    
     [self writeMFile:cellCoordinaterMFileString MfileName:cellCoordinaterFileName];
     
     
