@@ -29,8 +29,15 @@
 
 @property (nonatomic,strong)IBOutlet UITextField *preTextField;
 
+/**
+ *  Cell对应的Model名字
+ */
 
 @property (nonatomic,strong)IBOutlet UITextField *cellModelTextField;
+
+/**
+ *  框架统一类名
+ */
 
 @property (nonatomic,strong)IBOutlet UITextField *frameTextField;
 

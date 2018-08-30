@@ -196,17 +196,18 @@
     NSString *propetiesString = @"";
     
     for (PropertyInfomation *property in nodeModel.properties) {
-        NSString * bValue = [NSString stringWithFormat:@"%@%@",[[property.propertyValue substringToIndex:1]uppercaseString],[property.propertyValue substringFromIndex:1]];
+        
         switch (property.propertyType) {
                 
             case kNSString: {
+                NSString *bValue = [NSString stringWithFormat:@"%@%@",[[property.propertyValue substringToIndex:1]uppercaseString],[property.propertyValue substringFromIndex:1]];
                 NSString *tmpSting = [NSString stringWithFormat:@"- (void)set%@:(NSString *)%@ {\n    _%@ = %@;\n}\n\n",bValue,property.propertyValue,property.propertyValue,property.propertyValue];
                 propetiesString = [propetiesString stringByAppendingString:tmpSting];
                 
             } break;
                 
             case kNSNumber: {
-                
+                NSString *bValue = [NSString stringWithFormat:@"%@%@",[[property.propertyValue substringToIndex:1]uppercaseString],[property.propertyValue substringFromIndex:1]];
                 NSString *tmpSting = [NSString stringWithFormat:@"- (void)set%@:(NSNumber *)%@ {\n    _%@ = %@;\n}\n\n",bValue,property.propertyValue,property.propertyValue,property.propertyValue];
                 propetiesString = [propetiesString stringByAppendingString:tmpSting];
                 
@@ -215,7 +216,8 @@
             case kNSDictionary: {
                 
                 NodeModel *nodeModel = property.propertyValue;
-                bValue = [NSString stringWithFormat:@"%@%@",[[nodeModel.listType substringToIndex:1]uppercaseString],[nodeModel.listType substringFromIndex:1]];
+                NSString *bValue = [NSString stringWithFormat:@"%@%@",[[nodeModel.listType substringToIndex:1]uppercaseString],[nodeModel.listType substringFromIndex:1]];
+                
                 NSString *tmpSting = [NSString stringWithFormat:@"- (void)set%@:(%@ *)%@ {\n    _%@ = %@;\n}\n\n",bValue,nodeModel.modelName,nodeModel.listType,nodeModel.listType,nodeModel.listType];
                 propetiesString = [propetiesString stringByAppendingString:tmpSting];
                 
