@@ -6,11 +6,11 @@
 //  Copyright © 2018年 薛锦辉. All rights reserved.
 //
 
-#import "NodeModelStrings.h"
+#import "CreateNodeModelString.h"
 #import "AutoModelPCH.h"
 #import "PropertyInfomation.h"
 
-@interface NodeModelStrings ()
+@interface CreateNodeModelString ()
 
 @property (nonatomic, strong) NSDictionary *nodeModelStringsPlist;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation NodeModelStrings
+@implementation CreateNodeModelString
 
 - (instancetype)init {
     
@@ -37,7 +37,7 @@
 
 + (instancetype)nodeModelStringsWithNodeModel:(NodeModel *)nodeModel {
     
-    NodeModelStrings *nodeModelStrings = [[self alloc] init];
+    CreateNodeModelString *nodeModelStrings = [[self alloc] init];
     nodeModelStrings.nodeModel         = nodeModel;
     
     return nodeModelStrings;

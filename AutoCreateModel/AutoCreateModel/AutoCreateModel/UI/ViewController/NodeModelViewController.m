@@ -15,7 +15,7 @@
 #import "NodeCellView.h"
 #import "NodeMultiCellView.h"
 #import "EditView.h"
-#import "NodeModelStrings.h"
+#import "CreateNodeModelString.h"
 
 @interface NodeModelViewController ()
 

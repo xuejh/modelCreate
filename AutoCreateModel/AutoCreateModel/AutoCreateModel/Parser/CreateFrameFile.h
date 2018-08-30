@@ -10,9 +10,21 @@
 
 @interface CreateFrameFile : NSObject
 
+/**
+ *    框架的统一命名
+ */
+
 @property (nonatomic,strong)NSString *frameName;
+
+/**
+ *    Cell对应的Model名字
+ */
+
 @property (nonatomic,strong)NSString *modelInCellName;
 
+/**
+ *    创建框架文件
+ */
 - (void)createFile;
 
 @end

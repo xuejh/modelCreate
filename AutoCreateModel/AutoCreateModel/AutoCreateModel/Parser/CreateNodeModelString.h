@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NodeModel.h"
 
-@interface NodeModelStrings : NSObject
+@interface CreateNodeModelString : NSObject
 
 /**
  *  节点对象
@@ -21,7 +21,7 @@
  *
  *  @param nodeModel nodeModel对象
  *
- *  @return NodeModelStrings对象
+ *  @return CreateNodeModelString对象
  */
 + (instancetype)nodeModelStringsWithNodeModel:(NodeModel *)nodeModel;
 

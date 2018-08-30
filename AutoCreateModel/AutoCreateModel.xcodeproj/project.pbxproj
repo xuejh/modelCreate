@@ -26,7 +26,7 @@
 		F29D403721341DC300464621 /* NodeModelViewControllerBack_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F29D403621341DC300464621 /* NodeModelViewControllerBack_next@3x.png */; };
 		F29D404221341E5300464621 /* JsonManage.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D403A21341E5300464621 /* JsonManage.m */; };
 		F29D404321341E5300464621 /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D403C21341E5300464621 /* NodeModel.m */; };
-		F29D404421341E5300464621 /* NodeModelStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D403E21341E5300464621 /* NodeModelStrings.m */; };
+		F29D404421341E5300464621 /* CreateNodeModelString.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D403E21341E5300464621 /* CreateNodeModelString.m */; };
 		F29D404521341E5300464621 /* NodeModelStrings.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29D403F21341E5300464621 /* NodeModelStrings.plist */; };
 		F29D404621341E5300464621 /* PropertyInfomation.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D404121341E5300464621 /* PropertyInfomation.m */; };
 		F29D406B21341FA300464621 /* EditView.m in Sources */ = {isa = PBXBuildFile; fileRef = F29D404A21341FA300464621 /* EditView.m */; };
@@ -83,8 +83,8 @@
 		F29D403A21341E5300464621 /* JsonManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonManage.m; sourceTree = "<group>"; };
 		F29D403B21341E5300464621 /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
 		F29D403C21341E5300464621 /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
-		F29D403D21341E5300464621 /* NodeModelStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModelStrings.h; sourceTree = "<group>"; };
-		F29D403E21341E5300464621 /* NodeModelStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModelStrings.m; sourceTree = "<group>"; };
+		F29D403D21341E5300464621 /* CreateNodeModelString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNodeModelString.h; sourceTree = "<group>"; };
+		F29D403E21341E5300464621 /* CreateNodeModelString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNodeModelString.m; sourceTree = "<group>"; };
 		F29D403F21341E5300464621 /* NodeModelStrings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NodeModelStrings.plist; sourceTree = "<group>"; };
 		F29D404021341E5300464621 /* PropertyInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyInfomation.h; sourceTree = "<group>"; };
 		F29D404121341E5300464621 /* PropertyInfomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyInfomation.m; sourceTree = "<group>"; };
@@ -243,8 +243,8 @@
 				F29D403A21341E5300464621 /* JsonManage.m */,
 				F29D403B21341E5300464621 /* NodeModel.h */,
 				F29D403C21341E5300464621 /* NodeModel.m */,
-				F29D403D21341E5300464621 /* NodeModelStrings.h */,
-				F29D403E21341E5300464621 /* NodeModelStrings.m */,
+				F29D403D21341E5300464621 /* CreateNodeModelString.h */,
+				F29D403E21341E5300464621 /* CreateNodeModelString.m */,
 				F29D403F21341E5300464621 /* NodeModelStrings.plist */,
 				F29D404021341E5300464621 /* PropertyInfomation.h */,
 				F29D404121341E5300464621 /* PropertyInfomation.m */,
@@ -458,7 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F29D407121341FA300464621 /* NodeCellViewModel.m in Sources */,
-				F29D404421341E5300464621 /* NodeModelStrings.m in Sources */,
+				F29D404421341E5300464621 /* CreateNodeModelString.m in Sources */,
 				F29D406D21341FA300464621 /* NodeTableViewModel.m in Sources */,
 				F29D407921341FA300464621 /* NodeModelViewController.m in Sources */,
 				F29D404621341E5300464621 /* PropertyInfomation.m in Sources */,

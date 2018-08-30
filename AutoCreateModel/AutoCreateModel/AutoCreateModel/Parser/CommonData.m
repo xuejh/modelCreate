@@ -8,7 +8,7 @@
 
 #import "CommonData.h"
 #import "AutoModelPCH.h"
-#import "NodeModelStrings.h"
+#import "CreateNodeModelString.h"
 #import "CreateFrameFile.h"
 
 @implementation CommonData
@@ -73,7 +73,7 @@
     
     for (NodeModel *node in self.nodeModel.allSubNodes) {
         
-        NodeModelStrings *nodeModelString = [NodeModelStrings nodeModelStringsWithNodeModel:node];
+        CreateNodeModelString *nodeModelString = [CreateNodeModelString nodeModelStringsWithNodeModel:node];
         [nodeModelString createFile];
     }
     
